@@ -1,0 +1,130 @@
+@font-face {
+    font-family: Blackout;
+    src: url(/font/Blackout-Midnight.ttf);
+}
+@font-face{
+    font-family: Diodrum-bold;
+    src: url(/font/Diodrum-Bold.otf);
+}
+@font-face{
+    font-family: Diodrum-light;
+    src: url(/font/Diodrum-Light.otf);
+}
+@font-face{
+    font-family: Diodrum-medium;
+    src: url(/font/Diodrum-Medium.otf);
+}
+@font-face{
+    font-family: Diodrum-regular;
+    src: url(/font/Diodrum-Regular.otf);
+}
+@font-face{
+    font-family: Diodrum-semibold;
+    src: url(/font/Diodrum-Semibold.otf);
+}
+html, body {
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;    
+    /* FONT */
+    font-family: 'Roboto', sans-serif;
+    background-color: #0e0b16;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    perspective: 1000px;
+    min-width: 100%;
+    padding: 1.5em 0 0 0;
+    z-index: 2;
+    box-sizing: border-box;
+}
+body::before{
+    content: '';
+    display: block;
+}
+section.corpo{
+    position: relative;
+    max-width: 50%;
+    min-width: 27em;
+    min-height: 50%;
+    padding: 3.5em 3em 3em 3em;
+    background: #4717f6;
+    border-radius: 4px;
+    cursor: default;
+    text-align: center;
+    transform-origin: 50% 50%;
+    transform: rotateX(0deg);
+    transition: opacity 1s ease, transform 1s ease;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+span.profile img{
+    width: 120px;
+    border-radius: 100%;
+    margin: 0 auto;
+    background-color: #e7dfdd;
+    display: block;
+    box-shadow: 0 0 0 .5em #e7dfdd;
+}
+span.profile img:hover{
+    width: 130px;
+    transition-duration: 0.1s;
+}
+h1{
+    font-size: 1.85em;
+    letter-spacing: 0.22em;
+    margin: 20px 0 0 0;
+    color: #e7dfdd;
+    font-family: 'Blackout';
+    margin-left: 10px;
+}
+hr{
+    color: #a239ca;
+    width: 100%;
+    height: 3px;
+    background: #a239ca;
+    margin-top: 40px;
+}
+section p{
+    font-family: 'Diodrum-light';
+    font-size: 1em;
+    color: #e7dfdd;
+    padding: 1.5em 0 0 0;
+}
+ul.icons{
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+}
+ul.icons li{
+    display: inline-block;
+    padding: 0.67em 0.5em;
+    margin-bottom: -50px;
+}
+ul.icons li a{
+    text-decoration: none;
+    font-size: 2.5em;
+    text-align: center;
+    color: #e7dfdd;
+    display: block;
+    border: 1px solid;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: relative;
+    line-height: 1.55em;
+}
+ul.icons li a:before{
+    color: #a239ca;
+}
+img.rodape{
+    width: 130px;    
+}
+footer{
+    padding: 0 0 20px 0;
+    margin: 0 45px 0 0;
+}
