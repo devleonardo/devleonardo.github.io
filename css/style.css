@@ -118,8 +118,11 @@ ul.icons li a{
     position: relative;
     line-height: 1.55em;
 }
-ul.icons li a:before{
-    color: #a239ca;
+li a:hover{
+    background-color: #fff;
+}
+li, a, i:hover{
+    color: #4717f6;
 }
 img.rodape{
     width: 130px;    
