@@ -10,4 +10,7 @@
         padding: 2em .1em;
         margin-bottom: -50px;
     }
+    ul.icons li a{
+      text-decoration: none;
+    }
   }
