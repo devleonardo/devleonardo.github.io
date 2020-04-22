@@ -64,7 +64,8 @@
   }
   .col-8 #social li {
     margin: 0;
-    padding: 15px 5px 0 5px;
+    padding: 20px 5px 0 5px;
+    font-size: 3em;
   }
   .col-8 hr {
     width: 100%;
@@ -93,6 +94,7 @@
   .col-8 #social li {
     margin: 0;
     padding: 15px 10px 0 10px;
+    font-size: 5em;
   }
   .col-8 hr {
     width: 100%;
@@ -118,7 +120,8 @@
   }
   .col-8 #social li {
     margin: 0;
-    padding: 33px 10px 0 0;
+    padding: 56px 10px 0 0;
+    font-size: 3em;
   }
   .col-8 hr {
     width: 40%;
@@ -145,6 +148,7 @@
   .col-8 #social li {
     margin: 0;
     padding: 34px 10px 0 0;
+    font-size: 2.8em;
   }
   .col-8 hr {
     width: 30%;
@@ -171,6 +175,7 @@
   .col-8 #social li {
     margin: 0;
     padding: 35px 10px 0 0;
+    font-size: 2.1em;
   }
   .col-8 hr {
     width: 20%;
@@ -197,6 +202,7 @@
   .col-8 #social li {
     margin: 0;
     padding: 34px 10px 0 0;
+    font-size: 2.3em;
   }
   .col-8 hr {
     width: 20%;
@@ -223,6 +229,7 @@
   .col-8 #social li {
     margin: 0;
     padding: 33px 10px 0 0;
+    font-size: 2.12em;
   }
   .col-8 hr {
     width: 20%;
@@ -298,7 +305,6 @@ h2 {
 }
 
 #social i {
-  font-size: 2em;
   color: #e7dfdd;
 }
 #social i i:hover {
