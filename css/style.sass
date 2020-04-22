@@ -1,0 +1,151 @@
+// FONTS
+@font-face
+    font-family: Diodrum-bold
+    src: url(/font/Diodrum-Bold.otf)
+
+@font-face
+    font-family: Diodrum-light
+    src: url(/font/Diodrum-Light.otf)
+
+@font-face
+    font-family: Diodrum-medium
+    src: url(/font/Diodrum-Medium.otf)
+
+@font-face
+    font-family: Diodrum-regular
+    src: url(/font/Diodrum-Regular.otf)
+
+@font-face
+    font-family: Diodrum-semibold
+    src: url(/font/Diodrum-Semibold.otf)
+
+@import "responsive.sass"
+
+// COLOR
+$color-v: #d12b2e
+$color-b: #e7dfdd
+$color-p: #1c212e
+$color-c: #4e4e4e
+
+// MIXIN
+@mixin text-base
+    line-height: 1.4em
+
+// RESET DOCUMENT
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body 
+    display: flex
+    flex-direction: column
+    height: 100vh 
+    background-color: $color-p
+    //justify-content: space-between
+        
+/*body::before
+    content: ''
+    display: block
+
+.container 
+    width: 100vw
+    height: 100%
+    margin: 0 auto
+    padding: 20px 40px
+
+// PROFILE INFORMATION
+header
+    margin-bottom: 20px
+
+#profile img
+    width: 100%
+
+.profile
+    padding: 10px 0 0 0
+
+h1
+    letter-spacing: 0.05em
+    color: $color-b
+    font-family: Diodrum-medium
+    font-size: 26px
+
+h2
+    font-family: Diodrum-light
+    color: $color-c
+    font-size: 1em
+    padding: 10px 0 0 0
+    //text-align: justify
+
+#contato
+    font-family: Diodrum-light
+    color: $color-b
+    font-size: .8em
+    padding: 5px 0 0 0
+    a
+        text-decoration: none
+        color: $color-b
+    a:hover
+        color: $color-v
+
+#social li
+    margin: 0 auto
+    position: relative
+    display: inline-block
+    margin: 30px 5px 0 0
+
+#social i
+    font-size: 2em
+    color: $color-b
+    i:hover
+        color: $color-v
+
+#social i:hover
+    color: $color-v
+
+// PROFILE AND PERTIFOLIO DESCRIPTION
+article
+    width: 100%
+    padding: 20px 30px 20px 20px
+    border-left: 5px solid $color-v
+    border-radius: 0 5px 5px 0
+    margin-bottom: 10px
+    font-family: Diodrum-light
+    font-size: 1em
+    color: $color-p
+    background-color: $color-b
+    @include text-base
+
+h3 
+    font-family: Diodrum-medium
+    color: $color-p
+    font-weight: bold
+    font-size: 2em
+
+// MOTIVATION
+#frase
+    font-style: italic
+    font-size: 0.7em
+    @include text-base
+    color: $color-c
+    text-align: center
+    width: 70%
+    margin: 0 auto
+
+// LINES
+hr
+    border: none
+    height: 3px
+    background: $color-v
+    margin: 20px 0 20px 0
+
+// FOOTER
+img.rodape
+    width: 130px
+    margin: 0 auto  
+
+#footer
+    text-align: center
+    padding: 20px 20px
+    font-family: Diodrum-light
+    color: $color-b
