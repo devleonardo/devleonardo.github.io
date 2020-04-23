@@ -26,6 +26,7 @@ $color-v: #d12b2e
 $color-b: #e7dfdd
 $color-p: #1c212e
 $color-c: #4e4e4e
+$color-a: #2ed4f8
 
 // MIXIN
 @mixin text-base
@@ -86,6 +87,7 @@ h2
         color: $color-b
     a:hover
         color: $color-v
+        transition-duration: 1s
 
 #social li
     margin: 0 auto
@@ -96,11 +98,10 @@ h2
 #social i
     //font-size: 2em
     color: $color-b
-    i:hover
-        color: $color-v
 
 #social i:hover
     color: $color-v
+    transition-duration: 1s
 
 // PROFILE AND PERTIFOLIO DESCRIPTION
 article
@@ -114,6 +115,25 @@ article
     color: $color-p
     background-color: $color-b
     @include text-base
+
+.principal
+    font-family:'Courier New', Courier, monospace
+    font-size: 1.2em
+
+.principal:after
+    content: '|'
+    margin-left: 5px
+    opacity: 1
+    animation: pisca .7s infinite
+
+@keyframes pisca
+    0%, 100%
+        opacity: 1
+
+    50%
+        opacity: 0
+    
+
 
 h3 
     font-family: Diodrum-medium
