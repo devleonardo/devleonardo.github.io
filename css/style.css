@@ -328,10 +328,8 @@ article {
 }
 
 .principal {
-  font-family: "Courier New", Courier, monospace;
   font-size: 1.2em;
 }
-
 .principal:after {
   content: "|";
   margin-left: 5px;
@@ -369,10 +367,6 @@ hr {
   height: 3px;
   background: #d12b2e;
   margin: 20px 0 20px 0;
-}
-
-.alinhamento {
-  text-align: justify;
 }
 
 img.rodape {
