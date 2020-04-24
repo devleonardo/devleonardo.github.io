@@ -46,6 +46,10 @@
     max-width: 21em;
   }
 
+  header {
+    text-align: center;
+  }
+
   article hr {
     width: 35%;
   }
@@ -55,7 +59,10 @@
   }
 
   .col-4 {
-    width: 100%;
+    width: 70%;
+  }
+  .col-4 img {
+    border-radius: 100%;
   }
 
   .col-8 {
@@ -85,7 +92,7 @@
   }
 
   .col-4 {
-    width: 100%;
+    width: 45%;
   }
 
   .col-8 {
