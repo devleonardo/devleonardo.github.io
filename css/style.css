@@ -22,6 +22,10 @@
   margin: 0 5px 0 5px;
 }
 
+ul, ol{
+  list-style: none;
+}
+
 .row:before,
 .row:after {
   content: "";
@@ -332,6 +336,35 @@ article {
   color: #1c212e;
   background-color: #e7dfdd;
   line-height: 1.4em;
+}
+
+.projetos li {
+  width: 200px;
+  height: 200px;
+}
+
+.projetos li .tema{
+  content: "Bikcraft";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: #000;
+  margin-bottom: -200px;
+  letter-spacing: 0.05em;
+  color: #e7dfdd;
+  font-family: Diodrum-medium;
+  font-size: 26px;
+  text-align: center;
+  padding-top: 85px;
+  text-decoration: none;
+}
+
+.bikcraft img{
+  width: 200px;
+}
+
+.bikcraft img:hover{
+  opacity: 20%;
 }
 
 .principal {
