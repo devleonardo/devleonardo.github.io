@@ -54,11 +54,11 @@ ul, ol{
     text-align: center;
   }
 
-  article hr {
+  section hr {
     width: 35%;
   }
 
-  article p {
+  section p {
     text-align: center;
   }
 
@@ -87,11 +87,11 @@ ul, ol{
     max-width: 37em;
   }
 
-  article hr {
+  section hr {
     width: 13%;
   }
 
-  article p {
+  section p {
     text-align: left;
   }
 
@@ -116,7 +116,7 @@ ul, ol{
     max-width: 41em;
   }
 
-  article hr {
+  section hr {
     width: 12%;
   }
 
@@ -143,7 +143,7 @@ ul, ol{
     max-width: 47em;
   }
 
-  article hr {
+  section hr {
     width: 10%;
   }
 
@@ -170,7 +170,7 @@ ul, ol{
     max-width: 68em;
   }
 
-  article hr {
+  section hr {
     width: 7%;
   }
 
@@ -197,7 +197,7 @@ ul, ol{
     max-width: 62em;
   }
 
-  article hr {
+  section hr {
     width: 5%;
   }
 
@@ -224,7 +224,7 @@ ul, ol{
     max-width: 80em;
   }
 
-  article hr {
+  section hr {
     width: 5%;
   }
 
@@ -325,7 +325,7 @@ h2 {
   transition-duration: 1s;
 }
 
-article {
+section {
   width: 100%;
   padding: 20px 30px 20px 20px;
   border-left: 5px solid #d12b2e;
@@ -336,6 +336,14 @@ article {
   color: #1c212e;
   background-color: #e7dfdd;
   line-height: 1.4em;
+}
+
+.projetos{
+  align-items: center;
+  text-align: center;
+}
+.projetos h3{
+  text-align: left;
 }
 
 .projetos li {
@@ -359,12 +367,23 @@ article {
   text-decoration: none;
 }
 
-.bikcraft img{
-  width: 200px;
+.projetos ul li{
+  display: inline-block;
+  margin: 10px;
+  opacity: 30%;
 }
 
-.bikcraft img:hover{
-  opacity: 20%;
+.projetos ul li:hover{
+  opacity: 100%;
+}
+
+.bikcraft img{
+  width: 200px;
+
+}
+
+.acompanhantes img{
+  width: 200px;
 }
 
 .principal {
