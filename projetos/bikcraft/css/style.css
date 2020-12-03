@@ -567,11 +567,11 @@ img {
   border: 3px solid #fec63e;
   padding: 10px 30px;
   color: #fec63e;
-  font-size: 14px;
-  line-height: 20px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .btn:hover {
@@ -586,14 +586,14 @@ img {
 
 .subtitulo {
   font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
   letter-spacing: 0.1em;
   color: #000;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .subtitulo:after {
@@ -607,13 +607,13 @@ img {
 
 .subtitulo-interno {
   font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
   letter-spacing: 0.1em;
   color: #000;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .subtitulo-interno:after {
@@ -650,9 +650,9 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  padding: 10px 0;
   font-size: 14px;
   line-height: 20px;
-  padding: 10px 0;
 }
 
 .header_menu ul li a:hover {
@@ -672,10 +672,10 @@ img {
 
 .introducao h1 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 48px;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 48px;
 }
 
 .quote-externo {
@@ -701,8 +701,9 @@ img {
 .quote-externo cite {
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
   letter-spacing: 0.1em;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 /* Introdução interna */
@@ -716,9 +717,9 @@ img {
 }
 
 .introducao-interna h1 {
-  font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 36px;
 }
 
 .introducao-interna h1:after {
@@ -746,11 +747,11 @@ img {
 
 .produtos_lista li h3 {
   font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 20px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .produtos_lista li h3:after {
@@ -838,11 +839,11 @@ img {
 
 .qualidade_lista li h3 {
   font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 20px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .qualidade_lista li h3:after {
@@ -877,12 +878,12 @@ img {
 }
 
 .footer h3 {
-  font-size: 18px;
-  line-height: 25px;
   color: #fec63e;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .footer h3:after {
@@ -899,9 +900,9 @@ img {
 }
 
 .footer_contato ul li {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
   line-height: 20px;
-  font-family: Georgia, "Times New Roman", serif;
 }
 
 .footer_rede ul li {
@@ -1004,15 +1005,16 @@ img {
 }
 
 .missao_sobre p {
-  font-size: 18px;
-  line-height: 25px;
   margin-bottom: 1em;
   padding-right: 60px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .missao_sobre ul li {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
+  line-height: 25px;
   line-height: 30px;
 }
 
@@ -1050,7 +1052,6 @@ img {
 .produto_item h2 {
   color: #fff;
   text-shadow: 2px 2px 8px #000;
-  font-size: 36px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
@@ -1058,6 +1059,7 @@ img {
   top: -180px;
   text-align: center;
   margin-bottom: -56px;
+  font-size: 36px;
 }
 
 .produto_item h2:before, .produto_item h2:after {
@@ -1084,23 +1086,24 @@ img {
 
 .produto_info p {
   color: #fff;
-  font-size: 18px;
-  line-height: 25px;
   height: 180px;
   padding: 30px 40px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .produto_info ul li {
   background: #fec63e;
   text-transform: uppercase;
-  font-size: 18px;
-  line-height: 20px;
   font-weight: bold;
   float: left;
   width: 229px;
   height: 49px;
   text-align: center;
   padding: 15px 0;
+  font-size: 18px;
+  line-height: 25px;
+  line-height: 20px;
 }
 
 .produto_info ul li:nth-child(1), .produto_info ul li:nth-child(2) {
@@ -1134,10 +1137,10 @@ img {
 .form label {
   display: block;
   color: #fff;
+  margin-bottom: 4px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
   line-height: 25px;
-  margin-bottom: 4px;
 }
 
 .form input {
@@ -1149,8 +1152,9 @@ img {
   padding: 5px;
   margin-bottom: 10px;
   outline: none;
-  font-size: 14px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .form textarea {
@@ -1163,8 +1167,9 @@ img {
   padding: 5px;
   margin-bottom: 20px;
   outline: none;
-  font-size: 14px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .form button {
@@ -1177,18 +1182,19 @@ img {
 }
 
 .orcamento_dados h3 {
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   color: #fec63e;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .orcamento_dados span {
   display: block;
-  font-size: 18px;
-  line-height: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 25px;
+  line-height: 30px;
 }
 
 .orcamento_dados span:nth-of-type(even) {
@@ -1202,6 +1208,7 @@ img {
 .orcamento_dados ul li {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
+  line-height: 20px;
   padding: 10px 15px;
 }
 
@@ -1235,18 +1242,19 @@ img {
 
 .quote_cliente p {
   text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
   line-height: 25px;
-  font-style: italic;
-  margin-bottom: 20px;
 }
 
 .quote_cliente cite {
-  font-size: 18px;
   font-weight: bold;
   float: right;
   font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .header_menu ul li a.menu_ativo:after {
@@ -1274,10 +1282,10 @@ img {
 
 .contato_form label {
   display: block;
+  margin-bottom: 4px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
   line-height: 25px;
-  margin-bottom: 4px;
 }
 
 .contato_form input {
@@ -1288,8 +1296,9 @@ img {
   padding: 5px;
   margin-bottom: 10px;
   outline: none;
-  font-size: 14px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .contato_form textarea {
@@ -1301,8 +1310,9 @@ img {
   padding: 5px;
   margin-bottom: 20px;
   outline: none;
-  font-size: 14px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .contato_form button {
@@ -1315,18 +1325,19 @@ img {
 }
 
 .contato_dados h3 {
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   color: #fec63e;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .contato_dados span {
   display: block;
-  font-size: 18px;
-  line-height: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 25px;
+  line-height: 30px;
 }
 
 .contato_dados span:nth-of-type(even) {

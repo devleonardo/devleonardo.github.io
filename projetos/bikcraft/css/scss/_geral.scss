@@ -5,9 +5,7 @@ body{
 }
 
 p{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
-    line-height: 20px;
+    @include tipo-2(14);
 }
 
 img{
@@ -19,11 +17,10 @@ img{
     border: 3px solid $cor-primaria;
     padding: 10px 30px;
     color: $cor-primaria;
-    font-size: 14px;
-    line-height: 20px;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: bold;
+    @include tipo-1(14);
 }
 
 .btn:hover{
@@ -38,14 +35,13 @@ img{
 
 .subtitulo{
     font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
     letter-spacing: .1em;
     color: $black;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-bottom: 40px;
+    @include tipo-1(24);
 }
 
 .subtitulo:after{
@@ -59,13 +55,12 @@ img{
 
 .subtitulo-interno{
   font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
   letter-spacing: .1em;
   color: $black;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 20px;
+  @include tipo-1(24);
 }
 
 .subtitulo-interno:after{
@@ -103,9 +98,8 @@ img{
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: .1em;
-    font-size: 14px;
-    line-height: 20px;
     padding: 10px 0;
+    @include tipo-1(14);
 }
 
 .header_menu ul li a:hover{
@@ -125,10 +119,10 @@ img{
 
 .introducao h1{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 48px;
     color: $white;
     font-weight: bold;
     text-transform: uppercase;
+    @include tipo-1(48);
 }
 
 .quote-externo{
@@ -154,8 +148,8 @@ img{
 .quote-externo cite{
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
     letter-spacing: .1em;
+    @include tipo-1(14);
 }
 
 /* Introdução interna */
@@ -170,9 +164,9 @@ img{
 }
 
 .introducao-interna h1{
-    font-size: 36px;
     font-weight: bold;
     text-transform: uppercase;
+    @include tipo-1(36);
 }
 
 .introducao-interna h1:after{
@@ -201,11 +195,10 @@ img{
 
 .produtos_lista li h3{
     font-weight: bold;
-    font-size: 18px;
-    line-height: 25px;
     text-transform: uppercase;
     letter-spacing: .1em;
     margin-top: 20px;
+    @include tipo-1(18);
 }
 
 .produtos_lista li h3:after{
@@ -293,11 +286,10 @@ img{
 
 .qualidade_lista li h3{
     font-weight: bold;
-    font-size: 18px;
-    line-height: 25px;
     text-transform: uppercase;
     letter-spacing: .1em;
     margin-top: 20px;
+    @include tipo-1(18);
 }
 
 .qualidade_lista li h3:after{
@@ -334,12 +326,11 @@ img{
 }
 
 .footer h3{
-    font-size: 18px;
-    line-height: 25px;
     color: $cor-primaria;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: bold;
+    @include tipo-1(18);
 }
 
 .footer h3:after{
@@ -356,9 +347,7 @@ img{
 }
 
 .footer_contato ul li{
-    font-size: 14px;
-    line-height: 20px;
-    font-family: Georgia, 'Times New Roman', serif;
+    @include tipo-2(14);
 }
 
 .footer_rede ul li{
