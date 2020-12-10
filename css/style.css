@@ -349,40 +349,20 @@ section {
 .projetos li {
   width: 200px;
   height: 200px;
-}
-
-.projetos li .tema{
-  content: "Bikcraft";
-  display: block;
-  width: 200px;
-  height: 200px;
-  background: #000;
-  margin-bottom: -200px;
-  letter-spacing: 0.05em;
-  color: #e7dfdd;
-  font-family: Diodrum-medium;
-  font-size: 26px;
-  text-align: center;
-  padding-top: 85px;
-  text-decoration: none;
+  
 }
 
 .projetos ul li{
   display: inline-block;
   margin: 10px;
-  opacity: 30%;
+  opacity: 50%;
 }
 
 .projetos ul li:hover{
   opacity: 100%;
 }
 
-.bikcraft img{
-  width: 200px;
-
-}
-
-.acompanhantes img{
+img{
   width: 200px;
 }
 
