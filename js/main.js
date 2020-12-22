@@ -1,3 +1,6 @@
+const titulo = document.querySelector('.principal');
+const habilidades = document.querySelector('.skills');
+
 function typeWrite(elemento){
     const textoArray = elemento.innerHTML.split('');
     elemento.innerHTML = ' ';
@@ -9,5 +12,6 @@ function typeWrite(elemento){
 
   });
 }
-const titulo = document.querySelector('.principal');
+
 typeWrite(titulo);
+typeWrite(habilidades);

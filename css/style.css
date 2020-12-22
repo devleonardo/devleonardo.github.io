@@ -366,10 +366,10 @@ img{
   width: 200px;
 }
 
-.principal {
+.principal, .skills {
   font-size: 1.2em;
 }
-.principal:after {
+.principal:after, .skills:after {
   content: "|";
   margin-left: 5px;
   opacity: 1;

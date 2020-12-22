@@ -1,5 +1,8 @@
 "use strict";
 
+var titulo = document.querySelector('.principal');
+var habilidades = document.querySelector('.skills');
+
 function typeWrite(elemento) {
   var textoArray = elemento.innerHTML.split('');
   elemento.innerHTML = ' ';
@@ -10,5 +13,5 @@ function typeWrite(elemento) {
   });
 }
 
-var titulo = document.querySelector('.principal');
 typeWrite(titulo);
+typeWrite(habilidades);
