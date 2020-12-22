@@ -11,13 +11,3 @@ function typeWrite(elemento){
 }
 const titulo = document.querySelector('.principal');
 typeWrite(titulo);
-
-/* ocultando e exibindo H3 */
-
-/*const tema = document.querySelector('h4');
-
-function ocultaTexto(texto) {
-  const tema = texto.innerHTML = '';
-}
-
-ocultaTexto(tema);*/
