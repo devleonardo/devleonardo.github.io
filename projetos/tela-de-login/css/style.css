@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;900&display=swap");
-body, h1, h2, h3, ul, li, dt, dd, dl, p {
+body, html, h1, h2, h3, ul, li, dt, dd, dl, p {
   padding: 0px;
   margin: 0px;
   list-style: none;
   font-family: "Montserrat";
+  overflow-x: hidden;
 }
 
 a {
@@ -15,6 +16,7 @@ body {
   background: linear-gradient(-135deg, #c850c0, #4158d0) no-repeat;
   background-attachment: fixed;
   padding-top: 100px;
+  position: relative;
 }
 
 .container {
