@@ -81,14 +81,14 @@
   }
 }
 
-@media(max-width: 560px) {
+@media(max-width: 460px) {
   body{
-    padding-top: 15px;
+    padding-top: 50px;
   }
   .container {
     transition: 500ms;
     width: 200px;
-    height: 550px;
+    height: 450px;
     transition: 500ms;
   }
   .tela1{
@@ -96,7 +96,7 @@
   }
 
   .tela2{
-    margin-left: 7%;
+    margin-left: 6.7%;
   }
   input{
     width: 225px;
@@ -105,6 +105,6 @@
     width: 323px;
   }
   .criar{
-    margin-top: 50px;
+    margin-top: -20px;
   }
 }
