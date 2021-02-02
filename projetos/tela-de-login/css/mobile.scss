@@ -87,7 +87,7 @@
   }
   .container {
     transition: 500ms;
-    width: 200px;
+    width: 180px;
     height: 450px;
     transition: 500ms;
   }
@@ -96,13 +96,14 @@
   }
 
   .tela2{
-    margin-left: 6.7%;
+    margin-left: 0;
   }
   input{
-    width: 225px;
+    width: 170px;
   }
   button{
-    width: 323px;
+    width: 170px;
+    margin-left: 50px;
   }
   .criar{
     margin-top: -20px;
