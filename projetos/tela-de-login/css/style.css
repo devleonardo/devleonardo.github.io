@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;900&display=swap");
+body, h1, h2, h3, ul, li, dt, dd, dl, p {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  font-family: "Montserrat";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+.container {
+  width: 860px;
+  height: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 20px solid rgba(0, 0, 0, 0);
+}
+
+.tela1 {
+  width: 430px;
+}
+
+.tela2 {
+  text-align: center;
+  width: 430px;
+}
+
+.logo {
+  height: 300px;
+  margin-top: 150px;
+  margin-left: 65px;
+  will-change: transform;
+  transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+  transition: 1000ms;
+}
+.logo:hover {
+  will-change: transform;
+  transform: perspective(300px) rotateX(10deg) rotateY(10deg);
+  transition: 1000ms;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.6em;
+  padding-top: 150px;
+  padding-bottom: 40px;
+  color: #464646;
+}
+
+.formulario {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: right;
+  padding-right: 65px;
+}
+
+i {
+  width: 10px;
+  color: #666;
+  margin-top: -39px;
+  margin-left: 30px;
+}
+
+input {
+  width: 202px;
+  height: 10px;
+  margin-bottom: 5px;
+  outline: none;
+  border: none;
+  background: #e6e6e6;
+  border-radius: 100px;
+  padding: 20px 30px 20px 68px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(165, 165, 165, 0.966);
+  transition: 500ms;
+}
+input i:hover {
+  border: 2px solid #57b846;
+  transition: 500ms;
+}
+
+button {
+  border: none;
+  border-radius: 100px;
+  width: 300px;
+  height: 50px;
+  background: #57b846;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat";
+  margin-bottom: 10px;
+  margin-top: 15px;
+  transition: 500ms;
+}
+button:hover {
+  background: #2c2c2c;
+  transition: 500ms;
+}
+
+.forgot {
+  text-align: center;
+  position: relative;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #acacac;
+  margin-bottom: 70px;
+}
+.forgot a {
+  color: #666;
+}
+.forgot a:hover {
+  color: #57b846;
+  transition: 500ms;
+}
+.forgot a {
+  transition: 500ms;
+}
+
+.criar {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666;
+  margin-top: 120px;
+  transition: 500ms;
+}
+.criar:hover {
+  color: #57b846;
+  transition: 500ms;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 750px;
+    transition: 500ms;
+  }
+
+  .tela1 {
+    width: 380px;
+  }
+
+  .tela2 {
+    width: 340px;
+    padding-left: 60px;
+  }
+
+  .logo {
+    height: 250px;
+    margin-top: 170px;
+    margin-left: 45px;
+  }
+}
+@media (max-width: 940px) {
+  .container {
+    width: 580px;
+    transition: 500ms;
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    height: 150px;
+    margin-top: 0px;
+  }
+
+  .tela1 {
+    margin-left: 29%;
+  }
+
+  .tela2 {
+    margin-left: 35%;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 1.6em;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #464646;
+  }
+
+  input {
+    width: 400px;
+  }
+
+  button {
+    width: 498px;
+  }
+}
+@media (max-width: 760px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .container {
+    transition: 500ms;
+    width: 420px;
+    transition: 500ms;
+    justify-content: center;
+  }
+
+  .tela1 {
+    margin-left: 23%;
+  }
+
+  .tela2 {
+    margin-left: 24.6%;
+  }
+
+  input {
+    width: 355px;
+  }
+
+  button {
+    width: 453px;
+  }
+}
+@media (max-width: 560px) {
+  body {
+    padding-top: 15px;
+  }
+
+  .container {
+    transition: 500ms;
+    width: 200px;
+    height: 550px;
+    transition: 500ms;
+  }
+
+  .tela1 {
+    margin-left: 20%;
+  }
+
+  .tela2 {
+    margin-left: 7%;
+  }
+
+  input {
+    width: 225px;
+  }
+
+  button {
+    width: 323px;
+  }
+
+  .criar {
+    margin-top: 50px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
