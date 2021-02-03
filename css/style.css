@@ -356,10 +356,12 @@ section {
   display: inline-block;
   margin: 10px;
   opacity: 50%;
+  transition: 500ms;
 }
 
 .projetos ul li:hover{
   opacity: 100%;
+  transition: 500ms;
 }
 
 img{
