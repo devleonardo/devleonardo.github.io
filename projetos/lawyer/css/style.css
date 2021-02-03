@@ -279,5 +279,8 @@ footer a {
   color: white;
   font-weight: 700;
 }
+footer a:hover {
+  color: #0040ff;
+}
 
 /*# sourceMappingURL=style.css.map */
