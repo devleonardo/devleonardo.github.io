@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 .navegador {
-  background: #03164181;
+  /* background: #03164181; */
   position: fixed;
   height: 80px;
   display: flex;
@@ -39,6 +39,14 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   align-items: center;
   z-index: 10;
 }
+
+.menuFixo {
+  position: fixed;
+  top: 0px;
+  background-color: #03164181;
+  transition: 500ms;
+}
+
 .navegador a {
   color: white;
 }
