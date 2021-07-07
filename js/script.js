@@ -47,3 +47,5 @@
       else menu.classList.remove('menuFixo');
   });
 })();
+
+// CARREGAMENTO DO CONTEÚDO

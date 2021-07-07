@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 .navegador {
-  /* background: #03164181; */
+  background: #03164181;
   position: fixed;
   height: 80px;
   display: flex;
@@ -39,14 +39,6 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   align-items: center;
   z-index: 10;
 }
-
-.menuFixo {
-  position: fixed;
-  top: 0px;
-  background-color: #03164181;
-  transition: 500ms;
-}
-
 .navegador a {
   color: white;
 }
@@ -103,7 +95,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   font-size: 48px;
   color: white;
 }
-.presentation p {
+.presentation h1 {
   font-weight: 600;
 }
 .presentation span {
@@ -180,7 +172,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.titulo p {
+.titulo h2 {
   font-size: 24px;
   font-weight: 600;
   margin: 100px 0 0 0;
@@ -194,6 +186,45 @@ html {
   height: 4px;
   background: #FA6500;
   margin: 0 0 25px 0;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation: fadeIn 1s ease-in-out;
+  -moz-animation: fadeIn 1s ease-in-out;
+  -o-animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .skills {
@@ -484,6 +515,7 @@ html {
   text-align: center;
   color: white;
   letter-spacing: 1px;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=styles.css.map */
