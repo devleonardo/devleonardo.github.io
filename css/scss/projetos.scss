@@ -1,0 +1,10 @@
+.projetos {
+    background: #F6F6F6;
+    display: grid;
+    .titulo {
+        text-align: center;
+    }
+    .titulo::after {
+        margin: 0px auto;
+    }
+}

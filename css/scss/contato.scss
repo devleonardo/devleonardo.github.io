@@ -1,0 +1,43 @@
+.contato {
+    background: white;
+    display: grid;
+    .titulo {
+        text-align: center;
+    }
+    .titulo::after {
+        margin: 0px auto;
+    }
+}
+
+.contactLinks {
+    width: 600px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    //margin: 50px 0 100px 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    border-radius: 3px;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.068);
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    img{
+        height: 20px;
+        margin: 0 15px -3px 0;
+    }
+    li {
+        font-size: 18px;
+        font-weight: 500;
+        color: #FA6500;
+        line-height: 30px;
+    }
+    a {
+        text-decoration: none;
+        color: #215E98;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,53 @@
+.navegador {
+    background: #03164181;
+    position: fixed;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    a {
+        color: white;
+    }
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    margin: 0 0 0 75px-9;
+    a {
+        //background: chartreuse;
+        padding: 10px 20px;
+        margin: 0 10px;
+    }
+    li:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+}
+
+.target {
+    position: absolute;
+    border-bottom: 4px solid transparent;
+    z-index: -1;
+    transform: translateX(-60px);
+    position: fixed;
+}
+   
+.mynav a,
+.target {
+    transition: all .35s ease-in-out;
+}
+
+.contact {
+    background: #FA6500;
+    width: 100px;
+    height: 35px;
+    margin: 0 96px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        font-weight: 700;
+    }
+}

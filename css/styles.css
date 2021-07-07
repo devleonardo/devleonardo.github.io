@@ -1,0 +1,481 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+/**
+ * Remove anchor text-decoration
+ */
+a {
+  text-decoration: none;
+}
+
+/**
+ * Remove list-style
+ */
+ol, ul {
+  list-style: none;
+}
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.navegador {
+  background: #03164181;
+  position: fixed;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 10;
+}
+.navegador a {
+  color: white;
+}
+
+.menu {
+  display: flex;
+  margin: 0 0 0 66px;
+}
+.menu a {
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+.menu li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.target {
+  position: absolute;
+  border-bottom: 4px solid transparent;
+  z-index: -1;
+  transform: translateX(-60px);
+  position: fixed;
+}
+
+.mynav a,
+.target {
+  transition: all 0.35s ease-in-out;
+}
+
+.contact {
+  background: #FA6500;
+  width: 100px;
+  height: 35px;
+  margin: 0 96px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact a {
+  font-weight: 700;
+}
+
+.banner {
+  background: url(/img/background.jpg) no-repeat;
+  background-size: cover;
+  height: 512px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.presentation {
+  font-size: 48px;
+  color: white;
+}
+.presentation p {
+  font-weight: 600;
+}
+.presentation span {
+  color: #FA6500;
+}
+
+.subtitulo {
+  font-size: 24px;
+  color: white;
+}
+
+.citacao {
+  margin: 100px 96px -60px 96px;
+  text-align: right;
+  width: 400px;
+  font-size: 12px;
+  color: white;
+  font-style: italic;
+  float: right;
+}
+.citacao p {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.about {
+  background: #F6F6F6;
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  margin-left: 96px;
+}
+.description .nome p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.description p {
+  font-size: 14px;
+}
+.description .mais p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #031641;
+}
+
+.about img {
+  height: 370px;
+  margin-left: 100px;
+  margin-right: 96px;
+}
+
+.networks {
+  display: flex;
+  margin-bottom: 100px;
+}
+.networks img {
+  height: 35px;
+  margin: 54px 16px 0 0;
+}
+
+body {
+  background: #031641;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1140px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.titulo p {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 100px 0 0 0;
+  color: #031641;
+}
+
+.titulo::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #FA6500;
+  margin: 0 0 25px 0;
+}
+
+.skills {
+  background: #fff;
+  display: grid;
+  align-items: center;
+}
+.skills .titulo {
+  text-align: center;
+}
+.skills .titulo::after {
+  margin: 0px auto;
+}
+
+.gradeSkills {
+  margin: 30px 0 120px 0;
+}
+
+.flexSkill {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 96px 0 96px;
+  align-items: center;
+}
+.flexSkill li {
+  display: grid;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  background: white;
+  margin: 25px 0 0 0;
+  border-radius: 3px;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.068);
+  padding: 10px 0 10px 0;
+}
+.flexSkill li font {
+  font-size: 24px;
+  font-weight: 700;
+}
+.flexSkill li p {
+  font-size: 14px;
+  margin-top: -20px;
+}
+
+.flexSkill:last-child {
+  justify-content: center;
+  margin: 25px 0 0 0;
+}
+.flexSkill:last-child li {
+  margin: 25px 25px 0 25px;
+}
+
+.projetos {
+  background: #F6F6F6;
+  display: grid;
+}
+.projetos .titulo {
+  text-align: center;
+}
+.projetos .titulo::after {
+  margin: 0px auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.outer-wrapper {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.s-wrap {
+  width: 100%;
+  margin-bottom: 50px;
+  padding-bottom: 55%;
+  position: relative;
+  border: 10px solid #fff;
+  background-color: #efefe8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.s-wrap > input {
+  display: none;
+}
+
+.s-wrap .s-content {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 100%;
+  font-size: 0;
+  list-style: none;
+  transition: transform 1s;
+}
+
+.s-wrap .s-item {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.s-wrap .s-item-1 {
+  background-image: url("/img/aliança.jpg");
+}
+
+.s-wrap .s-item-2 {
+  background-image: url("/img/acompanhantes.jpg");
+}
+
+.s-wrap .s-item-3 {
+  background-image: url("/img/bikcraft.jpg");
+}
+
+.s-wrap .s-item-4 {
+  background-image: url("/img/lescone.jpg");
+}
+
+.s-wrap .s-item-5 {
+  background-image: url("/img/login.jpg");
+}
+
+.s-type-1 .s-control {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  transition-timing-function: ease-out;
+}
+
+.s-type-1 .s-control {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background-color: #efefe8;
+  cursor: pointer;
+}
+
+.s-type-1 .s-nav label {
+  display: none;
+  position: absolute;
+  top: 50%;
+  padding: 5px 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.s-type-1 .s-nav label::before, .s-type-1 .s-nav label::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 24px;
+  background-color: #FA6500;
+}
+
+.s-type-1 .s-nav label::before {
+  margin-bottom: -12px;
+}
+
+.s-type-1 .s-nav label.left {
+  left: 20px;
+}
+
+.s-type-1 .s-nav label.left::before {
+  transform: rotate(45deg);
+}
+
+.s-type-1 .s-nav label.left::after {
+  transform: rotate(-45deg);
+}
+
+.s-type-1 .s-nav label.right {
+  right: 20px;
+}
+
+.s-type-1 .s-nav label.right::before {
+  transform: rotate(-45deg);
+}
+
+.s-type-1 .s-nav label.right::after {
+  transform: rotate(45deg);
+}
+
+.s-type-1 #s-1:checked ~ .s-content {
+  transform: translateX(0%);
+}
+
+.s-type-1 #s-1:checked ~ .s-nav .s-nav-1 {
+  display: block;
+}
+
+.s-type-1 #s-2:checked ~ .s-content {
+  transform: translateX(-20%);
+}
+
+.s-type-1 #s-2:checked ~ .s-nav .s-nav-2 {
+  display: block;
+}
+
+.s-type-1 #s-3:checked ~ .s-content {
+  transform: translateX(-40%);
+}
+
+.s-type-1 #s-3:checked ~ .s-nav .s-nav-3 {
+  display: block;
+}
+
+.s-type-1 #s-4:checked ~ .s-content {
+  transform: translateX(-60%);
+}
+
+.s-type-1 #s-4:checked ~ .s-nav .s-nav-4 {
+  display: block;
+}
+
+.s-type-1 #s-5:checked ~ .s-content {
+  transform: translateX(-80%);
+}
+
+.s-type-1 #s-5:checked ~ .s-nav .s-nav-5 {
+  display: block;
+}
+
+.contato {
+  background: white;
+  display: grid;
+}
+.contato .titulo {
+  text-align: center;
+}
+.contato .titulo::after {
+  margin: 0px auto;
+}
+
+.contactLinks {
+  width: 600px;
+  height: 200px;
+  background: white;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border-radius: 3px;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.068);
+  padding: 10px 0 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.contactLinks img {
+  height: 20px;
+  margin: 0 15px -3px 0;
+}
+.contactLinks li {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FA6500;
+  line-height: 30px;
+}
+.contactLinks a {
+  text-decoration: none;
+  color: #215E98;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.rodape {
+  height: 50px;
+  background: #031641;
+  display: grid;
+  align-items: center;
+}
+.rodape p {
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/*# sourceMappingURL=styles.css.map */

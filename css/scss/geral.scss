@@ -1,0 +1,26 @@
+body {
+    background: #031641;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    margin: 0 auto;
+    width: 1140px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.titulo p{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 100px 0 0 0;
+    color: #031641;
+}
+.titulo::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #FA6500;
+    margin: 0 0 25px 0;
+}

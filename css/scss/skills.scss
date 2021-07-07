@@ -1,0 +1,51 @@
+.skills {
+    background: #fff;
+    display: grid;
+    align-items: center;
+    .titulo {
+        text-align: center;
+    }
+    .titulo::after {
+        margin: 0px auto;
+    }
+}
+
+.gradeSkills {
+    margin: 30px 0 120px 0;
+}
+
+.flexSkill {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    //grid-template-columns: repeat(4, 1fr);
+    margin: 0 96px 0 96px;
+    align-items: center;
+    li {
+        display: grid;
+        align-items: center;
+        width: 200px;
+        height: 100px;
+        background: rgb(255, 255, 255);
+        margin: 25px 0 0 0;
+        border-radius: 3px;
+        box-shadow: 0 0 2em rgba(0, 0, 0, 0.068);
+        padding: 10px 0 10px 0;
+        font {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 14px;
+            margin-top: -20px;
+        }
+    }
+}
+.flexSkill:last-child{
+    justify-content: center;
+    margin: 25px 0 0 0;
+    li {
+        margin: 25px 25px 0 25px;
+    }
+}

@@ -1,0 +1,39 @@
+.banner {
+    background: url(/img/background.jpg) no-repeat;
+    background-size: cover;
+    height: 512px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.presentation {
+    font-size: 48px;
+    color: white;
+    p {
+        font-weight: 600;
+    }
+    span {
+        color: #FA6500;
+    }
+}
+
+.subtitulo {
+    font-size: 24px;
+    color: white;
+}
+
+.citacao {
+    margin: 100px 96px -60px 96px;
+    text-align: right;
+    width: 400px;
+    font-size: 12px;
+    color: white;
+    font-style: italic;
+    float: right;
+    p {
+        font-weight: 600;
+        margin-top: 10px;
+    }
+}
