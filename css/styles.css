@@ -30,7 +30,6 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 .navegador {
-  background: #03164181;
   position: fixed;
   height: 80px;
   display: flex;
@@ -41,6 +40,13 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 .navegador a {
   color: white;
+}
+
+.menuFixo {
+  position: fixed;
+  top: 0px;
+  background-color: #03164181;
+  transition: 500ms;
 }
 
 .menu {
@@ -106,6 +112,21 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   font-size: 24px;
   color: white;
 }
+.subtitulo h2::after {
+  content: "|";
+  opacity: 1;
+  margin-left: 5px;
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 
 .citacao {
   margin: 100px 96px -60px 96px;
@@ -143,7 +164,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   color: #031641;
 }
 
-.about img {
+.about .profile {
   height: 370px;
   margin-left: 100px;
   margin-right: 96px;
@@ -240,16 +261,17 @@ html {
 }
 
 .gradeSkills {
-  margin: 30px 0 120px 0;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 120px;
 }
 
 .flexSkill {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 96px 0 96px;
-  align-items: center;
+  justify-content: space-around;
+  margin: 0 80px 0 80px;
 }
 .flexSkill li {
   display: grid;
@@ -257,7 +279,7 @@ html {
   width: 200px;
   height: 100px;
   background: white;
-  margin: 25px 0 0 0;
+  margin: 15px 10px 15px 10px;
   border-radius: 3px;
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.068);
   padding: 10px 0 10px 0;
@@ -269,14 +291,6 @@ html {
 .flexSkill li p {
   font-size: 14px;
   margin-top: -20px;
-}
-
-.flexSkill:last-child {
-  justify-content: center;
-  margin: 25px 0 0 0;
-}
-.flexSkill:last-child li {
-  margin: 25px 25px 0 25px;
 }
 
 .projetos {
@@ -484,13 +498,12 @@ html {
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.068);
   padding: 10px 0 10px 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .contactLinks img {
   height: 20px;
-  margin: 0 15px -3px 0;
+  margin: 0 15px -3px 28px;
 }
 .contactLinks li {
   font-size: 18px;
@@ -516,6 +529,117 @@ html {
   color: white;
   letter-spacing: 1px;
   font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 750px;
+    transition: 500ms;
+  }
+
+  .citacao {
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .description {
+    margin-left: 96px;
+    margin: 0 96px 0 96px;
+  }
+
+  .about .profile {
+    display: none;
+  }
+}
+@media (max-width: 940px) {
+  .container {
+    width: 580px;
+    transition: 500ms;
+    grid-template-columns: 1fr;
+  }
+
+  .navegador {
+    height: 80px;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 20px 10px;
+  }
+  .menu a {
+    margin: 0;
+  }
+
+  .contact {
+    margin: 0 auto;
+  }
+
+  .flexSkill {
+    margin: 0 20px 0 20px;
+  }
+
+  .contactLinks {
+    width: 500px;
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    transition: 500ms;
+    width: 420px;
+    transition: 500ms;
+    justify-content: center;
+  }
+
+  .navegador {
+    height: 120px;
+  }
+
+  .contact {
+    margin-bottom: 20px;
+  }
+
+  .presentation {
+    font-size: 36px;
+    margin-top: 120px;
+  }
+
+  .citacao {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+  }
+  .description .titulo::after {
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+
+  .networks img {
+    margin: 70px 0 0 33px;
+  }
+
+  .contactLinks {
+    width: 400px;
+    text-align: center;
+  }
+  .contactLinks a {
+    font-size: 20px;
+  }
+  .contactLinks img {
+    display: none;
+  }
+}
+@media (max-width: 460px) {
+  .container {
+    transition: 500ms;
+    width: 100%;
+    transition: 500ms;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

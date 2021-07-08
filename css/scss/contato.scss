@@ -13,7 +13,6 @@
     width: 600px;
     height: 200px;
     background: rgb(255, 255, 255);
-    //margin: 50px 0 100px 0;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 100px;
@@ -21,12 +20,11 @@
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.068);
     padding: 10px 0 10px 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     img{
         height: 20px;
-        margin: 0 15px -3px 0;
+        margin: 0 15px -3px 28px;
     }
     li {
         font-size: 18px;

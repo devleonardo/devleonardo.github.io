@@ -1,5 +1,4 @@
 .navegador {
-    background: #03164181;
     position: fixed;
     height: 80px;
     display: flex;
@@ -10,6 +9,13 @@
         color: white;
     }
     z-index: 10;
+}
+
+.menuFixo {
+    position: fixed;
+    top: 0px;
+    background-color: #03164181;
+    transition: 500ms;
 }
 
 .menu {

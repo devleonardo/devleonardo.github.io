@@ -1,0 +1,99 @@
+@media (max-width: 1200px) {
+    .container {
+      width: 750px;
+      transition: 500ms;
+    }
+    .citacao {
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .description {
+        margin-left: 96px;
+        margin: 0 96px 0 96px;   
+    }
+    .about .profile{
+        display: none;
+    }
+}
+  
+@media (max-width: 940px) {
+    .container {
+      width: 580px;
+      transition: 500ms;
+      grid-template-columns: 1fr; 
+    }
+    .navegador {
+        height: 80px;
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0 20px 10px;
+        a{
+            margin: 0;
+        }
+    }
+    .contact {
+        margin: 0 auto;
+    }
+    .flexSkill {
+        margin: 0 20px 0 20px;
+    }
+    .contactLinks {
+        width: 500px;
+    }
+}
+  
+@media(max-width: 760px) {
+    .container {
+      transition: 500ms;
+      width: 420px;
+      transition: 500ms;
+      justify-content: center;
+    }
+    .navegador {
+        height: 120px;
+    }
+    .contact {
+        margin-bottom: 20px;
+    }
+    .presentation {
+        font-size: 36px;
+        margin-top: 120px;
+    }
+    .citacao {
+        margin-top: 100px;
+        text-align: center;
+    }
+    .description {
+        // margin-left: 30px;
+        text-align: center;
+        .titulo::after {
+            margin: 0px auto;
+            margin-bottom: 30px;
+        }
+    }
+    .networks img {
+        margin: 70px 0 0 33px;
+    }
+    .contactLinks{
+        width: 400px;
+        text-align: center;
+        a{
+            font-size: 20px;
+        }
+        img{
+            display: none;
+        }
+    }
+}
+  
+@media(max-width: 460px) {
+    .container {
+      transition: 500ms;
+      width: 100%;
+      transition: 500ms;
+    }
+}
