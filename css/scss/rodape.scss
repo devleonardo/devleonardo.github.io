@@ -1,9 +1,12 @@
 .rodape {
     height: 50px;
-    background: #031641;
+    background: $darkgrey;
     display: grid;
     align-items: center;
     p {
+        b {
+            color: $lilac;
+        }
         text-align: center;
         color: white;
         letter-spacing: 1px;

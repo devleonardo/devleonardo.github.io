@@ -1,5 +1,5 @@
 .about {
-    background: #F6F6F6;
+    background: $gray;
     display: flex;
     align-items: center;
 }
@@ -12,12 +12,13 @@
     }
     p {
         font-size: 14px;
+        color: white;
     }
     
     .mais p {
         font-size: 14px;
         font-weight: 700;
-        color: #031641;
+        color: $lightgray;
     }
 }
 
@@ -25,6 +26,7 @@
     height: 370px;
     margin-left: 100px;
     margin-right: 96px;
+    border-left: 4px solid $lilac;
 }
 
 .networks{

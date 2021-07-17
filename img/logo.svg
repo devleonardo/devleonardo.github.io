@@ -1,19 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW 2020 (64 Bit) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="29.1042mm" height="29.1042mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 329.1 329.1"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30.3805mm" height="13.0526mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 182.65 78.47"
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
  <defs>
+  <font id="FontID0" horiz-adv-x="716" font-variant="normal" style="fill-rule:nonzero" font-weight="600">
+	<font-face 
+		font-family="Poppins SemiBold">
+		<font-face-src>
+			<font-face-name name="Poppins SemiBold"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="." horiz-adv-x="260" d="M130.999 -7.00172c-25.3293,0 -46.1627,7.83219 -62.5,23.5037 -16.3302,15.6644 -24.4989,35.1661 -24.4989,58.498 0,23.3319 8.16867,42.8336 24.4989,58.498 16.3373,15.6715 37.1707,23.5037 62.5,23.5037 24.6707,0 45.0029,-7.83219 61.0037,-23.5037 15.9937,-15.6644 23.9977,-35.1661 23.9977,-58.498 0,-23.3319 -8.00401,-42.8336 -23.9977,-58.498 -16.0009,-15.6715 -36.333,-23.5037 -61.0037,-23.5037z"/>
+   <glyph unicode="L" horiz-adv-x="458" d="M208.999 110.997l230.004 0 0 -110.997 -370.003 0 0 698.003 139.999 0 0 -587.006z"/>
+   <glyph unicode="é" horiz-adv-x="617" d="M583.999 289.003c0,-20.0029 -1.33162,-38.0011 -4.002,-54.002l-404.997 0c3.3362,-39.9986 17.3325,-71.3345 42.0032,-94.0006 24.6635,-22.6661 54.9971,-33.9991 90.9937,-33.9991 52.0046,0 89.0034,22.3296 111.004,66.996l151.002 0c-16.0009,-53.329 -46.671,-97.1649 -92.0032,-131.501 -45.3322,-34.3285 -101.002,-51.4963 -167.003,-51.4963 -53.329,0 -101.16,11.8342 -143.499,35.5026 -42.3325,23.6612 -75.3293,57.1664 -98.9977,100.494 -23.6684,43.3348 -35.5026,93.3348 -35.5026,150 0,57.3382 11.6695,107.668 35.0014,151.002 23.3319,43.3348 55.9994,76.6681 98.0026,100 41.996,23.3319 90.3351,35.0014 144.996,35.0014 52.6704,0 99.8353,-11.333 141.502,-33.9991 41.6667,-22.6661 74.0049,-54.8325 97.0003,-96.4991 23.0026,-41.6667 34.5003,-89.5046 34.5003,-143.499zm-144.996 39.9986c-0.672967,35.9966 -13.667,64.8339 -39.0034,86.4977 -25.3365,21.6638 -56.3359,32.5029 -92.9983,32.5029 -34.6649,0 -63.8316,-10.5026 -87.5,-31.5006 -23.6684,-21.0052 -38.1658,-50.1718 -43.4994,-87.5l263.001 0zm-21.0052 370.998l-229.997 -104.997 0 100 229.997 119.001 0 -114.003z"/>
+  </font>
   <style type="text/css">
    <![CDATA[
-    .fil0 {fill:#FA6500}
+    @font-face { font-family:"Poppins SemiBold";font-variant:normal;font-weight:600;src:url("#FontID0") format(svg)}
+    .fil1 {fill:#FEFEFE}
+    .fil0 {fill:#9466FF}
+    .fnt0 {font-weight:600;font-size:83.98px;font-family:'Poppins SemiBold'}
    ]]>
   </style>
  </defs>
  <g id="Camada_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0" d="M-0 0l51.86 0 0 277.25 173.53 0 0 51.86 -173.53 0 -51.86 0 0 -51.86 0 -277.25zm277.25 0l-60.84 163.63 -60.84 -163.63 -51.86 0 0 225.39 51.86 0 0 -85.91 31.94 85.91 5.93 0 45.93 0 5.93 0 31.94 -85.91 0 189.63 51.86 0 0 -329.1 -51.86 0z"/>
+  <path class="fil0" d="M128.08 0c21.67,0 39.24,17.57 39.24,39.24 0,21.67 -17.57,39.24 -39.24,39.24 -21.67,0 -39.24,-17.57 -39.24,-39.24 0,-21.67 17.57,-39.24 39.24,-39.24zm0 24.8c7.97,0 14.43,6.46 14.43,14.43 0,7.97 -6.46,14.43 -14.43,14.43 -7.97,0 -14.43,-6.46 -14.43,-14.43 0,-7.97 6.46,-14.43 14.43,-14.43z"/>
+  <text x="-5.79" y="73.04"  class="fil1 fnt0">L</text>
+  <text x="32.75" y="73.04"  class="fil1 fnt0">é    .</text>
  </g>
 </svg>

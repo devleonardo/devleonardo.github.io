@@ -3,7 +3,7 @@
 
     const target = document.querySelector(".target");
     const links = document.querySelectorAll(".mynav a");
-    const colors = ["#FA6500"];
+    const colors = ["#9466FF"];
   
     function mouseenterFunc() {
       if (!this.parentNode.classList.contains("active")) {
@@ -59,3 +59,5 @@ function typeWriter(elemento) {
 
 const titulo = document.querySelector('.subtitulo h2');
 typeWriter(titulo);
+
+// BOTÃO MOBILE

@@ -29,6 +29,11 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   font-weight: normal;
 }
 
+#logo {
+  width: 70px;
+  margin: 0 0 0 96px;
+}
+
 .navegador {
   position: fixed;
   height: 80px;
@@ -45,20 +50,17 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 .menuFixo {
   position: fixed;
   top: 0px;
-  background-color: #03164181;
+  background-color: #121214;
   transition: 500ms;
 }
 
 .menu {
   display: flex;
-  margin: 0 0 0 66px;
+  margin-right: 65px;
 }
 .menu a {
   padding: 10px 20px;
   margin: 0 10px;
-}
-.menu li:not(:last-child) {
-  margin-right: 20px;
 }
 
 .target {
@@ -74,17 +76,8 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   transition: all 0.35s ease-in-out;
 }
 
-.contact {
-  background: #FA6500;
-  width: 100px;
-  height: 35px;
-  margin: 0 96px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contact a {
-  font-weight: 700;
+#btn-mobile {
+  display: none;
 }
 
 .banner {
@@ -105,7 +98,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   font-weight: 600;
 }
 .presentation span {
-  color: #FA6500;
+  color: #9466FF;
 }
 
 .subtitulo {
@@ -143,7 +136,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 .about {
-  background: #F6F6F6;
+  background: #121214;
   display: flex;
   align-items: center;
 }
@@ -157,17 +150,19 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 .description p {
   font-size: 14px;
+  color: white;
 }
 .description .mais p {
   font-size: 14px;
   font-weight: 700;
-  color: #031641;
+  color: #A8A8B3;
 }
 
 .about .profile {
   height: 370px;
   margin-left: 100px;
   margin-right: 96px;
+  border-left: 4px solid #9466FF;
 }
 
 .networks {
@@ -180,7 +175,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 body {
-  background: #031641;
+  background: #09090A;
   font-family: "Poppins", sans-serif;
 }
 
@@ -197,7 +192,7 @@ html {
   font-size: 24px;
   font-weight: 600;
   margin: 100px 0 0 0;
-  color: #031641;
+  color: white;
 }
 
 .titulo::after {
@@ -205,7 +200,7 @@ html {
   display: block;
   width: 40px;
   height: 4px;
-  background: #FA6500;
+  background: #9466FF;
   margin: 0 0 25px 0;
 }
 
@@ -249,7 +244,8 @@ html {
 }
 
 .skills {
-  background: #fff;
+  background: #121214;
+  border-top: 1px solid #29292D;
   display: grid;
   align-items: center;
 }
@@ -278,23 +274,109 @@ html {
   align-items: center;
   width: 200px;
   height: 100px;
-  background: white;
+  background: linear-gradient(180deg, #202024 0%, #151517 93%);
   margin: 15px 10px 15px 10px;
-  border-radius: 3px;
-  box-shadow: 0 0 2em rgba(0, 0, 0, 0.068);
-  padding: 10px 0 10px 0;
-}
-.flexSkill li font {
   font-size: 24px;
   font-weight: 700;
+  padding: 10px 0 10px 0;
 }
 .flexSkill li p {
   font-size: 14px;
   margin-top: -20px;
+  color: white;
+}
+.flexSkill :nth-child(1) hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  margin-top: -25px;
+  background: linear-gradient(90deg, #fb941f 0%, rgba(251, 148, 31, 0.4) 93%);
+}
+.flexSkill :nth-child(1) span {
+  color: #FB941F;
+  margin-top: -20px;
+}
+.flexSkill :nth-child(2) hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  margin-top: -25px;
+  background: linear-gradient(90deg, #458acb 0%, rgba(69, 138, 203, 0.4) 93%);
+}
+.flexSkill :nth-child(2) span {
+  color: #458ACB;
+  margin-top: -20px;
+}
+.flexSkill :nth-child(3) hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  margin-top: -25px;
+  background: linear-gradient(90deg, #cf649a 0%, rgba(207, 100, 154, 0.4) 93%);
+}
+.flexSkill :nth-child(3) span {
+  color: #CF649A;
+  margin-top: -20px;
+}
+.flexSkill :nth-child(4) hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  margin-top: -25px;
+  background: linear-gradient(90deg, #e1bd00 0%, rgba(225, 189, 0, 0.4) 93%);
+}
+.flexSkill :nth-child(4) span {
+  color: #E1BD00;
+  margin-top: -20px;
+}
+.flexSkill :nth-child(5) hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  margin-top: -25px;
+  background: linear-gradient(90deg, #8156e4 0%, rgba(129, 86, 228, 0.4) 93%);
+}
+.flexSkill :nth-child(5) span {
+  color: #8156E4;
+  margin-top: -20px;
+}
+.flexSkill :nth-child(6) hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  margin-top: -25px;
+  background: linear-gradient(90deg, #215e98 0%, rgba(33, 94, 152, 0.4) 93%);
+}
+.flexSkill :nth-child(6) span {
+  color: #215E98;
+  margin-top: -20px;
+}
+.flexSkill :nth-child(7) hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  margin-top: -25px;
+  background: linear-gradient(90deg, #e73f5a 0%, rgba(231, 63, 90, 0.4) 93%);
+}
+.flexSkill :nth-child(7) span {
+  color: #E73F5A;
+  margin-top: -20px;
+}
+.flexSkill :nth-child(8) hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  margin-top: -25px;
+  background: linear-gradient(90deg, #04ce5f 0%, rgba(4, 206, 95, 0.4) 93%);
+}
+.flexSkill :nth-child(8) span {
+  color: #04CE5F;
+  margin-top: -20px;
 }
 
 .projetos {
-  background: #F6F6F6;
+  background: #121214;
+  border-top: 1px solid #29292D;
   display: grid;
 }
 .projetos .titulo {
@@ -405,7 +487,7 @@ html {
   display: block;
   width: 8px;
   height: 24px;
-  background-color: #FA6500;
+  background-color: #9466FF;
 }
 
 .s-type-1 .s-nav label::before {
@@ -477,7 +559,8 @@ html {
 }
 
 .contato {
-  background: white;
+  background: #121214;
+  border-top: 1px solid #29292D;
   display: grid;
 }
 .contato .titulo {
@@ -508,19 +591,19 @@ html {
 .contactLinks li {
   font-size: 18px;
   font-weight: 500;
-  color: #FA6500;
+  color: #9466FF;
   line-height: 30px;
 }
 .contactLinks a {
   text-decoration: none;
-  color: #215E98;
+  color: #121214;
   font-size: 24px;
   font-weight: 500;
 }
 
 .rodape {
   height: 50px;
-  background: #031641;
+  background: #09090A;
   display: grid;
   align-items: center;
 }
@@ -530,11 +613,26 @@ html {
   letter-spacing: 1px;
   font-size: 14px;
 }
+.rodape p b {
+  color: #9466FF;
+}
 
 @media (max-width: 1200px) {
   .container {
     width: 750px;
     transition: 500ms;
+  }
+
+  #logo {
+    width: 70px;
+    margin: 0 0 0 50px;
+  }
+
+  .menu {
+    margin-right: 30px;
+  }
+  .menu a {
+    padding: 10px 10px;
   }
 
   .citacao {
@@ -564,17 +662,16 @@ html {
     height: 80px;
   }
 
-  .menu {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 0 20px 10px;
-  }
-  .menu a {
-    margin: 0;
+  #logo {
+    width: 60px;
+    margin: 0 0 0 40px;
   }
 
-  .contact {
-    margin: 0 auto;
+  .menu {
+    margin-right: 30px;
+  }
+  .menu a {
+    padding: 5px 5px;
   }
 
   .flexSkill {
@@ -588,7 +685,7 @@ html {
 @media (max-width: 760px) {
   .container {
     transition: 500ms;
-    width: 420px;
+    width: 620px;
     transition: 500ms;
     justify-content: center;
   }
@@ -597,8 +694,16 @@ html {
     height: 120px;
   }
 
-  .contact {
-    margin-bottom: 20px;
+  #logo {
+    width: 60px;
+    margin: 0 30px 0 40px;
+  }
+
+  .menu {
+    margin-right: 30px;
+  }
+  .menu a {
+    padding: 5px 5px;
   }
 
   .presentation {
@@ -639,6 +744,71 @@ html {
     transition: 500ms;
     width: 100%;
     transition: 500ms;
+  }
+
+  .navegador {
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #logo {
+    width: 80px;
+    margin: 0 0 0 0;
+    padding: 5px;
+  }
+
+  .menu {
+    margin-right: 30px;
+  }
+  .menu a {
+    padding: 5px 5px;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  .banner {
+    height: 350px;
+  }
+
+  .presentation {
+    display: none;
+  }
+
+  .citacao {
+    width: 300px;
+    margin-top: 40px;
+  }
+
+  .networks {
+    display: flex;
+    margin-bottom: 80px;
+  }
+  .networks img {
+    height: 35px;
+    margin: 54px 16px 0 16px;
+  }
+
+  .contactLinks {
+    width: 300px;
+    height: 150px;
+    display: flex;
+  }
+  .contactLinks ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contactLinks span {
+    display: none;
+  }
+  .contactLinks img {
+    display: block;
+    margin: 25px;
+    height: 40px;
   }
 }
 

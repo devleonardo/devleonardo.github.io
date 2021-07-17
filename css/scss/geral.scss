@@ -1,5 +1,5 @@
 body {
-    background: #031641;
+    background: $darkgrey;
     font-family: 'Poppins', sans-serif;
 }
 .container {
@@ -10,20 +10,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.titulo h2{
-    font-size: 24px;
-    font-weight: 600;
-    margin: 100px 0 0 0;
-    color: #031641;
-}
-.titulo::after{
-    content: "";
-    display: block;
-    width: 40px;
-    height: 4px;
-    background: #FA6500;
-    margin: 0 0 25px 0;
-}
+@include title;
 
 @-webkit-keyframes fadeIn {
     0% { opacity: 0; }

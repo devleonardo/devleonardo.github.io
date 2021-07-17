@@ -1,3 +1,9 @@
+@import "variavesemixin";
+
+#logo {
+    width: 70px;
+    margin: 0 0 0 96px;
+}
 .navegador {
     position: fixed;
     height: 80px;
@@ -14,22 +20,17 @@
 .menuFixo {
     position: fixed;
     top: 0px;
-    background-color: #03164181;
+    background-color: $gray;
     transition: 500ms;
 }
 
 .menu {
     display: flex;
-    margin: 0 0 0 75px-9;
+    margin-right: 65px;
     a {
-        //background: chartreuse;
         padding: 10px 20px;
         margin: 0 10px;
     }
-    li:not(:last-child) {
-        margin-right: 20px;
-    }
-    
 }
 
 .target {
@@ -44,16 +45,6 @@
 .target {
     transition: all .35s ease-in-out;
 }
-
-.contact {
-    background: #FA6500;
-    width: 100px;
-    height: 35px;
-    margin: 0 96px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    a {
-        font-weight: 700;
-    }
+#btn-mobile{
+    display: none;
 }

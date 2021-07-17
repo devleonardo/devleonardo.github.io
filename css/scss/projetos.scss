@@ -1,5 +1,6 @@
 .projetos {
-    background: #F6F6F6;
+    background: $gray;
+    border-top: 1px solid $line;
     display: grid;
     .titulo {
         text-align: center;

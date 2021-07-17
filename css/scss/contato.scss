@@ -1,5 +1,6 @@
 .contato {
-    background: white;
+    background: $gray;
+    border-top: 1px solid $line;
     display: grid;
     .titulo {
         text-align: center;
@@ -29,12 +30,12 @@
     li {
         font-size: 18px;
         font-weight: 500;
-        color: #FA6500;
+        color: $lilac;
         line-height: 30px;
     }
     a {
         text-decoration: none;
-        color: #215E98;
+        color: $gray;
         font-size: 24px;
         font-weight: 500;
     }
