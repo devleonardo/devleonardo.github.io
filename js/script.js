@@ -59,5 +59,3 @@ function typeWriter(elemento) {
 
 const titulo = document.querySelector('.subtitulo h2');
 typeWriter(titulo);
-
-// BOTÃO MOBILE

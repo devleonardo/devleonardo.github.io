@@ -113,37 +113,66 @@
       transition: 500ms;
     }
     .navegador {
-        height: 60px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        display: none;
     }
-    // #btn-mobile{
-    //     display: block;
-    //     background: none;
-    //     border: none;
-    //     color: $lilac;
-    //     font-size: 30px;
-    // }
-    #logo {
-        width: 80px;
-        margin: 0 0 0 0;
-        padding: 5px;
-    }
-    .menu {
-        margin-right: 30px;
-        a {
-            padding: 5px 5px;
+    #menu-mobile{
+        display: block;
+        #check{
+            display: none;
+        }
+        #icone{
+            cursor: pointer;
+            padding: 15px;
+            position: fixed;
+            z-index: 2;
+            color: $lilac;
+            font-size: 36px;
+        }
+        .barra{
+            background: #09090ae0;
+            height: 100%;
+            width: 300px;
+            position: fixed;
+            transition: all .2s linear;
+            left: -300px;
+            z-index: 1;
+        }
+        nav{
+            width: 100%;
+            position: absolute;
+            top: 85px;
+            display: grid;
+            grid-template-columns: 1fr;
+            a{
+                text-decoration: none;
+                background: $gray;
+                padding: 20px;
+                font-size: 14pt;
+                transition: .2s linear;
+                color: white;
+                border-bottom: 2px solid $darkgrey;
+                opacity: 0;
+                margin-top: 200px;
+                :hover{
+                    background: $lilac;
+                }
+            }
+        }
+        #check:checked ~ .barra{
+            transform: translateX(300px);
+            nav a{
+                opacity: 1;
+                margin-top: 0;
+                transition-delay: .2s;
+            }
         }
     }
-    #nav{
-        display: none;
-    }
     .banner{
-        height: 350px;
+        height: 400px;
     }
     .presentation{
-        display: none;
+        font-size: 36px;
+        margin-top: 0px;
     }
     .citacao{
         width: 300px;
