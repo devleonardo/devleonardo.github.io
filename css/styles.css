@@ -808,8 +808,13 @@ html {
     margin-bottom: 30px;
   }
 
+  .networks {
+    display: flex;
+    justify-content: center;
+  }
   .networks img {
-    margin: 70px 0 0 33px;
+    height: 35px;
+    margin: 54px 20px 0 20px;
   }
 
   .contactLinks {
@@ -917,11 +922,11 @@ html {
 
   .networks {
     display: flex;
-    margin: 0 0 80px 50px;
+    justify-content: center;
   }
   .networks img {
     height: 35px;
-    margin: 54px 16px 0 16px;
+    margin: 54px 20px 0 20px;
   }
 
   .flexSkill li {
@@ -946,6 +951,14 @@ html {
     display: block;
     margin: 25px;
     height: 40px;
+  }
+
+  .rodape {
+    width: 300px;
+    height: 80px;
+  }
+  .rodape p {
+    font-size: 14px;
   }
 }
 
