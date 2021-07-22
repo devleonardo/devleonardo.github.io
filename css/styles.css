@@ -653,25 +653,67 @@ html {
 }
 @media (max-width: 940px) {
   .container {
-    width: 580px;
+    width: 100%;
     transition: 500ms;
     grid-template-columns: 1fr;
   }
 
   .navegador {
-    height: 80px;
+    display: none;
   }
 
-  #logo {
-    width: 60px;
-    margin: 0 0 0 40px;
+  #menu-mobile {
+    display: block;
   }
-
-  .menu {
-    margin-right: 30px;
+  #menu-mobile #check {
+    display: none;
   }
-  .menu a {
-    padding: 5px 5px;
+  #menu-mobile #icone {
+    cursor: pointer;
+    padding: 15px;
+    margin: -14px 0 0 0;
+    position: fixed;
+    z-index: 2;
+    color: #9466FF;
+    font-size: 36px;
+  }
+  #menu-mobile .barra {
+    background: #09090ae0;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    transition: all 0.2s linear;
+    left: -300px;
+    z-index: 1;
+  }
+  #menu-mobile nav {
+    width: 100%;
+    position: absolute;
+    top: 85px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #menu-mobile nav a {
+    text-decoration: none;
+    background: #121214;
+    padding: 20px;
+    font-size: 14pt;
+    transition: 0.2s linear;
+    color: white;
+    border-bottom: 2px solid #09090A;
+    opacity: 0;
+    margin-top: 200px;
+  }
+  #menu-mobile nav a :hover {
+    background: #9466FF;
+  }
+  #menu-mobile #check:checked ~ .barra {
+    transform: translateX(300px);
+  }
+  #menu-mobile #check:checked ~ .barra nav a {
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: 0.2s;
   }
 
   .flexSkill {
@@ -685,25 +727,67 @@ html {
 @media (max-width: 760px) {
   .container {
     transition: 500ms;
-    width: 620px;
+    width: 100%;
     transition: 500ms;
     justify-content: center;
   }
 
   .navegador {
-    height: 120px;
+    display: none;
   }
 
-  #logo {
-    width: 60px;
-    margin: 0 30px 0 40px;
+  #menu-mobile {
+    display: block;
   }
-
-  .menu {
-    margin-right: 30px;
+  #menu-mobile #check {
+    display: none;
   }
-  .menu a {
-    padding: 5px 5px;
+  #menu-mobile #icone {
+    cursor: pointer;
+    padding: 15px;
+    margin: -14px 0 0 0;
+    position: fixed;
+    z-index: 2;
+    color: #9466FF;
+    font-size: 36px;
+  }
+  #menu-mobile .barra {
+    background: #09090ae0;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    transition: all 0.2s linear;
+    left: -300px;
+    z-index: 1;
+  }
+  #menu-mobile nav {
+    width: 100%;
+    position: absolute;
+    top: 85px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #menu-mobile nav a {
+    text-decoration: none;
+    background: #121214;
+    padding: 20px;
+    font-size: 14pt;
+    transition: 0.2s linear;
+    color: white;
+    border-bottom: 2px solid #09090A;
+    opacity: 0;
+    margin-top: 200px;
+  }
+  #menu-mobile nav a :hover {
+    background: #9466FF;
+  }
+  #menu-mobile #check:checked ~ .barra {
+    transform: translateX(300px);
+  }
+  #menu-mobile #check:checked ~ .barra nav a {
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: 0.2s;
   }
 
   .presentation {
