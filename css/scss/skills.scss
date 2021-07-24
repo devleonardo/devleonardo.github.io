@@ -30,7 +30,7 @@
         align-items: center;
         width: 200px;
         height: 100px;
-        background: linear-gradient(180deg, rgba(32,32,36,1) 0%, rgba(21,21,23,1) 93%);
+        background: $darkgrey;
         margin: 15px 10px 15px 10px;
         font-size: 24px;
         font-weight: 700;
@@ -44,7 +44,7 @@
     :nth-child(1){
         hr{
             @include hr;
-            background: linear-gradient(90deg, rgba(251,148,31,1) 0%, rgba(251,148,31,0.4) 93%); 
+            background: #FB941F; 
         }
         span{
             color:#FB941F;
@@ -54,7 +54,7 @@
     :nth-child(2){
         hr{
             @include hr;
-            background: linear-gradient(90deg, rgba(69,138,203,1) 0%, rgba(69,138,203,0.4) 93%); 
+            background: #458ACB; 
         }
         span{
             color:#458ACB;
@@ -64,7 +64,7 @@
     :nth-child(3){
         hr{
             @include hr;
-            background: linear-gradient(90deg, rgba(207,100,154,1) 0%, rgba(207,100,154,0.4) 93%); 
+            background: #CF649A; 
         }
         span{
             color:#CF649A;
@@ -74,7 +74,7 @@
     :nth-child(4){
         hr{
             @include hr;
-            background: linear-gradient(90deg, rgba(225,189,0,1) 0%, rgba(225,189,0,0.4) 93%); 
+            background: #E1BD00; 
 
         }
         span{
@@ -85,7 +85,7 @@
     :nth-child(5){
         hr{
             @include hr;
-            background: linear-gradient(90deg, rgba(129,86,228) 0%, rgba(129,86,228, 0.4) 93%); 
+            background: #8156E4; 
         }
         span{
             color:#8156E4;
@@ -95,27 +95,37 @@
     :nth-child(6){
         hr{
             @include hr;
-            background: linear-gradient(90deg, rgba(33,94,152,1) 0%, rgba(33,94,152,0.4) 93%); 
+            background: #e94e31;
         }
         span{
-            color:#215E98;
+            color:#e94e31;
             margin-top: -20px;
         }
     }
     :nth-child(7){
         hr{
             @include hr;
-            background: linear-gradient(90deg, rgba(231,63,90,1) 0%, rgba(231,63,90,0.4) 93%); 
+            background: #215E98; 
         }
         span{
-            color:#E73F5A;
+            color:#215E98;
             margin-top: -20px;
         }
     }
     :nth-child(8){
         hr{
             @include hr;
-            background: linear-gradient(90deg, rgba(4,206,95,1) 0%, rgba(4,206,95,0.4) 93%); 
+            background: #E73F5A; 
+        }
+        span{
+            color:#E73F5A;
+            margin-top: -20px;
+        }
+    }
+    :nth-child(9){
+        hr{
+            @include hr;
+            background: #04CE5F; 
         }
         span{
             color:#04CE5F;
