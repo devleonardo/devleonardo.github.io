@@ -81,8 +81,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 .banner {
-  background: url(/img/background.jpg) no-repeat;
-  background-size: cover;
+  background: url(/img/background.webp);
   height: 512px;
   text-align: center;
   display: grid;
@@ -175,7 +174,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 body {
-  background: #09090A;
+  background: url(/img/Polygon.svg) fixed;
   font-family: "Poppins", sans-serif;
 }
 
@@ -445,23 +444,23 @@ html {
 }
 
 .s-wrap .s-item-1 {
-  background-image: url("/img/aliança.jpg");
+  background-image: url("/img/aliança.webp");
 }
 
 .s-wrap .s-item-2 {
-  background-image: url("/img/acompanhantes.jpg");
+  background-image: url("/img/acompanhantes.webp");
 }
 
 .s-wrap .s-item-3 {
-  background-image: url("/img/bikcraft.jpg");
+  background-image: url("/img/bikcraft.webp");
 }
 
 .s-wrap .s-item-4 {
-  background-image: url("/img/lescone.jpg");
+  background-image: url("/img/lescone.webp");
 }
 
 .s-wrap .s-item-5 {
-  background-image: url("/img/login.jpg");
+  background-image: url("/img/login.webp");
 }
 
 .s-type-1 .s-control {
@@ -614,7 +613,7 @@ html {
 
 .rodape {
   height: 50px;
-  background: #09090A;
+  background: none;
   display: grid;
   align-items: center;
 }
