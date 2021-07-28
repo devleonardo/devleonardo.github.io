@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 body {
-  background: url(/img/Polygon.svg) fixed #9466FF;
+  background: url(/img/Polygon.svg) fixed #070616;
   font-family: "Poppins", sans-serif;
 }
 
@@ -675,19 +675,20 @@ html {
   #menu-mobile #icone {
     cursor: pointer;
     padding: 15px;
-    margin: -14px 0 0 0;
+    margin: 5px 0 0 5px;
     position: fixed;
     z-index: 2;
-    color: #9466FF;
-    font-size: 36px;
+  }
+  #menu-mobile #icone img {
+    width: 40px;
   }
   #menu-mobile .barra {
-    background: #09090ae0;
+    background: #070616f8;
     height: 100%;
-    width: 300px;
+    width: 100%;
     position: fixed;
     transition: all 0.2s linear;
-    left: -300px;
+    left: -100%;
     z-index: 1;
   }
   #menu-mobile nav {
@@ -699,20 +700,20 @@ html {
   }
   #menu-mobile nav a {
     text-decoration: none;
-    padding: 20px;
-    font-size: 14pt;
+    padding: 30px;
+    font-size: 26pt;
+    letter-spacing: 5px;
     transition: 0.2s linear;
     color: white;
-    border-bottom: 2px solid #9466FF;
+    text-align: center;
     opacity: 0;
     margin-top: 200px;
   }
   #menu-mobile nav :last-child {
-    width: 200px;
-    border: none;
+    height: 50px;
   }
   #menu-mobile #check:checked ~ .barra {
-    transform: translateX(300px);
+    transform: translateX(100%);
   }
   #menu-mobile #check:checked ~ .barra nav a {
     opacity: 1;
@@ -753,19 +754,20 @@ html {
   #menu-mobile #icone {
     cursor: pointer;
     padding: 15px;
-    margin: -14px 0 0 0;
+    margin: 5px 0 0 5px;
     position: fixed;
     z-index: 2;
-    color: #9466FF;
-    font-size: 36px;
+  }
+  #menu-mobile #icone img {
+    width: 40px;
   }
   #menu-mobile .barra {
-    background: #09090ae0;
+    background: #070616f8;
     height: 100%;
-    width: 300px;
+    width: 100%;
     position: fixed;
     transition: all 0.2s linear;
-    left: -300px;
+    left: -100%;
     z-index: 1;
   }
   #menu-mobile nav {
@@ -777,20 +779,20 @@ html {
   }
   #menu-mobile nav a {
     text-decoration: none;
-    padding: 20px;
-    font-size: 14pt;
+    padding: 30px;
+    font-size: 26pt;
+    letter-spacing: 5px;
     transition: 0.2s linear;
     color: white;
-    border-bottom: 2px solid #9466FF;
+    text-align: center;
     opacity: 0;
     margin-top: 200px;
   }
   #menu-mobile nav :last-child {
-    width: 200px;
-    border: none;
+    height: 50px;
   }
   #menu-mobile #check:checked ~ .barra {
-    transform: translateX(300px);
+    transform: translateX(100%);
   }
   #menu-mobile #check:checked ~ .barra nav a {
     opacity: 1;
@@ -838,19 +840,20 @@ html {
   #menu-mobile #icone {
     cursor: pointer;
     padding: 15px;
-    margin: -14px 0 0 0;
+    margin: 5px 0 0 5px;
     position: fixed;
     z-index: 2;
-    color: #9466FF;
-    font-size: 36px;
+  }
+  #menu-mobile #icone img {
+    width: 40px;
   }
   #menu-mobile .barra {
-    background: #09090ae0;
+    background: #070616f8;
     height: 100%;
-    width: 300px;
+    width: 100%;
     position: fixed;
     transition: all 0.2s linear;
-    left: -300px;
+    left: -100%;
     z-index: 1;
   }
   #menu-mobile nav {
@@ -862,20 +865,20 @@ html {
   }
   #menu-mobile nav a {
     text-decoration: none;
-    padding: 20px;
-    font-size: 14pt;
+    padding: 30px;
+    font-size: 26pt;
+    letter-spacing: 5px;
     transition: 0.2s linear;
     color: white;
-    border-bottom: 2px solid #9466FF;
+    text-align: center;
     opacity: 0;
     margin-top: 200px;
   }
   #menu-mobile nav :last-child {
-    width: 200px;
-    border: none;
+    height: 50px;
   }
   #menu-mobile #check:checked ~ .barra {
-    transform: translateX(300px);
+    transform: translateX(100%);
   }
   #menu-mobile #check:checked ~ .barra nav a {
     opacity: 1;
@@ -944,7 +947,6 @@ html {
   .rodape {
     width: 300px;
     height: 80px;
-    background: #070616;
   }
   .rodape p {
     font-size: 14px;
