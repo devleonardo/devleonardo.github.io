@@ -2,10 +2,5 @@
     background: $gray;
     border-top: 1px solid $line;
     display: grid;
-    .titulo {
-        text-align: center;
-    }
-    .titulo::after {
-        margin: 0px auto;
-    }
+    padding: 80px 0 80px 0;
 }

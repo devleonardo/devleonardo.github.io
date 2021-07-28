@@ -32,17 +32,18 @@
         grid-template-columns: 1fr;
         a{
             text-decoration: none;
-            background: $gray;
+            // background: $gray;
             padding: 20px;
             font-size: 14pt;
             transition: .2s linear;
             color: white;
-            border-bottom: 2px solid $darkgrey;
+            border-bottom: 2px solid $lilac;
             opacity: 0;
             margin-top: 200px;
-            :hover{
-                background: $lilac;
-            }
+        }
+        :last-child{
+            width: 200px;
+            border: none;
         }
     }
     #check:checked ~ .barra{

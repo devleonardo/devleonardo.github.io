@@ -1,32 +1,41 @@
 @import "variavesemixin";
 
+#start{
+    background: $darkgrey;
+}
+
 #logo {
     width: 70px;
-    margin: 0 0 0 96px;
 }
 
 .navegador {
     position: fixed;
     height: 80px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     a {
         color: white;
     }
     z-index: 10;
+    .mynav{
+        margin: 0 0 0 567px;
+    }
+    a img{
+        height: 40px;
+        margin-right: 0;
+    }
 }
 
 .menuFixo {
     position: fixed;
     top: 0px;
-    background-color: #09090ab6;
+    background-color: #09090ae5;
     transition: 500ms;
 }
 .menu {
     display: flex;
-    margin-right: 65px;
+    margin-right: 20px;
     a {
         padding: 10px 20px;
         margin: 0 10px;

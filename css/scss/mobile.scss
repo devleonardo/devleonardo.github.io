@@ -3,12 +3,13 @@
       width: 750px;
       transition: 500ms;
     }
-
-    #logo {
-        margin: 0 0 0 50px;
+    .navegador{
+        .mynav{
+            margin: 0 0 0 237px;
+        }
     }
     .menu {
-        margin-right: 30px;
+        margin-right: 20px;
         a {
             padding: 10px 10px;
         }
@@ -35,6 +36,9 @@
       grid-template-columns: 1fr; 
     }
     @import 'menumobile';
+    .description .sobre{
+        width: 600px;
+    }
     .flexSkill {
         margin: 0 20px 0 20px;
     }
@@ -53,26 +57,10 @@
     @import 'menumobile';
     .presentation {
         font-size: 36px;
-        margin-top: 120px;
     }
     .citacao {
         margin-top: 100px;
         text-align: center;
-    }
-    .description {
-        text-align: center;
-        .titulo::after {
-            margin: 0px auto;
-            margin-bottom: 30px;
-        }
-    }
-    .networks{
-        display: flex;
-        justify-content: center;
-        img {
-            height: 35px;
-            margin: 54px 20px 0 20px;
-        }
     }
     .contactLinks{
         width: 400px;
@@ -117,11 +105,9 @@
         margin: 30px;
     }
     .networks{
-        display: flex;
-        justify-content: center;
+        margin: 0 auto;
         img {
-            height: 35px;
-            margin: 54px 20px 0 20px;
+            margin: 60px 30px 0 30px;
         }
     }
     .flexSkill{

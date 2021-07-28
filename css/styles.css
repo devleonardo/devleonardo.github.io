@@ -29,16 +29,18 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   font-weight: normal;
 }
 
+#start {
+  background: #09090A;
+}
+
 #logo {
   width: 70px;
-  margin: 0 0 0 96px;
 }
 
 .navegador {
   position: fixed;
   height: 80px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   z-index: 10;
@@ -46,17 +48,24 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 .navegador a {
   color: white;
 }
+.navegador .mynav {
+  margin: 0 0 0 567px;
+}
+.navegador a img {
+  height: 40px;
+  margin-right: 0;
+}
 
 .menuFixo {
   position: fixed;
   top: 0px;
-  background-color: #09090ab6;
+  background-color: #09090ae5;
   transition: 500ms;
 }
 
 .menu {
   display: flex;
-  margin-right: 65px;
+  margin-right: 20px;
 }
 .menu a {
   padding: 10px 20px;
@@ -81,7 +90,6 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 .banner {
-  background: url(/img/background.webp);
   height: 512px;
   text-align: center;
   display: grid;
@@ -136,12 +144,18 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 
 .about {
   background: #121214;
-  display: flex;
-  align-items: center;
+  padding: 80px 0 80px 0;
 }
 
 .description {
   margin-left: 96px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.description .sobre {
+  width: 500px;
+  margin-top: 70px;
 }
 .description .nome p {
   font-size: 18px;
@@ -159,14 +173,12 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 
 .about .profile {
   height: 370px;
-  margin-left: 100px;
-  margin-right: 96px;
+  margin: 60px 96px 0 50px;
   border-left: 4px solid #9466FF;
 }
 
 .networks {
   display: flex;
-  margin-bottom: 100px;
 }
 .networks img {
   height: 35px;
@@ -190,17 +202,17 @@ html {
 .titulo h2 {
   font-size: 24px;
   font-weight: 600;
-  margin: 100px 0 0 0;
+  margin: 0 0 0 96px;
   color: white;
 }
 
 .titulo::after {
   content: "";
   display: block;
-  width: 40px;
-  height: 4px;
+  width: 80px;
+  height: 1px;
   background: #9466FF;
-  margin: 0 0 25px 0;
+  margin: -18px 0 0 0;
 }
 
 @-webkit-keyframes fadeIn {
@@ -247,18 +259,12 @@ html {
   border-top: 1px solid #29292D;
   display: grid;
   align-items: center;
-}
-.skills .titulo {
-  text-align: center;
-}
-.skills .titulo::after {
-  margin: 0px auto;
+  padding: 80px 0 80px 0;
 }
 
 .gradeSkills {
   margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 120px;
+  margin-top: 70px;
 }
 
 .flexSkill {
@@ -388,12 +394,7 @@ html {
   background: #121214;
   border-top: 1px solid #29292D;
   display: grid;
-}
-.projetos .titulo {
-  text-align: center;
-}
-.projetos .titulo::after {
-  margin: 0px auto;
+  padding: 80px 0 80px 0;
 }
 
 *,
@@ -403,16 +404,16 @@ html {
 }
 
 .outer-wrapper {
-  width: 80%;
-  margin: 50px auto;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 70px;
 }
 
 .s-wrap {
   width: 100%;
-  margin-bottom: 50px;
   padding-bottom: 55%;
   position: relative;
-  border: 10px solid #fff;
+  border: 1px solid #9466FF;
   background-color: #efefe8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -432,7 +433,7 @@ html {
   height: 100%;
   font-size: 0;
   list-style: none;
-  transition: transform 1s;
+  transition: transform 1.5s;
 }
 
 .s-wrap .s-item {
@@ -572,12 +573,7 @@ html {
   background: #121214;
   border-top: 1px solid #29292D;
   display: grid;
-}
-.contato .titulo {
-  text-align: center;
-}
-.contato .titulo::after {
-  margin: 0px auto;
+  padding: 80px 0 80px 0;
 }
 
 .contactLinks {
@@ -585,8 +581,7 @@ html {
   height: 200px;
   background: white;
   margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 70px;
   border-radius: 3px;
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.068);
   padding: 10px 0 10px 0;
@@ -612,7 +607,7 @@ html {
 }
 
 .rodape {
-  height: 50px;
+  height: 70px;
   background: none;
   display: grid;
   align-items: center;
@@ -633,12 +628,12 @@ html {
     transition: 500ms;
   }
 
-  #logo {
-    margin: 0 0 0 50px;
+  .navegador .mynav {
+    margin: 0 0 0 237px;
   }
 
   .menu {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .menu a {
     padding: 10px 10px;
@@ -704,17 +699,17 @@ html {
   }
   #menu-mobile nav a {
     text-decoration: none;
-    background: #121214;
     padding: 20px;
     font-size: 14pt;
     transition: 0.2s linear;
     color: white;
-    border-bottom: 2px solid #09090A;
+    border-bottom: 2px solid #9466FF;
     opacity: 0;
     margin-top: 200px;
   }
-  #menu-mobile nav a :hover {
-    background: #9466FF;
+  #menu-mobile nav :last-child {
+    width: 200px;
+    border: none;
   }
   #menu-mobile #check:checked ~ .barra {
     transform: translateX(300px);
@@ -723,6 +718,10 @@ html {
     opacity: 1;
     margin-top: 0;
     transition-delay: 0.2s;
+  }
+
+  .description .sobre {
+    width: 600px;
   }
 
   .flexSkill {
@@ -778,17 +777,17 @@ html {
   }
   #menu-mobile nav a {
     text-decoration: none;
-    background: #121214;
     padding: 20px;
     font-size: 14pt;
     transition: 0.2s linear;
     color: white;
-    border-bottom: 2px solid #09090A;
+    border-bottom: 2px solid #9466FF;
     opacity: 0;
     margin-top: 200px;
   }
-  #menu-mobile nav a :hover {
-    background: #9466FF;
+  #menu-mobile nav :last-child {
+    width: 200px;
+    border: none;
   }
   #menu-mobile #check:checked ~ .barra {
     transform: translateX(300px);
@@ -801,29 +800,11 @@ html {
 
   .presentation {
     font-size: 36px;
-    margin-top: 120px;
   }
 
   .citacao {
     margin-top: 100px;
     text-align: center;
-  }
-
-  .description {
-    text-align: center;
-  }
-  .description .titulo::after {
-    margin: 0px auto;
-    margin-bottom: 30px;
-  }
-
-  .networks {
-    display: flex;
-    justify-content: center;
-  }
-  .networks img {
-    height: 35px;
-    margin: 54px 20px 0 20px;
   }
 
   .contactLinks {
@@ -881,17 +862,17 @@ html {
   }
   #menu-mobile nav a {
     text-decoration: none;
-    background: #121214;
     padding: 20px;
     font-size: 14pt;
     transition: 0.2s linear;
     color: white;
-    border-bottom: 2px solid #09090A;
+    border-bottom: 2px solid #9466FF;
     opacity: 0;
     margin-top: 200px;
   }
-  #menu-mobile nav a :hover {
-    background: #9466FF;
+  #menu-mobile nav :last-child {
+    width: 200px;
+    border: none;
   }
   #menu-mobile #check:checked ~ .barra {
     transform: translateX(300px);
@@ -930,12 +911,10 @@ html {
   }
 
   .networks {
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
   }
   .networks img {
-    height: 35px;
-    margin: 54px 20px 0 20px;
+    margin: 60px 30px 0 30px;
   }
 
   .flexSkill li {

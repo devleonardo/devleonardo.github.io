@@ -5,16 +5,16 @@
 }
 
 .outer-wrapper {
-  width: 80%;
-  margin: 50px auto;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 70px;
 }
 
 .s-wrap {
   width: 100%;
-  margin-bottom: 50px;
   padding-bottom: 55%;
   position: relative;
-  border: 10px solid #fff;
+  border: 1px solid $lilac;
   background-color: #efefe8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -32,7 +32,7 @@
   height: 100%;
   font-size: 0;
   list-style: none;
-  transition: transform 1s;
+  transition: transform 1.5s;
 }
 .s-wrap .s-item {
   display: inline-block;
