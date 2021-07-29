@@ -1,5 +1,5 @@
 body {
-    background: url(/img/Polygon.svg) fixed #070616;
+    background: url(/img/indice.webp) fixed $darkgrey;
     font-family: 'Poppins', sans-serif;
 }
 .container {
@@ -9,7 +9,6 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
 @include title;
 
 @-webkit-keyframes fadeIn {

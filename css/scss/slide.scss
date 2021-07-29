@@ -5,7 +5,7 @@
 }
 
 .outer-wrapper {
-  width: 70%;
+  width: 73%;
   margin: 0 auto;
   margin-top: 70px;
 }
@@ -15,7 +15,6 @@
   padding-bottom: 55%;
   position: relative;
   border: 1px solid $lilac;
-  background-color: #efefe8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
@@ -57,29 +56,10 @@
   background-image: url("/img/login.webp");
 }
 
-.s-type-1 .s-control {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  text-align: center;
-  transform: translateX(-50%);
-  transition-timing-function: ease-out;
-}
-.s-type-1 .s-control {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 10px;
-  border-radius: 50%;
-  border: 1px solid #999;
-  background-color: #efefe8;
-  cursor: pointer;
-}
 .s-type-1 .s-nav label {
   display: none;
   position: absolute;
   top: 50%;
-  padding: 5px 10px;
   transform: translateY(-50%);
   cursor: pointer;
 }

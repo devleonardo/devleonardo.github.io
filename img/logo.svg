@@ -1,17 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 162.76 75.31" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64 Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="24.5193mm" height="10.0163mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 78.59 32.1"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
  <defs>
   <style type="text/css">
-   
-    .str0 {stroke:#9466FF;stroke-width:1.14;stroke-miterlimit:22.9256}
-    .str1 {stroke:white;stroke-width:0.43;stroke-miterlimit:22.9256}
-    .fil0 {fill:#9466FF}
-    .fil1 {fill:white;fill-rule:nonzero}
-   
+   <![CDATA[
+    .fil0 {fill:#FF6600}
+    .fil1 {fill:white}
+   ]]>
   </style>
  </defs>
  <g id="Camada_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-  <path class="fil0 str0 logo-1" d="M114.93 0.57c20.48,0 37.09,16.6 37.09,37.09 0,20.48 -16.6,37.09 -37.09,37.09 -20.48,0 -37.09,-16.6 -37.09,-37.09 0,-20.48 16.6,-37.09 37.09,-37.09zm0 23.45c7.53,0 13.64,6.11 13.64,13.64 0,7.53 -6.11,13.64 -13.64,13.64 -7.53,0 -13.64,-6.11 -13.64,-13.64 0,-7.53 6.11,-13.64 13.64,-13.64z" style="fill: rgb(148, 102, 255); stroke-dasharray: 320.786px; stroke-dashoffset: 0px; transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;"></path>
-  <path class="fil1 str1 logo-2" d="M11.33 61.59l18.26 0 0 8.81 -29.37 0 0 -55.4 11.11 0 0 46.59zm144.47 7.78c-2.01,0 -3.66,-0.62 -4.96,-1.87 -1.3,-1.24 -1.94,-2.79 -1.94,-4.64 0,-1.85 0.65,-3.4 1.94,-4.64 1.3,-1.24 2.95,-1.87 4.96,-1.87 1.96,0 3.57,0.62 4.84,1.87 1.27,1.24 1.9,2.79 1.9,4.64 0,1.85 -0.64,3.4 -1.9,4.64 -1.27,1.24 -2.88,1.87 -4.84,1.87zm-82.23 -22.7c0,1.59 -0.11,3.02 -0.32,4.29l-32.15 0c0.26,3.17 1.38,5.66 3.33,7.46 1.96,1.8 4.37,2.7 7.22,2.7 4.13,0 7.06,-1.77 8.81,-5.32l11.99 0c-1.27,4.23 -3.7,7.71 -7.3,10.44 -3.6,2.72 -8.02,4.09 -13.26,4.09 -4.23,0 -8.03,-0.94 -11.39,-2.82 -3.36,-1.88 -5.98,-4.54 -7.86,-7.98 -1.88,-3.44 -2.82,-7.41 -2.82,-11.91 0,-4.55 0.93,-8.55 2.78,-11.99 1.85,-3.44 4.45,-6.09 7.78,-7.94 3.33,-1.85 7.17,-2.78 11.51,-2.78 4.18,0 7.92,0.9 11.23,2.7 3.31,1.8 5.87,4.35 7.7,7.66 1.83,3.31 2.74,7.1 2.74,11.39zm-11.51 -3.17c-0.05,-2.86 -1.08,-5.15 -3.1,-6.87 -2.01,-1.72 -4.47,-2.58 -7.38,-2.58 -2.75,0 -5.07,0.83 -6.95,2.5 -1.88,1.67 -3.03,3.98 -3.45,6.95l20.88 0zm-1.67 -29.45l-18.26 8.33 0 -7.94 18.26 -9.45 0 9.05z" style="fill: rgb(255, 255, 255); stroke-dasharray: 532.064px; stroke-dashoffset: 0px; transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;"></path>
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M59.62 5.53l11.38 0c4.18,0 7.6,3.42 7.6,7.6l0 11.38c0,4.18 -3.42,7.6 -7.6,7.6l-11.38 0c-4.18,0 -7.6,-3.42 -7.6,-7.6l0 -11.38c0,-4.18 3.42,-7.6 7.6,-7.6zm1.6 5.94l8.19 0c1.79,0 3.26,1.47 3.26,3.26l0 8.19c0,1.79 -1.47,3.26 -3.26,3.26l-8.19 0c-1.79,0 -3.26,-1.47 -3.26,-3.26l0 -8.19c0,-1.79 1.47,-3.26 3.26,-3.26z"/>
+  <path class="fil1" d="M26.7 26.17l21.23 0c0.38,0 0.69,0.37 0.69,0.81l0 4.31c0,0.45 -0.31,0.81 -0.69,0.81l-21.23 0c-0.38,0 -0.69,-0.37 -0.69,-0.81l0 -4.31c0,-0.45 0.31,-0.81 0.69,-0.81zm0 -20.63l21.23 0c0.38,0 0.69,0.37 0.69,0.81l0 4.31c0,0.45 -0.31,0.81 -0.69,0.81l-21.23 0c-0.38,0 -0.69,-0.37 -0.69,-0.81l0 -4.31c0,-0.45 0.31,-0.81 0.69,-0.81zm0 10.32l21.23 0c0.38,0 0.69,0.37 0.69,0.81l0 4.31c0,0.45 -0.31,0.81 -0.69,0.81l-21.23 0c-0.38,0 -0.69,-0.37 -0.69,-0.81l0 -4.31c0,-0.45 0.31,-0.81 0.69,-0.81z"/>
+  <path class="fil1" d="M6.75 26.17l15.05 0c0.45,0 0.81,0.37 0.81,0.81l0 4.31c0,0.45 -0.37,0.81 -0.81,0.81l-20.99 0c-0.45,0 -0.81,-0.37 -0.81,-0.81l0 -24.95c0,-0.45 0.37,-0.81 0.81,-0.81l4.31 0c0.45,0 0.81,0.37 0.81,0.81l0 19.01c0,0.45 0.37,0.81 0.81,0.81z"/>
+  <path class="fil0" d="M29.74 3.99l13.37 -3.96c0.31,-0.09 0.65,0.13 0.75,0.49l1.03 3.47 -15.16 0z"/>
  </g>
 </svg>

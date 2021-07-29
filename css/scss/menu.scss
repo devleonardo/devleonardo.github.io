@@ -1,9 +1,5 @@
 @import "variavesemixin";
 
-#start{
-    background: $darkgrey;
-}
-
 #logo {
     width: 70px;
 }
@@ -14,10 +10,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    z-index: 10;
     a {
         color: white;
     }
-    z-index: 10;
     .mynav{
         margin: 0 0 0 567px;
     }
@@ -29,8 +25,9 @@
 
 .menuFixo {
     position: fixed;
+    width: 100%;
     top: 0px;
-    background-color: #09090ae5;
+    background-color: #09090af6;
     transition: 500ms;
 }
 .menu {

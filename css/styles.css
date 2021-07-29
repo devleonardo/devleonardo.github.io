@@ -29,10 +29,6 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   font-weight: normal;
 }
 
-#start {
-  background: #09090A;
-}
-
 #logo {
   width: 70px;
 }
@@ -58,8 +54,9 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 
 .menuFixo {
   position: fixed;
+  width: 100%;
   top: 0px;
-  background-color: #09090ae5;
+  background-color: #09090af6;
   transition: 500ms;
 }
 
@@ -105,7 +102,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   font-weight: 600;
 }
 .presentation span {
-  color: #9466FF;
+  color: #ff6600;
 }
 
 .subtitulo {
@@ -143,7 +140,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 .about {
-  background: #121214;
+  background: #131219;
   padding: 80px 0 80px 0;
 }
 
@@ -155,7 +152,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 .description .sobre {
   width: 500px;
-  margin-top: 70px;
+  margin-top: 60px;
 }
 .description .nome p {
   font-size: 18px;
@@ -174,7 +171,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 .about .profile {
   height: 370px;
   margin: 60px 96px 0 50px;
-  border-left: 4px solid #9466FF;
+  border-left: 4px solid #ff6600;
 }
 
 .networks {
@@ -186,7 +183,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 body {
-  background: url(/img/Polygon.svg) fixed #070616;
+  background: url(/img/indice.webp) fixed #09090A;
   font-family: "Poppins", sans-serif;
 }
 
@@ -200,7 +197,7 @@ html {
 }
 
 .titulo h2 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
   margin: 0 0 0 96px;
   color: white;
@@ -211,8 +208,8 @@ html {
   display: block;
   width: 80px;
   height: 1px;
-  background: #9466FF;
-  margin: -18px 0 0 0;
+  background: #ff6600;
+  margin-top: -21px;
 }
 
 @-webkit-keyframes fadeIn {
@@ -255,7 +252,7 @@ html {
 }
 
 .skills {
-  background: #121214;
+  background: #131219;
   border-top: 1px solid #29292D;
   display: grid;
   align-items: center;
@@ -391,7 +388,7 @@ html {
 }
 
 .projetos {
-  background: #121214;
+  background: #131219;
   border-top: 1px solid #29292D;
   display: grid;
   padding: 80px 0 80px 0;
@@ -404,7 +401,7 @@ html {
 }
 
 .outer-wrapper {
-  width: 70%;
+  width: 73%;
   margin: 0 auto;
   margin-top: 70px;
 }
@@ -413,8 +410,7 @@ html {
   width: 100%;
   padding-bottom: 55%;
   position: relative;
-  border: 1px solid #9466FF;
-  background-color: #efefe8;
+  border: 1px solid #ff6600;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
@@ -464,31 +460,10 @@ html {
   background-image: url("/img/login.webp");
 }
 
-.s-type-1 .s-control {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  text-align: center;
-  transform: translateX(-50%);
-  transition-timing-function: ease-out;
-}
-
-.s-type-1 .s-control {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 10px;
-  border-radius: 50%;
-  border: 1px solid #999;
-  background-color: #efefe8;
-  cursor: pointer;
-}
-
 .s-type-1 .s-nav label {
   display: none;
   position: absolute;
   top: 50%;
-  padding: 5px 10px;
   transform: translateY(-50%);
   cursor: pointer;
 }
@@ -570,7 +545,7 @@ html {
 }
 
 .contato {
-  background: #121214;
+  background: #131219;
   border-top: 1px solid #29292D;
   display: grid;
   padding: 80px 0 80px 0;
@@ -596,12 +571,12 @@ html {
 .contactLinks li {
   font-size: 18px;
   font-weight: 500;
-  color: #9466FF;
+  color: #ff6600;
   line-height: 30px;
 }
 .contactLinks a {
   text-decoration: none;
-  color: #121214;
+  color: #131219;
   font-size: 24px;
   font-weight: 500;
 }
@@ -619,7 +594,7 @@ html {
   font-size: 14px;
 }
 .rodape p b {
-  color: #9466FF;
+  color: #ff6600;
 }
 
 @media (max-width: 1200px) {
@@ -680,10 +655,10 @@ html {
     z-index: 2;
   }
   #menu-mobile #icone img {
-    width: 40px;
+    width: 30px;
   }
   #menu-mobile .barra {
-    background: #070616f8;
+    background: #09090afa;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -711,6 +686,7 @@ html {
   }
   #menu-mobile nav :last-child {
     height: 50px;
+    border: none;
   }
   #menu-mobile #check:checked ~ .barra {
     transform: translateX(100%);
@@ -759,10 +735,10 @@ html {
     z-index: 2;
   }
   #menu-mobile #icone img {
-    width: 40px;
+    width: 30px;
   }
   #menu-mobile .barra {
-    background: #070616f8;
+    background: #09090afa;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -790,6 +766,7 @@ html {
   }
   #menu-mobile nav :last-child {
     height: 50px;
+    border: none;
   }
   #menu-mobile #check:checked ~ .barra {
     transform: translateX(100%);
@@ -845,10 +822,10 @@ html {
     z-index: 2;
   }
   #menu-mobile #icone img {
-    width: 40px;
+    width: 30px;
   }
   #menu-mobile .barra {
-    background: #070616f8;
+    background: #09090afa;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -876,6 +853,7 @@ html {
   }
   #menu-mobile nav :last-child {
     height: 50px;
+    border: none;
   }
   #menu-mobile #check:checked ~ .barra {
     transform: translateX(100%);

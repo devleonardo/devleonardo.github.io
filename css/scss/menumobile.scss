@@ -13,11 +13,11 @@
         position: fixed;
         z-index: 2;
         img{
-            width: 40px;
+            width: 30px;
         }
     }
     .barra{
-        background: #070616f8;
+        background: #09090afa;
         height: 100%;
         width: 100%;
         position: fixed;
@@ -44,6 +44,7 @@
         }
         :last-child{
             height: 50px;
+            border: none;
         }
     }
     #check:checked ~ .barra{
