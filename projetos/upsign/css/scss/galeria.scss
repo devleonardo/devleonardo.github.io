@@ -1,0 +1,15 @@
+#galeria{
+    width: 100%;
+    background: $cinza;
+    .galeria{
+        margin: 0 auto;
+        padding: 100px 0 100px 0;
+    }
+    .titulo h3{
+        margin: 0 0 30px 0;
+        font-size: 30px;
+        font-weight: 600;
+        color: $azul;
+    }
+}
+

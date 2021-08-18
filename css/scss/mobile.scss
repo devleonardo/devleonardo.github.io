@@ -27,6 +27,9 @@
     .about .profile{
         display: none;
     }
+    .slide{
+        width: 560px;
+    }
 }
   
 @media (max-width: 940px) {
@@ -45,13 +48,15 @@
     .contactLinks {
         width: 500px;
     }
+    .slide{
+        width: 700px;
+    }
 }
   
 @media(max-width: 760px) {
     .container {
       transition: 500ms;
       width: 100%;
-      transition: 500ms;
       justify-content: center;
     }
     @import 'menumobile';
@@ -72,13 +77,21 @@
             display: none;
         }
     }
+    .slide{
+        width: 540px;
+    }
+}
+
+@media(max-width: 550px) {
+    .slide{
+        width: 400px;
+    }
 }
   
 @media(max-width: 460px) {
     .container {
       transition: 500ms;
       width: 100%;
-      transition: 500ms;
     }
     @import 'menumobile';
     .banner{
@@ -110,6 +123,9 @@
             margin: 60px 30px 0 30px;
         }
     }
+    .slide{
+        width: 380px;
+    }
     .flexSkill{
         li{
             width: 150px;
@@ -140,5 +156,11 @@
         p{
             font-size: 14px;
         }
+    }
+}
+
+@media(max-width: 420px) {
+    .slide{
+        width: 300px;
     }
 }
