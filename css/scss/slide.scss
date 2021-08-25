@@ -2,9 +2,19 @@
   margin-top: 70px;
   button{
     width: 50px;
-    height: 100px;
+    height: 70px;
     i{
       font-size: 40px;
     }
   }
+}
+
+.w3-button{
+  color: #fff !important;
+  background-color: $lilac !important;
+}
+
+.w3-button:hover {
+  color: $lilac !important;
+  background-color: #fff !important;
 }

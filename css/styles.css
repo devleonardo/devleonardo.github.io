@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 #logo {
-  width: 70px;
+  width: 140px;
 }
 
 .navegador {
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   color: white;
 }
 .navegador .mynav {
-  margin: 0 0 0 567px;
+  margin: 0 0 0 507px;
 }
 .navegador a img {
   height: 40px;
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   font-weight: 600;
 }
 .presentation span {
-  color: #ff6600;
+  color: #FF725E;
 }
 
 .subtitulo {
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 .about .profile {
   height: 370px;
   margin: 60px 96px 0 50px;
-  border-left: 4px solid #ff6600;
+  border-left: 4px solid #FF725E;
 }
 
 .networks {
@@ -207,7 +207,7 @@ html {
   display: block;
   width: 80px;
   height: 1px;
-  background: #ff6600;
+  background: #FF725E;
   margin-top: -21px;
 }
 
@@ -398,10 +398,20 @@ html {
 }
 .slide button {
   width: 50px;
-  height: 100px;
+  height: 70px;
 }
 .slide button i {
   font-size: 40px;
+}
+
+.w3-button {
+  color: #fff !important;
+  background-color: #FF725E !important;
+}
+
+.w3-button:hover {
+  color: #FF725E !important;
+  background-color: #fff !important;
 }
 
 .contato {
@@ -431,7 +441,7 @@ html {
 .contactLinks li {
   font-size: 18px;
   font-weight: 500;
-  color: #ff6600;
+  color: #FF725E;
   line-height: 30px;
 }
 .contactLinks a {
@@ -454,7 +464,7 @@ html {
   font-size: 14px;
 }
 .rodape p b {
-  color: #ff6600;
+  color: #FF725E;
 }
 
 @media (max-width: 1200px) {
@@ -464,7 +474,7 @@ html {
   }
 
   .navegador .mynav {
-    margin: 0 0 0 237px;
+    margin: 0 0 0 177px;
   }
 
   .menu {
