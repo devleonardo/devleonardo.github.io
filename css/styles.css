@@ -53,10 +53,9 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 
 .menuFixo {
   position: fixed;
-  width: 100%;
   top: 0px;
   background-color: #09090af6;
-  transition: 500ms;
+  transition: 1s;
 }
 
 .menu {
@@ -134,6 +133,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   color: white;
   background: #FF725E;
   transition: 1s;
+  cursor: pointer;
 }
 .banner .dev button:hover {
   background: white;
