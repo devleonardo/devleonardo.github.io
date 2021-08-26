@@ -1,25 +1,43 @@
 @media (max-width: 1200px) {
     .container {
-      width: 750px;
+      width: 890px;
       transition: 500ms;
     }
     .navegador{
         .mynav{
-            margin: 0 0 0 177px;
+            margin: 0 0 0 317px;
         }
     }
     .menu {
-        margin-right: 20px;
         a {
             padding: 10px 10px;
         }
     }
-    .citacao {
-        text-align: center;
-        float: none;
-        margin: 0 auto;
-        margin-top: 50px;
+    .banner {
+        height: 500px;
+        transition: 500ms;
+        .upcode{
+            display: none;
+        }
+        .dev{
+            margin-top: 100px !important;
+            width: 100%;
+            margin: 0 auto;
+            span{
+                font-size: 40px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
     }
+    #citacao{
+        padding: 15px 50px 15px 50px;
+        .citacao q{
+            font-size: 14px;
+        }
+    }
+    
     .description {
         margin-left: 96px;
         margin: 0 96px 0 96px;   
@@ -28,7 +46,7 @@
         display: none;
     }
     .slide{
-        width: 560px;
+        width: 760px;
     }
 }
   
@@ -39,15 +57,43 @@
       grid-template-columns: 1fr; 
     }
     @import 'menumobile';
+    .upcode-mobile{
+        display: block;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        img{
+            width: 350px;
+            margin-top: 60px;
+        }
+    }
+    .banner {
+        padding: 0 96px 0 96px;
+        .dev{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            span{
+                font-size: 30px;
+            }
+            p{
+                font-size: 16px;
+            }
+            .calltoaction{
+                margin-bottom: 50px;
+            }
+        }
+    }
+
     .description .sobre{
         width: 600px;
     }
     .flexSkill {
         margin: 0 20px 0 20px;
     }
-    .contactLinks {
-        width: 500px;
-    }
+    // .contactLinks {
+    //     width: 500px;
+    // }
     .slide{
         width: 700px;
     }
@@ -60,26 +106,41 @@
       justify-content: center;
     }
     @import 'menumobile';
-    .presentation {
-        font-size: 36px;
-    }
-    .citacao {
-        margin-top: 100px;
-        text-align: center;
-    }
-    .contactLinks{
-        width: 400px;
-        text-align: center;
-        a{
-            font-size: 20px;
-        }
+
+    .upcode-mobile{
         img{
-            display: none;
+            width: 300px;
+            margin-bottom: -240px;
         }
     }
-    .slide{
-        width: 540px;
+    .banner {
+        margin-top: -100px;
+        .dev{
+            span{
+                display: none;
+            }
+            p{
+                display: none;
+            }
+            .calltoaction{
+                margin-bottom: 50px;
+            }
+        }
     }
+
+    // .contactLinks{
+    //     width: 400px;
+    //     text-align: center;
+    //     a{
+    //         font-size: 20px;
+    //     }
+    //     img{
+    //         display: none;
+    //     }
+    // }
+    // .slide{
+    //     width: 540px;
+    // }
 }
 
 @media(max-width: 550px) {
@@ -95,24 +156,7 @@
     }
     @import 'menumobile';
     .banner{
-        height: 400px;
-    }
-    .presentation{
-        width: 110px;
-        height: 50px;
-        font-size: 36px;
-        margin-top: 0px;
-        background: url(/img/logo.svg) no-repeat;
-        background-size: 100px;
-        margin: 0 auto;
-        margin-bottom: 10px;
-        h1 {
-            display: none;
-        }
-    }
-    .citacao{
-        width: 300px;
-        margin-top: 40px;
+        padding: 0 0 0 0;
     }
     .description{
         margin: 30px;
@@ -126,30 +170,30 @@
     .slide{
         width: 380px;
     }
-    .flexSkill{
-        li{
-            width: 150px;
-            margin: 5px;
-        }
-    }
-    .contactLinks{
-        width: 300px;
-        height: 150px;
-        display: flex;
-        ul{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        span{
-            display: none;
-        }
-        img{
-            display: block;
-            margin: 25px;
-            height: 40px;
-        }
-    }
+    // .flexSkill{
+    //     li{
+    //         width: 150px;
+    //         margin: 5px;
+    //     }
+    // }
+    // .contactLinks{
+    //     width: 300px;
+    //     height: 150px;
+    //     display: flex;
+    //     ul{
+    //         display: flex;
+    //         justify-content: space-between;
+    //         align-items: center;
+    //     }
+    //     span{
+    //         display: none;
+    //     }
+    //     img{
+    //         display: block;
+    //         margin: 25px;
+    //         height: 40px;
+    //     }
+    // }
     .rodape{
         width: 300px;
         height: 80px;

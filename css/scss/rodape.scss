@@ -1,3 +1,18 @@
+#citacao{
+    background: $line;
+    border-top: 1px solid $line;
+    padding: 20px 0 20px 0;
+    color: white;
+    text-align: center;
+    .citacao q{
+        font-style: italic;
+        font-size: 14px;
+    }
+    .citacao p{
+        margin-top: 5px;
+    }
+}
+
 .rodape {
     height: 70px;
     background: none;

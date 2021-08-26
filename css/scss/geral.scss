@@ -34,3 +34,38 @@ html {
     -o-animation: fadeIn 1s ease-in-out;
     animation: fadeIn 1s ease-in-out;
 }
+
+.fadeImg {
+    opacity:0;
+    -webkit-animation: fadeIn 5s ease-in-out;
+    -moz-animation: fadeIn 5s ease-in-out;
+    -o-animation: fadeIn 5s ease-in-out;
+    animation: fadeIn 5s ease-in-out; 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;}
+    
+    .fadeImg-delay {	
+    -webkit-animation-delay:3s;
+    -moz-animation-delay:3s;
+    -o-animation-delay:3s;
+    animation-delay:3s;}
+    
+    .fadeImg2 {
+    opacity:0;
+    -webkit-animation: fadeIn 500ms linear;
+    -moz-animation: fadeIn 500ms linear;
+    -o-animation: fadeIn 500ms linear;
+    animation: fadeIn 500ms linear; 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;}
+    
+    .fadeImg2-delay {	
+    -webkit-animation-delay:6s;
+    -moz-animation-delay:6s;
+    -o-animation-delay:6s;
+    animation-delay:6s;
+}
