@@ -3,7 +3,7 @@
 
     const target = document.querySelector(".target");
     const links = document.querySelectorAll(".mynav a");
-    const colors = ["#6E65F4"];
+    const colors = ["#FF725E"];
   
     function mouseenterFunc() {
       if (!this.parentNode.classList.contains("active")) {
@@ -11,7 +11,7 @@
           if (links[i].parentNode.classList.contains("active")) {
             links[i].parentNode.classList.remove("active");
           }
-          links[i].style.opacity = "0.4";
+          links[i].style.opacity = "0.25";
         }
   
         this.parentNode.classList.add("active");
@@ -71,23 +71,23 @@ const linkMenu = document.querySelector('.barra nav');
 linkMenu.addEventListener("click", ativarCheckbox);
 
 // SLIDE
-var slideIndex = 1;
-showDivs(slideIndex);
+// var slideIndex = 1;
+// showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+// function plusDivs(n) {
+//   showDivs(slideIndex += n);
+// }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
+// function showDivs(n) {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   if (n > x.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//      x[i].style.display = "none";  
+//   }
+//   x[slideIndex-1].style.display = "block";  
+// }
 
 // PLUGIN FACEBOOK
 var chatbox = document.getElementById('fb-customer-chat');
