@@ -3,7 +3,7 @@
 
     const target = document.querySelector(".target");
     const links = document.querySelectorAll(".mynav a");
-    const colors = ["#6E65F4"];
+    const colors = ["#FF725E"];
   
     function mouseenterFunc() {
       if (!this.parentNode.classList.contains("active")) {
@@ -11,7 +11,7 @@
           if (links[i].parentNode.classList.contains("active")) {
             links[i].parentNode.classList.remove("active");
           }
-          links[i].style.opacity = "0.4";
+          links[i].style.opacity = "0.25";
         }
   
         this.parentNode.classList.add("active");
@@ -91,8 +91,8 @@ linkMenu.addEventListener("click", ativarCheckbox);
 
 // PLUGIN FACEBOOK
 var chatbox = document.getElementById('fb-customer-chat');
-              chatbox.setAttribute("page_id", "101110651492053");
-              chatbox.setAttribute("attribution", "biz_inbox");
+    chatbox.setAttribute("page_id", "101110651492053");
+    chatbox.setAttribute("attribution", "biz_inbox");
 
 window.fbAsyncInit = function() {
   FB.init({
@@ -106,5 +106,5 @@ window.fbAsyncInit = function() {
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/pt_BR/sdk/xfbml.customerchat.js';
-  fjs.parentNode.insertBefore(js, fjs);
+  fjs.parentNode.insertBefore(js, fjs); 
 }(document, 'script', 'facebook-jssdk'));
