@@ -1,6 +1,58 @@
 .projetos {
-    background: $gray;
-    border-top: 1px solid $line;
-    display: grid;
+    background: $grafite;
+    // border-top: 1px solid $line;
     padding: 80px 0 80px 0;
+    ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        li{
+            width: 300px;
+            height: auto;
+            margin: 30px;
+            overflow: hidden;
+            img{
+                max-width: 100%;
+                height: auto;
+                transform: scale(1);
+                transition: .4s;
+            }
+            .site{
+                padding: 10px;
+                color: white;
+                height: 70px;
+                span{
+                    font-size: 18px;
+                    font-weight: 600;
+                    transition: .4s;
+                }
+            }
+            .site::after{
+                content: "";
+                display: block;
+                width: 4px;
+                height: 20px;
+                background: $lilas;
+                margin: -45px 0 0 -10px;
+                transition: .4s;
+            }
+        }
+        li:hover{
+            img{
+                transform: scale(1.1);
+                transition: .4s;
+            }
+            span{
+                color: $lilas;
+                transition: .4s;
+            }
+            .site::after{
+                height: 45px;
+                transition: .4s;
+            }
+        }
+    }
+    
 }
