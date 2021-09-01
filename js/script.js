@@ -71,28 +71,28 @@ const linkMenu = document.querySelector('.barra nav');
 linkMenu.addEventListener("click", ativarCheckbox);
 
 // SLIDE
-// var slideIndex = 1;
-// showDivs(slideIndex);
+var slideIndex = 1;
+showDivs(slideIndex);
 
-// function plusDivs(n) {
-//   showDivs(slideIndex += n);
-// }
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-// function showDivs(n) {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   if (n > x.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = x.length}
-//   for (i = 0; i < x.length; i++) {
-//      x[i].style.display = "none";  
-//   }
-//   x[slideIndex-1].style.display = "block";  
-// }
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
 
 // PLUGIN FACEBOOK
 var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "101110651492053");
-    chatbox.setAttribute("attribution", "biz_inbox");
+              chatbox.setAttribute("page_id", "101110651492053");
+              chatbox.setAttribute("attribution", "biz_inbox");
 
 window.fbAsyncInit = function() {
   FB.init({
@@ -106,5 +106,5 @@ window.fbAsyncInit = function() {
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/pt_BR/sdk/xfbml.customerchat.js';
-  fjs.parentNode.insertBefore(js, fjs); 
+  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
