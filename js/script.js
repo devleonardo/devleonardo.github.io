@@ -3,7 +3,7 @@
 
     const target = document.querySelector(".target");
     const links = document.querySelectorAll(".mynav a");
-    const colors = ["#FF725E"];
+    const colors = ["#6E65F4"];
   
     function mouseenterFunc() {
       if (!this.parentNode.classList.contains("active")) {
@@ -11,7 +11,7 @@
           if (links[i].parentNode.classList.contains("active")) {
             links[i].parentNode.classList.remove("active");
           }
-          links[i].style.opacity = "0.25";
+          links[i].style.opacity = "0.4";
         }
   
         this.parentNode.classList.add("active");

@@ -1,0 +1,111 @@
+@media (max-width: 1200px) {
+  .container {
+    width: 750px;
+    transition: 500ms;
+  }
+
+  .tela1{
+    width: 380px;
+  }
+
+  .tela2{
+    width: 340px;
+    padding-left: 60px;
+  }
+
+  .logo{
+    height: 250px;
+    margin-top: 170px;
+    margin-left: 45px;
+  }
+}
+
+@media (max-width: 940px) {
+  .container {
+    width: 580px;
+    transition: 500ms;
+    grid-template-columns: 1fr; 
+  }
+
+  .logo{
+    height: 150px;
+    margin-top: 0px;
+  }
+
+  .tela1{
+    margin-left: 29%;
+  }
+
+  .tela2{
+    margin-left: 35%;
+  }
+
+  h1{
+    font-weight: 700;
+    font-size: 1.6em;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: rgb(70, 70, 70);
+  }
+
+  input{
+    width: 400px;
+  }
+  button{
+    width: 498px;
+  }
+}
+
+@media(max-width: 760px) {
+  body{
+    padding-top: 60px;
+  }
+  .container {
+    transition: 500ms;
+    width: 420px;
+    transition: 500ms;
+    justify-content: center;
+  }
+  .tela1{
+    margin-left: 23%;
+  }
+
+  .tela2{
+    margin-left: 24.6%;
+  }
+  input{
+    width: 355px;
+  }
+  button{
+    width: 453px;
+  }
+}
+
+@media(max-width: 460px) {
+  body{
+    padding-top: 50px;
+  }
+  .container {
+    transition: 500ms;
+    width: 180px;
+    height: 450px;
+    transition: 500ms;
+  }
+  .tela1{
+    margin-left: 20%;
+  }
+
+  .tela2{
+    margin-left: 0;
+  }
+  input{
+    width: 170px;
+  }
+  button{
+    width: 170px;
+    margin-left: 50px;
+  }
+  .criar{
+    margin-top: -20px;
+  }
+}

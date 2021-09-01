@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;900&display=swap');
+
+body, html, h1, h2, h3, ul, li, dt, dd, dl, p {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  font-family: 'Montserrat';
+  overflow-x: hidden;
+
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  background: linear-gradient(-135deg,#c850c0,#4158d0) no-repeat;
+  background-attachment: fixed;
+  padding-top: 100px;
+  position: relative;
+
+}
+
+.container{
+  width: 860px;
+  height: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 20px solid rgba(0, 0, 0, 0);
+}
+
+.tela1{
+  // background: #666;
+  width: 430px;
+}
+
+.tela2{
+  // background: rgb(145, 145, 145);
+  text-align: center;
+  width: 430px;
+}
+
+.logo{
+  height: 300px;
+  margin-top: 150px;
+  margin-left: 65px;
+  &:hover{
+    will-change: transform;
+    transform: perspective(300px) rotateX(10deg) rotateY(10deg);
+    transition: 1000ms;
+  }
+  will-change: transform;
+  transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+  transition: 1000ms;
+}
+
+h1{
+  font-weight: 700;
+  font-size: 1.6em;
+  padding-top: 150px;
+  padding-bottom: 40px;
+  color: rgb(70, 70, 70);
+}
+
+.formulario{
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: right;
+  padding-right: 65px;
+}
+
+i{
+  width: 10px;
+  color: #666;
+  margin-top: -39px;
+  margin-left: 30px;
+}
+
+input{
+  width: 300px-98;
+  height: 10px;
+  margin-bottom: 5px;
+  outline: none;
+  border: none;
+  background: #e6e6e6;
+  border-radius: 100px;
+  padding: 20px 30px 20px 68px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  color: rgba(165, 165, 165, 0.966);
+  i:hover{
+    border: 2px solid #57b846;
+    transition: 500ms;
+  }
+  transition: 500ms;
+}
+
+button{
+  border: none;
+  border-radius: 100px;
+  width: 300px;
+  height: 50px;
+  background: #57b846;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Montserrat';
+  margin-bottom: 10px;
+  margin-top: 15px;
+  &:hover{
+    background: #2c2c2c;
+    transition: 500ms;
+  }
+  transition: 500ms;
+}
+
+.forgot{
+  text-align: center;
+  position: relative;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgb(172, 172, 172);
+  margin-bottom: 70px;
+  a{
+    color: #666;
+  }
+  a:hover{
+    color: #57b846;
+    transition: 500ms;
+  }
+  a{
+    transition: 500ms;
+  }
+}
+
+.criar{
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666;
+  margin-top: 120px;
+  &:hover{
+    color: #57b846;
+    transition: 500ms;
+  }
+  transition: 500ms;
+}
+
+@import 'mobile';

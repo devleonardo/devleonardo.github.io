@@ -1,0 +1,42 @@
+.about {
+    background: $gray;
+    padding: 80px 0 80px 0;
+}
+.description {
+    margin-left: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .sobre{
+        width: 500px;
+        margin-top: 60px;
+    }
+    .nome p{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    p {
+        font-size: 14px;
+        color: white;
+    }
+    
+    .mais p {
+        font-size: 14px;
+        font-weight: 700;
+        color: $lightgray;
+    }
+}
+
+.about .profile {
+    height: 370px;
+    margin: 60px 96px 0 50px;
+    border-left: 4px solid $lilac;
+}
+
+.networks{
+    display: flex;
+    img {
+        height: 35px;
+        margin: 54px 16px 0 0;
+    }
+}
