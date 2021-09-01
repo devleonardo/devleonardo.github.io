@@ -90,9 +90,12 @@ function showDivs(n) {
 }
 
 // PLUGIN FACEBOOK
+
+
+
 var chatbox = document.getElementById('fb-customer-chat');
-              chatbox.setAttribute("page_id", "101110651492053");
-              chatbox.setAttribute("attribution", "biz_inbox");
+chatbox.setAttribute("page_id", "101110651492053");
+chatbox.setAttribute("attribution", "biz_inbox");
 
 window.fbAsyncInit = function() {
   FB.init({
