@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 /* ==========================================================================
    Reset
    ========================================================================== */
@@ -97,7 +96,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   .banner .upcode {
     margin-top: 70px; }
     .banner .upcode img {
-      width: 750px;
+      width: 40vw;
       height: auto;
       animation: up-down 1s infinite alternate; }
   .banner .dev {
@@ -357,7 +356,7 @@ html {
 
 @media (max-width: 1200px) {
   .banner .upcode img {
-    width: 400px; }
+    width: 30vw; }
   .banner .dev {
     width: 60%;
     margin-top: 20px;
@@ -512,18 +511,15 @@ html {
       width: 100%;
       line-height: 35px; }
 
-  .projetos {
-    background: #131219; }
-    .projetos ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 100px 0 0 0; }
-      .projetos ul li {
-        width: 240px;
-        height: auto;
-        margin: 20px;
-        overflow: hidden; }
+  .projetos ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px 0 0 0; }
+    .projetos ul li {
+      width: 25vw;
+      margin: 20px;
+      overflow: hidden; }
 
   .informacao {
     height: 4900px !important; }
@@ -598,7 +594,7 @@ html {
     .projetos ul {
       margin: 20px 0 0 0; }
       .projetos ul li {
-        width: 155px;
+        width: 25vw;
         margin: 10px; }
 
   .informacao {

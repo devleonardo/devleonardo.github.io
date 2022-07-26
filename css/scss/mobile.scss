@@ -3,7 +3,7 @@
     .banner {
         .upcode{
             img{
-                width: 400px;
+                width: 30vw;
             }
         }
         .dev{
@@ -96,15 +96,15 @@
     }
 
     .projetos {
-        background: $grafite;
+        // background: $grafite;
         ul{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin: 100px 0 0 0;
             li{
-                width: 240px;
-                height: auto;
+                width: 25vw;
+                // height: auto;
                 margin: 20px;
                 overflow: hidden;
             }
@@ -151,7 +151,7 @@
         ul{
             margin: 20px 0 0 0;
             li{
-                width: 155px;
+                width: 25vw;
                 margin: 10px;
             }
         }
