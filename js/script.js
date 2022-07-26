@@ -57,7 +57,7 @@
 //   });
 // }
 
-// const titulo = document.querySelector('.subtitulo h2');
+// const titulo = document.querySelector('.dev span');
 // typeWriter(titulo);
 
 
@@ -71,20 +71,20 @@ const linkMenu = document.querySelector('.barra nav');
 linkMenu.addEventListener("click", ativarCheckbox);
 
 // SLIDE
-var slideIndex = 1;
-showDivs(slideIndex);
+// var slideIndex = 1;
+// showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+// function plusDivs(n) {
+//   showDivs(slideIndex += n);
+// }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
+// function showDivs(n) {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   if (n > x.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//      x[i].style.display = "none";  
+//   }
+//   x[slideIndex-1].style.display = "block";  
+// }

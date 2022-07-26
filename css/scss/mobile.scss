@@ -231,7 +231,7 @@
         }
     }
     .conteudo .btn{
-        display: none;
+        visibility:hidden;
     }
     .rodape {
         height: 70px;
@@ -241,22 +241,24 @@
 @media(max-width: 420px) {
     .container {
         transition: 500ms;
-        width: 500px !important;
-        height: 700px;
-        padding: 100px !important;
-        margin: 20px -40px !important;
+        width: 100% !important;
+        // height: 700px;
+        padding: 30px !important;
+        // margin: 20px -40px !important;
     }
     @import 'menumobile';
 
     .banner {
+        height: 650px;
+        // margin-bottom: 90px;
         .upcode-mobile{
             img{
                 width: 200px; 
-                margin-top: 20px;
+                // margin-top: 10px;
             }
         }
         .dev{
-            margin: 10px 0 10px 0 !important;
+            // margin: 10px 0 10px 0 !important;
             span{
                 font-size: 18px;
             }
@@ -272,19 +274,24 @@
     }
 
     .projetos {
-        height: 1300px !important;
+        height: 1270px !important;
         h2{
-            margin: -140px 0 0 0 !important;
+            margin: -50px 0 0 0 !important;
         }
     }
 
     .informacao{
         h2{
-            margin: -140px 0 0 0 !important;
+            margin: -50px 0 0 0 !important;
         }
-        height: 5800px !important;
+        height: 6200px !important;
+    }
+
+    .conteudo .btn{
+        visibility: visible;
+        margin: 25px 0 0 -15px;
     }
     .rodape {
-        display: none;
+        // display: none;
     }
 }

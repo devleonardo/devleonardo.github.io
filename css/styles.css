@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 /* ==========================================================================
    Reset
    ========================================================================== */
@@ -691,17 +692,15 @@ html {
       font-size: 15px !important; }
 
   .conteudo .btn {
-    display: none; }
+    visibility: hidden; }
 
   .rodape {
     height: 70px; } }
 @media (max-width: 420px) {
   .container {
     transition: 500ms;
-    width: 500px !important;
-    height: 700px;
-    padding: 100px !important;
-    margin: 20px -40px !important; }
+    width: 100% !important;
+    padding: 30px !important; }
 
   .navegador {
     display: none; }
@@ -752,31 +751,31 @@ html {
         margin-top: 0;
         transition-delay: .2s; }
 
-  .banner .upcode-mobile img {
-    width: 200px;
-    margin-top: 20px; }
-  .banner .dev {
-    margin: 10px 0 10px 0 !important; }
+  .banner {
+    height: 650px; }
+    .banner .upcode-mobile img {
+      width: 200px; }
     .banner .dev span {
       font-size: 18px; }
     .banner .dev .call {
       font-size: 15px;
       line-height: 22px; }
-  .banner .btn {
-    width: 220px !important; }
+    .banner .btn {
+      width: 220px !important; }
 
   .projetos {
-    height: 1300px !important; }
+    height: 1270px !important; }
     .projetos h2 {
-      margin: -140px 0 0 0 !important; }
+      margin: -50px 0 0 0 !important; }
 
   .informacao {
-    height: 5800px !important; }
+    height: 6200px !important; }
     .informacao h2 {
-      margin: -140px 0 0 0 !important; }
+      margin: -50px 0 0 0 !important; }
 
-  .rodape {
-    display: none; } }
+  .conteudo .btn {
+    visibility: visible;
+    margin: 25px 0 0 -15px; } }
 .informacao {
   width: 100%;
   height: auto;
