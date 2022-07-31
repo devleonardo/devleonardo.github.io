@@ -1,17 +1,20 @@
 $lightgray: #A8A8B3;
-$darkgrey: #09090A;
-$lilas: #6E65F4;
+$darkgrey: #060112;
+$lilas: #5b1fa6;
 $line: #242327;
-$grafite: #131219;
-$grafite-claro: #17171d;
+$grafite: #0E091B;
+$grafite-claro: #151020;
 $lime: rgb(17, 216, 10);
 
 @mixin title(){
     .titulo h2{
         font-size: 30px;
-        font-weight: 600;
+        font-weight: 700;
         color: white;
         letter-spacing: .05em;
+        
+    }::first-letter{
+        // font-weight: 800;
     }
     .titulo::after{
         content: "";

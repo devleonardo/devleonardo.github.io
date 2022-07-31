@@ -35,13 +35,15 @@
         }
         .btn{
             margin-top: 40px;
-            border: 3px solid $lilas;
-            background: none;
             color: white;
             height: 60px;
+            transition: opacity 1s;
+            background: rgb(93,32,166);
+            background: linear-gradient(90deg, rgba(93,32,166,1) 0%, rgba(93,32,166,1) 100%); 
         }
         .btn:hover{
-            background: $lilas;
+            background: rgb(93,32,166);
+            background: linear-gradient(90deg, rgba(93,32,166,1) 0%, rgba(165,60,181,1) 100%); 
         }
     }
 }

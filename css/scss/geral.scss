@@ -11,81 +11,83 @@ html {
 }
 @include title;
 
-@-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; } 
-    }
-    @-moz-keyframes fadeIn {
-    0% { opacity: 0;}
-    100% { opacity: 1; }
-    }
-    @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-    }
-    @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
+// @-webkit-keyframes fadeIn {
+//     0% { opacity: 0; }
+//     100% { opacity: 1; } 
+//     }
+//     @-moz-keyframes fadeIn {
+//     0% { opacity: 0;}
+//     100% { opacity: 1; }
+//     }
+//     @-o-keyframes fadeIn {
+//     0% { opacity: 0; }
+//     100% { opacity: 1; }
+//     }
+//     @keyframes fadeIn {
+//     0% { opacity: 0; }
+//     100% { opacity: 1; }
+// }
 
-.fadeIn {
-    -webkit-animation: fadeIn 1s ease-in-out;
-    -moz-animation: fadeIn 1s ease-in-out;
-    -o-animation: fadeIn 1s ease-in-out;
-    animation: fadeIn 1s ease-in-out;
-}
+// .fadeIn {
+//     -webkit-animation: fadeIn 1s ease-in-out;
+//     -moz-animation: fadeIn 1s ease-in-out;
+//     -o-animation: fadeIn 1s ease-in-out;
+//     animation: fadeIn 1s ease-in-out;
+// }
 
-.fadeImg {
-    opacity:0;
-    -webkit-animation: fadeIn 5s ease-in-out;
-    -moz-animation: fadeIn 5s ease-in-out;
-    -o-animation: fadeIn 5s ease-in-out;
-    animation: fadeIn 5s ease-in-out; 
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    -o-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;}
+// .fadeImg {
+//     opacity:0;
+//     -webkit-animation: fadeIn 5s ease-in-out;
+//     -moz-animation: fadeIn 5s ease-in-out;
+//     -o-animation: fadeIn 5s ease-in-out;
+//     animation: fadeIn 5s ease-in-out; 
+//     -webkit-animation-fill-mode:forwards;
+//     -moz-animation-fill-mode:forwards;
+//     -o-animation-fill-mode:forwards;
+//     animation-fill-mode:forwards;}
     
-    .fadeImg-delay {	
-    -webkit-animation-delay:3s;
-    -moz-animation-delay:3s;
-    -o-animation-delay:3s;
-    animation-delay:3s;}
+//     .fadeImg-delay {	
+//     -webkit-animation-delay:3s;
+//     -moz-animation-delay:3s;
+//     -o-animation-delay:3s;
+//     animation-delay:3s;}
     
-    .fadeImg2 {
-    opacity:0;
-    -webkit-animation: fadeIn 500ms linear;
-    -moz-animation: fadeIn 500ms linear;
-    -o-animation: fadeIn 500ms linear;
-    animation: fadeIn 500ms linear; 
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    -o-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;}
+//     .fadeImg2 {
+//     opacity:0;
+//     -webkit-animation: fadeIn 500ms linear;
+//     -moz-animation: fadeIn 500ms linear;
+//     -o-animation: fadeIn 500ms linear;
+//     animation: fadeIn 500ms linear; 
+//     -webkit-animation-fill-mode:forwards;
+//     -moz-animation-fill-mode:forwards;
+//     -o-animation-fill-mode:forwards;
+//     animation-fill-mode:forwards;}
     
-    .fadeImg2-delay {	
-    -webkit-animation-delay:6s;
-    -moz-animation-delay:6s;
-    -o-animation-delay:6s;
-    animation-delay:6s;
-}
+//     .fadeImg2-delay {	
+//     -webkit-animation-delay:6s;
+//     -moz-animation-delay:6s;
+//     -o-animation-delay:6s;
+//     animation-delay:6s;
+// }
 
 .btn{
     width: 250px;
     height: 45px;
     border: none;
-    border-radius: 50px;
+    border-radius: 5px;
     padding: 5px 20px 5px 20px;
     font-size: 18px;
     color: white;
-    background: $lilas;
-    transition: 0.5s;
+    background: rgb(93,32,166);
+    background: linear-gradient(90deg, rgba(93,32,166,1) 0%, rgba(93,32,166,1) 100%); 
+    transition: 1s;
     cursor: pointer;
 }
 .btn:hover{
-    background: white;
-    color: $lilas;
-    transition: 0.5s;
+    background: rgb(93,32,166);
+    background: linear-gradient(90deg, rgba(93,32,166,1) 0%, rgba(165,60,181,1) 100%); 
+    // color: #5b1fa6;
+    transition: 1s;
 }
 
 @keyframes up-down {
