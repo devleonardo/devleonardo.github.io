@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   .banner .upcode {
     margin-top: 70px; }
     .banner .upcode img {
-      width: 40vw;
+      width: 30vw;
       height: auto;
       animation: up-down 1s infinite alternate; }
   .banner .dev {
@@ -177,7 +177,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
     .sobre .conteudo .fa-times {
       color: red; }
     .sobre .conteudo i {
-      color: #11d80a;
+      color: #32ff7e;
       margin-right: 10px; }
     .sobre .conteudo span {
       font-size: 20px; }
@@ -385,7 +385,7 @@ html {
 
   .contratar:hover {
     color: white;
-    background: #11d80a; } }
+    background: #32ff7e; } }
 @media (max-width: 760px) {
   .container {
     transition: 500ms;
@@ -771,7 +771,7 @@ html {
     .informacao .conteudo .fa-times {
       color: red; }
     .informacao .conteudo i {
-      color: #11d80a;
+      color: #32ff7e;
       margin-right: 10px; }
     .informacao .conteudo span {
       font-size: 20px; }
@@ -784,7 +784,7 @@ html {
 
 .contratar:hover {
   color: white;
-  background: #11d80a; }
+  background: #32ff7e; }
 
 .parceiros {
   background: #0E091B;
