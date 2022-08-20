@@ -236,19 +236,18 @@ html {
   background: #0E091B;
   padding: 80px 0 80px 0; }
   .projetos ul {
-    width: 100%;
+    width: 70vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 0 auto; }
     .projetos ul li {
       width: 300px;
-      height: auto;
       margin: 30px;
+      border-radius: 5px;
       overflow: hidden; }
       .projetos ul li img {
         max-width: 100%;
-        height: auto;
         transform: scale(1);
         transition: .4s; }
       .projetos ul li .site {
@@ -267,9 +266,6 @@ html {
         background: #5b1fa6;
         margin: -45px 0 0 -10px;
         transition: .4s; }
-    .projetos ul li:hover img {
-      transform: scale(1.1);
-      transition: .4s; }
     .projetos ul li:hover span {
       color: #5b1fa6;
       transition: .4s; }
