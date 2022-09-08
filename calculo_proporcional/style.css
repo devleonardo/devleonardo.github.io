@@ -1,0 +1,41 @@
+html, body{
+    margin: 0;
+    padding: 10px;
+    background: #363f44;
+
+}
+
+.calculadora{
+    width: 100%;
+}
+
+.calculo{
+    width: 300px;
+    padding: 10px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 0;
+}
+
+input{
+    width: 100px;
+    
+}
+
+output{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 0;
+    color: red;
+}
+
+#resultado{
+    font-size: 1.6em;
+}
