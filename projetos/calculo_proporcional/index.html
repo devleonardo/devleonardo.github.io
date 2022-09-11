@@ -10,39 +10,45 @@
 <body>
     <section class="calculadora">
         <div class="calculo container">
-            <img src="img/leste.webp" alt="">
-            <p>SALÁRIO BASE</p>
-            <input type="number" class="base" value="0">
-    
-            <p>HORA EXTRA 50%</p>
-            <input type="number" class="hora50" value="0">
-    
-            <p>HORA EXTRA 100%</p>
-            <input type="number" class="hora100" value="0">
-    
-            <p>REPOUSO REMUNERADO</p>
-            <input type="number" class="repouso" value="0">
-    
-            <p>ALIMENTAÇÃO</p>
-            <input type="number" class="alimentacao" value="0">
-    
-            <p>TRANSPORTE</p>
-            <input type="number" class="transporte" value="0">
-    
-            <p>ASSISTÊNCIA MÉDICA</p>
-            <input type="number" class="medico" value="0">
-    
-            <p>ASSISTÊNCIA ODONTOLÓGICA</p>
-            <input type="number" class="odonto" value="0">
-    
-            <p>INSS FOLHA</p>
-            <input type="number" class="inss" value="0">
-    
-            <p>IRRF FOLHA</p>
-            <input type="number" class="irrf" value="0">
-    
-            <p>VALOR APROXIMADO:</p>
-            <output type="text" id="resultado" />
+            <h2>
+                Insira abaixo os valores de acordo com o expecificado no contracheque e compare.
+            </h2>
+            <span>Pode haver pequenas variações devido as frações e arredondamentos existentes no calculo principal.</span>
+            <div class="somatorio">
+                <p>SALÁRIO BASE</p>
+                <span>R$ </span><input type="text" class="base" value="0"><span class="add"> + 30%</span>
+        
+                <p>HORA EXTRA 50%</p>
+                <span>HR </span><input type="text" class="hora50" value="0">
+        
+                <p>HORA EXTRA 100%</p>
+                <span>HR </span><input type="text" class="hora100" value="0">
+        
+                <p>REPOUSO REMUNERADO</p>
+                <span>R$ </span><input type="text" class="repouso" value="0">
+        
+                <p>ALIMENTAÇÃO</p>
+                <span>R$ </span><input type="text" class="alimentacao" value="0">
+        
+                <p>TRANSPORTE</p>
+                <span>R$ </span><input type="text" class="transporte" value="0">
+        
+                <p>ASSISTÊNCIA MÉDICA</p>
+                <span>R$ </span><input type="text" class="medico" value="0">
+        
+                <p>ASSISTÊNCIA ODONTOLÓGICA</p>
+                <span>R$ </span><input type="text" class="odonto" value="0">
+        
+                <p>INSS FOLHA</p>
+                <span>R$ </span><input type="text" class="inss" value="0">
+        
+                <p>IRRF FOLHA</p>
+                <span>R$ </span><input type="text" class="irrf" value="0">
+        
+                <p>VALOR APROXIMADO:</p>
+                <p></p>
+                <output type="text" id="resultado">0</output>
+            </div>
         </div>
     </section>
     <footer class="container">

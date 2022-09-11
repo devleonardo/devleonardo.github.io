@@ -14,6 +14,6 @@ onkeyup = () =>{
     valorReceber = base+hora50+hora100+repouso-alimentacao-transporte-medico-odonto-inss-irrf;
 
     document.getElementById('resultado').value = valorReceber.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
-
+    
 };
 

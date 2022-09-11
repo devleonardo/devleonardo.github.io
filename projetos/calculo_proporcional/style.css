@@ -1,8 +1,7 @@
 html, body{
     margin: 0;
-    padding: 10px;
-    background: #002019;
-
+    /* padding: 5px; */
+    background: #131219;
 }
 
 .container{
@@ -15,42 +14,65 @@ html, body{
 
 .calculo{
     position: relative;
-    width: 300px;
+    /* width: 100%; */
     padding: 10px;
     background: #fff;
 }
 
-img{
-    margin: 5px 0 10px 0;
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    color: #5B1FA6;
+    font-size: 18px;
 }
 
-p{
+span{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 700;
     font-size: 14px;
-    line-height: 0;
     letter-spacing: 1px;
     color: #414141;
 }
 
+.somatorio{
+    margin-top: 30px;
+}
+
+p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 0;
+    letter-spacing: 1px;
+    color: #414141;
+    margin-top: 20px;
+}
+
+.add{
+    color: #5B1FA6;
+    font-weight: 500;
+    font-size: 12px;
+}
+
 input{
-    width: 100px;
+    width: 120px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #5B1FA6;
     font-family: 'Courier New', Courier, monospace;
 }
 
 output{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 0;
-    color: #00997b;
+    color: #5B1FA6;
 }
 
 footer{
-    width: 300px;
     height: 50px;
-    padding: 20px 10px 0 10px;
-    background: #00997b;
+    padding: 10px 0 0 0;
+    background: #5B1FA6;
 }
 
 footer>p{
