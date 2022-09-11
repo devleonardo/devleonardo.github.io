@@ -1,6 +1,5 @@
 html, body{
     margin: 0;
-    /* padding: 5px; */
     background: #131219;
 }
 
@@ -14,7 +13,6 @@ html, body{
 
 .calculo{
     position: relative;
-    /* width: 100%; */
     padding: 10px;
     background: #fff;
 }
