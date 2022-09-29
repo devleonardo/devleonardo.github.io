@@ -1,5 +1,5 @@
 const iniciar = document.querySelector('.btn');
-const tempo = 25000;
+const tempo = 26500;
 let i = 0
 
 minhaconexao = () => {
