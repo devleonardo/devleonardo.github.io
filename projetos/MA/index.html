@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vereador Marcos Araújo — Itaboraí, Rio de Janeiro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --laranja: #ff7300;
+    --laranja-hover: #e06200;
+    --laranja-claro: rgba(255,115,0,0.12);
+    --azul: #0033ff;
+    --azul-escuro: #0025cc;
+    --azul-nav: #001eaa;
+    --branco: #ffffff;
+    --cinza-fundo: #f4f6fb;
+    --cinza-claro: #eaecf4;
+    --cinza-medio: #b0b8d0;
+    --cinza-escuro: #4a5068;
+    --texto: #0d1230;
+    --sombra: 0 4px 28px rgba(0,51,255,0.10);
+    --sombra-laranja: 0 4px 20px rgba(255,115,0,0.25);
+    --radius: 12px;
+    --transition: 0.26s cubic-bezier(.4,0,.2,1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--cinza-fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--azul);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 66px;
+    box-shadow: 0 2px 20px rgba(0,33,200,0.30);
+  }
+  .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-brand-accent {
+    background: var(--laranja);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem; font-weight: 800;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 4px;
+  }
+  .nav-brand-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.28rem; font-weight: 800;
+    letter-spacing: 0.02em; text-transform: uppercase;
+    color: white;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none; font-size: 0.86rem; font-weight: 500;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    transition: color var(--transition);
+    position: relative; padding-bottom: 3px;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+    height: 2px; background: var(--laranja);
+    transform: scaleX(0); transition: transform var(--transition);
+  }
+  .nav-links a:hover { color: white; }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; }
+
+  /* HERO */
+  .hero {
+    background: var(--azul);
+    color: white;
+    padding: 90px 5% 80px;
+    display: grid; grid-template-columns: 1fr 400px;
+    gap: 60px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; right: -60px; top: -60px;
+    width: 480px; height: 480px;
+    background: var(--laranja); opacity: 0.07; border-radius: 50%;
+  }
+  .hero-text { position: relative; z-index: 1; animation: fadeUp .65s ease both; }
+  .hero-chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--laranja); color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.76rem; font-weight: 800;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 4px; margin-bottom: 22px;
+  }
+  .hero-chip::before { content: '★'; font-size: 0.68rem; }
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(3.2rem, 6.5vw, 5.2rem);
+    font-weight: 900; line-height: 0.94;
+    text-transform: uppercase; letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+  .hero h1 span { color: var(--laranja); }
+  .hero-city {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.95rem; font-weight: 500;
+    color: rgba(255,255,255,0.65); margin-bottom: 24px;
+  }
+  .hero-city::before { content: '📍'; }
+  .hero p {
+    font-size: 1.02rem; line-height: 1.72;
+    color: rgba(255,255,255,0.7);
+    max-width: 460px; margin-bottom: 36px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--laranja); color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 1rem;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 13px 30px; border-radius: 7px;
+    text-decoration: none; border: none; cursor: pointer;
+    box-shadow: var(--sombra-laranja);
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  }
+  .btn-primary:hover { background: var(--laranja-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,115,0,0.42); }
+  .btn-ghost {
+    background: transparent; color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 1rem;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 13px 30px; border-radius: 7px;
+    border: 2px solid rgba(255,255,255,0.3);
+    text-decoration: none; cursor: pointer;
+    transition: border-color var(--transition), background var(--transition);
+  }
+  .btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+  .hero-photo { position: relative; z-index: 1; animation: fadeUp .65s .15s ease both; }
+  .hero-photo-frame {
+    width: 100%; aspect-ratio: 3/4;
+    background: linear-gradient(160deg, rgba(255,115,0,0.15), rgba(255,255,255,0.04));
+    border: 2px solid rgba(255,115,0,0.28);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.4); font-size: 0.8rem; text-align: center;
+    padding: 24px; position: relative; overflow: hidden;
+  }
+  .hero-photo-frame::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 5px; background: var(--laranja);
+  }
+  .photo-icon { font-size: 3.5rem; display: block; margin-bottom: 12px; opacity: 0.45; }
+
+  /* SOCIAL BAR */
+  .social-bar {
+    background: var(--azul-escuro);
+    border-bottom: 3px solid var(--laranja);
+    padding: 12px 5%;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    flex-wrap: wrap;
+  }
+  .social-bar-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.76rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); margin-right: 4px;
+  }
+  .social-link {
+    display: flex; align-items: center; gap: 7px;
+    padding: 7px 16px; border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.88rem; font-weight: 700;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    transition: transform var(--transition), filter var(--transition);
+  }
+  .social-link:hover { transform: translateY(-2px); filter: brightness(1.15); }
+  .social-link svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .s-instagram { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: white; }
+  .s-facebook  { background: #1877f2; color: white; }
+  .s-youtube   { background: #ff0000; color: white; }
+  .s-whatsapp  { background: #25d366; color: white; }
+  .s-tiktok    { background: #010101; color: white; }
+
+  /* SECTIONS */
+  section { padding: 80px 5%; }
+  .section-header { margin-bottom: 48px; }
+  .section-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.73rem; font-weight: 800;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--laranja);
+    display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
+  }
+  .section-eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--laranja); border-radius: 1px; }
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 900; text-transform: uppercase;
+    color: var(--azul); line-height: 1;
+  }
+  .section-sub { font-size: 0.93rem; color: var(--cinza-escuro); margin-top: 8px; }
+
+  /* BIOGRAPHY */
+  #biografia { background: white; }
+  .bio-grid { display: grid; grid-template-columns: 290px 1fr; gap: 56px; align-items: start; }
+  .bio-card {
+    background: var(--cinza-fundo);
+    border-radius: var(--radius); overflow: hidden;
+    border: 1.5px solid var(--cinza-claro); box-shadow: var(--sombra);
+  }
+  .bio-card-top {
+    background: var(--azul);
+    padding: 30px 22px 22px; text-align: center; position: relative;
+  }
+  .bio-card-top::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 4px; background: var(--laranja);
+  }
+  .bio-avatar {
+    width: 96px; height: 96px;
+    background: rgba(255,255,255,0.12);
+    border: 3px solid var(--laranja);
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; color: rgba(255,255,255,0.45);
+  }
+  .bio-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.35rem; font-weight: 900;
+    text-transform: uppercase; color: white; margin-bottom: 4px;
+  }
+  .bio-role { font-size: 0.78rem; color: rgba(255,255,255,0.6); }
+  .bio-card-body { padding: 18px 20px; }
+  .bio-stat {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 9px 0; border-bottom: 1px solid var(--cinza-claro);
+    font-size: 0.82rem;
+  }
+  .bio-stat:last-child { border-bottom: none; }
+  .bio-stat-label { color: var(--cinza-escuro); }
+  .bio-stat-value { font-weight: 700; color: var(--azul); }
+  .bio-stat-value.orange { color: var(--laranja); }
+
+  .bio-content h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.45rem; font-weight: 800;
+    text-transform: uppercase; color: var(--azul); margin-bottom: 18px;
+  }
+  .bio-content p {
+    line-height: 1.85; color: var(--cinza-escuro);
+    margin-bottom: 16px; font-size: 0.94rem;
+  }
+  .bio-content p.placeholder {
+    background: #fff8f0; border-left: 3px solid var(--laranja);
+    border-radius: 6px; padding: 14px 18px;
+    font-style: italic; color: #a07040; font-size: 0.87rem;
+  }
+
+  /* VIDEOS */
+  #videos { background: var(--cinza-fundo); }
+  .video-outer { max-width: 860px; }
+  .video-card {
+    background: white; border-radius: var(--radius);
+    overflow: hidden; box-shadow: var(--sombra);
+    border: 1.5px solid var(--cinza-claro);
+  }
+  .video-embed { position: relative; padding-top: 56.25%; background: #080810; }
+  .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .video-loading {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 14px; color: rgba(255,255,255,0.5); font-size: 0.88rem;
+  }
+  .video-spinner {
+    width: 42px; height: 42px;
+    border: 3px solid rgba(255,115,0,0.25);
+    border-top-color: var(--laranja);
+    border-radius: 50%; animation: spin 1s linear infinite;
+  }
+  .video-footer { padding: 22px 24px; }
+  .video-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fff0e6; color: var(--laranja);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 4px; margin-bottom: 10px;
+  }
+  .video-badge::before { content: '▶'; }
+  .video-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.22rem; font-weight: 800;
+    color: var(--azul); margin-bottom: 5px;
+  }
+  .video-date { font-size: 0.8rem; color: var(--cinza-escuro); }
+  .video-api-note {
+    margin-top: 18px; padding: 12px 16px;
+    background: #f0f4ff; border-left: 3px solid var(--azul);
+    border-radius: 6px; font-size: 0.79rem; color: #3348aa; line-height: 1.6;
+  }
+  .video-api-note code { background: rgba(0,51,255,0.09); padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; }
+
+  /* GALERIA */
+  #galeria { background: white; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .gallery-item {
+    border-radius: 10px; overflow: hidden;
+    background: var(--cinza-claro); aspect-ratio: 4/3;
+    position: relative; cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,51,255,0.16); }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,20,80,0.82));
+    color: white; padding: 28px 12px 10px;
+    font-size: 0.77rem; font-weight: 500;
+    transform: translateY(100%); transition: transform var(--transition);
+  }
+  .gallery-item:hover .gallery-caption { transform: translateY(0); }
+  .gallery-placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: var(--cinza-medio); font-size: 0.77rem; text-align: center;
+    gap: 8px; padding: 12px;
+    background: linear-gradient(135deg, #f4f6fb, #eaedf8);
+  }
+  .gallery-placeholder span { font-size: 2rem; }
+  .gallery-note {
+    margin-top: 22px; padding: 13px 18px;
+    background: #f0f4ff; border-left: 3px solid var(--azul);
+    border-radius: 6px; font-size: 0.82rem; color: var(--cinza-escuro);
+  }
+  .gallery-note code { background: rgba(0,51,255,0.08); padding: 2px 6px; border-radius: 4px; font-size: 0.77rem; }
+
+  /* LEIS */
+  #leis { background: var(--cinza-fundo); }
+  .leis-container { max-width: 820px; }
+  .leis-list {
+    background: white; border-radius: var(--radius);
+    box-shadow: var(--sombra); border: 1.5px solid var(--cinza-claro); overflow: hidden;
+  }
+  .lei-item {
+    display: flex; align-items: center; gap: 16px;
+    padding: 18px 24px; border-bottom: 1px solid var(--cinza-claro);
+    transition: background var(--transition);
+  }
+  .lei-item:last-child { border-bottom: none; }
+  .lei-item:hover { background: #f7f9ff; }
+  .lei-icon-wrap {
+    background: var(--laranja-claro); color: var(--laranja);
+    width: 40px; height: 40px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; flex-shrink: 0;
+  }
+  .lei-info { flex: 1; min-width: 0; }
+  .lei-name { font-weight: 600; font-size: 0.91rem; color: var(--texto); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lei-date { font-size: 0.77rem; color: var(--cinza-escuro); margin-top: 3px; }
+  .lei-btn {
+    background: var(--azul); color: white; border: none;
+    padding: 9px 18px; border-radius: 7px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.86rem; font-weight: 800;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; white-space: nowrap;
+    transition: background var(--transition), transform var(--transition);
+  }
+  .lei-btn:hover { background: var(--azul-escuro); transform: translateY(-1px); }
+  .leis-empty { text-align: center; padding: 56px; color: var(--cinza-escuro); }
+  .leis-note {
+    margin-top: 18px; padding: 13px 18px;
+    background: white; border-left: 3px solid var(--laranja);
+    border-radius: 6px; font-size: 0.82rem; color: var(--cinza-escuro);
+  }
+  .leis-note code { background: rgba(255,115,0,0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.77rem; }
+
+  /* LIGHTBOX */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 999;
+    background: rgba(0,10,40,0.94);
+    align-items: center; justify-content: center; padding: 20px;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 10px; object-fit: contain; }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 28px;
+    color: white; font-size: 2rem; cursor: pointer;
+    background: none; border: none; transition: color var(--transition);
+  }
+  .lightbox-close:hover { color: var(--laranja); }
+
+  /* FOOTER */
+  footer {
+    background: var(--azul);
+    border-top: 4px solid var(--laranja);
+    color: rgba(255,255,255,0.62);
+    text-align: center; padding: 44px 5%;
+  }
+  .footer-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.55rem; font-weight: 900;
+    text-transform: uppercase; color: white; margin-bottom: 6px;
+  }
+  .footer-name span { color: var(--laranja); }
+  .footer-sub { font-size: 0.84rem; margin-bottom: 18px; }
+  .footer-contact { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 24px; }
+  .footer-contact a { color: rgba(255,255,255,0.72); text-decoration: none; font-size: 0.84rem; transition: color var(--transition); }
+  .footer-contact a:hover { color: var(--laranja); }
+  .footer-copy { font-size: 0.73rem; opacity: 0.38; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes spin   { from { transform:rotate(0deg); }  to { transform:rotate(360deg); } }
+  .reveal { opacity:0; transform:translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; text-align: center; padding: 60px 5% 50px; }
+    .hero-photo { display: none; }
+    .hero p { margin: 0 auto 28px; }
+    .hero-actions { justify-content: center; }
+    .hero-city { justify-content: center; }
+    .bio-grid { grid-template-columns: 1fr; }
+    .bio-card { max-width: 310px; margin: 0 auto; }
+  }
+  @media (max-width: 660px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 66px; left: 0; right: 0; background: var(--azul-escuro); padding: 20px 5%; gap: 1.2rem; z-index: 99; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; }
+    .lei-btn { padding: 8px 12px; font-size: 0.78rem; }
+    .social-link { padding: 6px 10px; font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#">
+    <span class="nav-brand-accent">Vereador</span>
+    <span class="nav-brand-name">Marcos Araújo</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#biografia">Biografia</a></li>
+    <li><a href="#videos">Vídeos</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#leis">Leis & Decretos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-chip">Mandato 2024–2028 · Itaboraí–RJ</div>
+    <h1>Marcos<br><span>Araújo</span></h1>
+    <div class="hero-city">Câmara Municipal de Itaboraí, Rio de Janeiro</div>
+    <p>Acompanhe cada projeto, lei e decreto do nosso mandato. Transparência total para Itaboraí — porque a população merece saber o que acontece na Câmara.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#leis">Ver Leis e Decretos</a>
+      <a class="btn-ghost" href="#biografia">Conheça o Vereador</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="hero-photo-frame">
+      <div>
+        <span class="photo-icon">📸</span>
+        <p style="font-size:0.78rem;line-height:1.6;color:rgba(255,255,255,0.38);">Substituir pela foto<br>oficial de Marcos Araújo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REDES SOCIAIS -->
+<div class="social-bar">
+  <span class="social-bar-label">Siga nas redes:</span>
+  <a class="social-link s-instagram" href="#" target="_blank">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    Instagram
+  </a>
+  <a class="social-link s-facebook" href="#" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+    Facebook
+  </a>
+  <a class="social-link s-youtube" href="#" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+    YouTube
+  </a>
+  <a class="social-link s-whatsapp" href="https://wa.me/5521000000000" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.989.574 3.842 1.567 5.403L2 22l4.745-1.545A9.962 9.962 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+    WhatsApp
+  </a>
+  <a class="social-link s-tiktok" href="#" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+    TikTok
+  </a>
+</div>
+
+<!-- BIOGRAFIA -->
+<section id="biografia">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Quem é</div>
+    <div class="section-title">Marcos Araújo</div>
+    <div class="section-sub">Vereador por Itaboraí — mandato 2024–2028</div>
+  </div>
+  <div class="bio-grid">
+    <div class="reveal">
+      <div class="bio-card">
+        <div class="bio-card-top">
+          <div class="bio-avatar">📸</div>
+          <div class="bio-name">Marcos Araújo</div>
+          <div class="bio-role">Vereador · Itaboraí–RJ</div>
+        </div>
+        <div class="bio-card-body">
+          <div class="bio-stat"><span class="bio-stat-label">Partido</span><span class="bio-stat-value orange">PARTIDO</span></div>
+          <div class="bio-stat"><span class="bio-stat-label">Legislatura</span><span class="bio-stat-value">2024–2028</span></div>
+          <div class="bio-stat"><span class="bio-stat-label">Município</span><span class="bio-stat-value">Itaboraí–RJ</span></div>
+          <div class="bio-stat"><span class="bio-stat-label">Comissões</span><span class="bio-stat-value">—</span></div>
+          <div class="bio-stat"><span class="bio-stat-label">Projetos publicados</span><span class="bio-stat-value orange" id="totalProjetos">—</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="bio-content reveal">
+      <h3>Trajetória e Valores</h3>
+      <p class="placeholder">✏️ Insira aqui a trajetória de Marcos Araújo. Ex: "Nascido em Itaboraí, Marcos dedicou sua vida ao serviço público e às causas da nossa comunidade. Formado em [área], atuou como [cargo/atividade] antes de ingressar na política..."</p>
+      <p class="placeholder">✏️ Segundo parágrafo — principais bandeiras do mandato, áreas de atuação prioritárias (saúde, educação, infraestrutura, etc.) e conquistas já obtidas.</p>
+      <p class="placeholder">✏️ Terceiro parágrafo — projetos em andamento, visão de futuro para Itaboraí e mensagem para a população.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VÍDEOS -->
+<section id="videos">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Canal no YouTube</div>
+    <div class="section-title">Último Vídeo Publicado</div>
+    <div class="section-sub">Atualizado automaticamente sempre que um novo vídeo é postado no canal.</div>
+  </div>
+  <div class="video-outer reveal">
+    <div class="video-card">
+      <div class="video-embed" id="videoEmbed">
+        <div class="video-loading" id="videoLoading">
+          <div class="video-spinner"></div>
+          <span>Carregando último vídeo do canal...</span>
+        </div>
+      </div>
+      <div class="video-footer">
+        <div class="video-badge">Último vídeo publicado</div>
+        <div class="video-title" id="videoTitle">Aguardando dados do canal...</div>
+        <div class="video-date" id="videoDate"></div>
+        <div class="video-api-note">
+          ⚙️ <strong>Como funciona:</strong> busca automática do último vídeo via <code>YouTube Data API v3</code>.
+          Configure <code>youtubeChannelId</code> e <code>youtubeApiKey</code> no bloco CONFIG do HTML para ativar.<br><br>
+          📋 <strong>Endpoint:</strong> <code>GET /youtube/v3/search?channelId=CHANNEL_ID&order=date&maxResults=1&type=video</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Atividades</div>
+    <div class="section-title">Galeria de Fotos</div>
+    <div class="section-sub">Registros do trabalho de Marcos Araújo em Itaboraí.</div>
+  </div>
+  <div class="gallery-grid reveal" id="galleryGrid"></div>
+  <div class="gallery-note reveal">
+    📁 <strong>Como funciona:</strong> coloque as imagens em <code>/fotos/</code> com nomes descritivos — o nome vira legenda automática.
+    Rode <code>python gerar_indices.py</code> para atualizar o site.
+  </div>
+</section>
+
+<!-- LEIS E DECRETOS -->
+<section id="leis">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Transparência</div>
+    <div class="section-title">Leis e Decretos</div>
+    <div class="section-sub">Documentos oficiais do mandato — mais recente no topo.</div>
+  </div>
+  <div class="leis-container">
+    <div class="leis-list reveal" id="leisList"></div>
+    <div class="leis-note reveal">
+      📁 <strong>Como funciona:</strong> coloque os PDFs em <code>/leis/</code> com nomes descritivos.
+      Rode <code>python gerar_indices.py</code> — o site atualiza automaticamente.
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- FOOTER -->
+<footer id="contato">
+  <div class="footer-name">Marcos <span>Araújo</span></div>
+  <div class="footer-sub">Vereador · Câmara Municipal de Itaboraí — Rio de Janeiro</div>
+  <div class="footer-contact">
+    <a href="mailto:contato@marcosaraujo.com.br">✉ contato@marcosaraujo.com.br</a>
+    <a href="tel:+5521000000000">📞 (21) 0000-0000</a>
+    <a href="https://wa.me/5521000000000" target="_blank">💬 WhatsApp</a>
+  </div>
+  <div class="footer-copy">© 2026 · Vereador Marcos Araújo · Câmara Municipal de Itaboraí–RJ</div>
+</footer>
+
+<script>
+const CONFIG = {
+  youtubeChannelId: 'CHANNEL_ID_AQUI',
+  youtubeApiKey:    'API_KEY_AQUI',
+  leisIndexUrl:     'leis/index.json',
+  fotosIndexUrl:    'fotos/index.json',
+};
+
+const MOCK_LEIS = [
+  { nome: 'PL-042 – Criação do Conselho Municipal de Juventude de Itaboraí.pdf',  data: '2026-02-23T18:54:00' },
+  { nome: 'Decreto-039 – Regulamenta transporte escolar gratuito.pdf',             data: '2026-02-07T14:19:00' },
+  { nome: 'PL-031 – Institui Semana Municipal do Meio Ambiente.pdf',               data: '2026-01-13T21:53:00' },
+  { nome: 'PL-027 – Ampliação da merenda escolar nas escolas municipais.pdf',      data: '2026-01-13T21:49:00' },
+  { nome: 'Lei-019 – Iluminação pública LED no bairro Manilha.pdf',                data: '2025-12-27T09:30:00' },
+];
+const MOCK_FOTOS = [
+  { arquivo: 'Inauguração da UBS Bom Sucesso.jpg',     src: null },
+  { arquivo: 'Visita às escolas municipais.jpg',        src: null },
+  { arquivo: 'Sessão ordinária fevereiro 2026.jpg',     src: null },
+  { arquivo: 'Entrega de cestas básicas Itaboraí.jpg',  src: null },
+  { arquivo: 'Reunião com moradores do Manilha.jpg',    src: null },
+  { arquivo: 'Fiscalização da Praça Central.jpg',       src: null },
+];
+const MOCK_VIDEO = {
+  videoId: 'dQw4w9WgXcQ',
+  titulo: 'Sessão Plenária — Aprovação do Projeto de Transporte Escolar | Câmara de Itaboraí',
+  data: '23 de fevereiro de 2026'
+};
+
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+function renderLeis(leis) {
+  const list = document.getElementById('leisList');
+  list.innerHTML = '';
+  if (!leis.length) { list.innerHTML = '<div class="leis-empty">📄 Nenhum documento publicado ainda.</div>'; return; }
+  leis.sort((a, b) => new Date(b.data) - new Date(a.data));
+  leis.forEach(lei => {
+    const dt = new Date(lei.data);
+    const dtStr = dt.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+    const nome = lei.nome.replace('.pdf','');
+    const el = document.createElement('div');
+    el.className = 'lei-item';
+    el.innerHTML = `
+      <div class="lei-icon-wrap">📄</div>
+      <div class="lei-info">
+        <div class="lei-name" title="${nome}">${nome}</div>
+        <div class="lei-date">Publicado em: ${dtStr}</div>
+      </div>
+      <a class="lei-btn" href="leis/${lei.nome}" target="_blank">Visualizar PDF</a>`;
+    list.appendChild(el);
+  });
+  document.getElementById('totalProjetos').textContent = leis.length;
+}
+
+async function loadLeis() {
+  try { const r = await fetch(CONFIG.leisIndexUrl); if (!r.ok) throw 0; renderLeis(await r.json()); }
+  catch { renderLeis(MOCK_LEIS); }
+}
+
+function renderFotos(fotos) {
+  const grid = document.getElementById('galleryGrid');
+  grid.innerHTML = '';
+  fotos.forEach(foto => {
+    const leg = foto.arquivo.replace(/\.[^/.]+$/,'');
+    const el = document.createElement('div');
+    el.className = 'gallery-item';
+    if (foto.src) {
+      el.innerHTML = `<img src="${foto.src}" alt="${leg}" loading="lazy"><div class="gallery-caption">${leg}</div>`;
+      el.querySelector('img').onclick = () => openLightbox(foto.src);
+    } else {
+      el.innerHTML = `<div class="gallery-placeholder"><span>🖼️</span><small>${leg}</small></div>`;
+    }
+    grid.appendChild(el);
+  });
+}
+
+async function loadFotos() {
+  try { const r = await fetch(CONFIG.fotosIndexUrl); if (!r.ok) throw 0; renderFotos(await r.json()); }
+  catch { renderFotos(MOCK_FOTOS); }
+}
+
+async function loadVideo() {
+  const embed = document.getElementById('videoEmbed');
+  const loading = document.getElementById('videoLoading');
+  const title = document.getElementById('videoTitle');
+  const date  = document.getElementById('videoDate');
+  const addIframe = id => {
+    loading.style.display = 'none';
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube.com/embed/${id}?rel=0`;
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    embed.appendChild(f);
+  };
+  if (CONFIG.youtubeChannelId === 'CHANNEL_ID_AQUI') {
+    addIframe(MOCK_VIDEO.videoId);
+    title.textContent = MOCK_VIDEO.titulo;
+    date.textContent  = 'Publicado em: ' + MOCK_VIDEO.data;
+    return;
+  }
+  try {
+    const url = `https://www.googleapis.com/youtube/v3/search?channelId=${CONFIG.youtubeChannelId}&order=date&maxResults=1&type=video&key=${CONFIG.youtubeApiKey}&part=snippet`;
+    const data = await (await fetch(url)).json();
+    const item = data.items[0];
+    addIframe(item.id.videoId);
+    title.textContent = item.snippet.title;
+    date.textContent  = 'Publicado em: ' + new Date(item.snippet.publishedAt).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
+  } catch {
+    loading.innerHTML = '<span style="font-size:2rem">⚠️</span><span style="color:rgba(255,115,0,.9)">Configure a YouTube API Key para ativar.</span>';
+  }
+}
+
+function openLightbox(src) { document.getElementById('lightboxImg').src = src; document.getElementById('lightbox').classList.add('active'); }
+function closeLightbox()   { document.getElementById('lightbox').classList.remove('active'); }
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+loadLeis(); loadFotos(); loadVideo();
+</script>
+</body>
+</html>
