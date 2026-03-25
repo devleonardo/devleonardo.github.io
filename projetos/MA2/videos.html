@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vídeos — Vereador Marcos Araújo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .video-card {
+    background: white; border-radius: var(--radius);
+    border: 1.5px solid var(--cinza-claro); box-shadow: var(--sombra);
+    display: grid; grid-template-columns: 1fr 360px;
+    overflow: hidden; max-width: 1060px;
+  }
+  .video-left { display: flex; flex-direction: column; }
+  .video-embed { position: relative; padding-top: 56.25%; background: #08080f; }
+  .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .video-loading {
+    position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 14px; color: rgba(255,255,255,0.45); font-size: 0.87rem;
+  }
+  .video-spinner { width: 42px; height: 42px; border: 3px solid rgba(255,115,0,.22); border-top-color: var(--laranja); border-radius: 50%; animation: spin 1s linear infinite; }
+  .video-meta { padding: 20px 24px; border-top: 1px solid var(--cinza-claro); }
+  .video-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fff0e6; color: var(--laranja);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 4px; margin-bottom: 10px;
+  }
+  .video-badge::before { content: '▶'; }
+  .video-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--azul); line-height: 1.22; margin-bottom: 6px; }
+  .video-date  { font-size: 0.79rem; color: var(--cinza-escuro); }
+
+  /* Painel lateral de descrição */
+  .video-desc-panel { border-left: 1.5px solid var(--cinza-claro); display: flex; flex-direction: column; background: var(--fundo); }
+  .video-desc-header { background: var(--azul); padding: 14px 18px; display: flex; align-items: center; gap: 8px; }
+  .video-desc-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--laranja); flex-shrink: 0; }
+  .video-desc-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+  .video-desc-body { padding: 18px; flex: 1; overflow-y: auto; max-height: 340px; }
+  .video-desc-text { font-size: 0.87rem; line-height: 1.76; color: var(--cinza-escuro); white-space: pre-line; word-break: break-word; }
+  .video-desc-text.vazio { font-style: italic; color: var(--cinza-medio); }
+  .video-desc-btn {
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+    margin: 0 16px 16px;
+    padding: 10px; border-radius: 7px;
+    background: var(--laranja); color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.84rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+    text-decoration: none; flex-shrink: 0;
+    transition: background var(--t), transform var(--t);
+  }
+  .video-desc-btn:hover { background: var(--laranja-hover); transform: translateY(-1px); }
+
+  @media (max-width: 860px) {
+    .video-card { grid-template-columns: 1fr; }
+    .video-desc-panel { border-left: none; border-top: 1.5px solid var(--cinza-claro); }
+    .video-desc-body { max-height: 220px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<div id="social-placeholder"></div>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-eyebrow">Canal no YouTube</div>
+    <h1>Vídeos</h1>
+    <p>Último vídeo publicado — atualizado automaticamente.</p>
+  </div>
+</div>
+
+<section style="background:var(--fundo);">
+  <div class="video-card">
+    <div class="video-left">
+      <div class="video-embed" id="videoEmbed">
+        <div class="video-loading" id="videoLoading">
+          <div class="video-spinner"></div>
+          <span>Carregando último vídeo...</span>
+        </div>
+      </div>
+      <div class="video-meta">
+        <div class="video-badge">Último vídeo publicado</div>
+        <div class="video-title" id="videoTitle">Aguardando...</div>
+        <div class="video-date"  id="videoDate"></div>
+      </div>
+    </div>
+
+    <div class="video-desc-panel">
+      <div class="video-desc-header">
+        <div class="video-desc-dot"></div>
+        <span class="video-desc-label">Descrição do vídeo</span>
+      </div>
+      <div class="video-desc-body">
+        <p class="video-desc-text" id="videoDesc">Carregando descrição...</p>
+      </div>
+      <a class="video-desc-btn" id="videoLink" href="#" target="_blank">▶ Assistir no YouTube</a>
+    </div>
+  </div>
+
+  <div class="note-box azul" style="margin-top:24px;max-width:1060px;">
+    ⚙️ <strong>Como funciona:</strong> esta página busca automaticamente o último vídeo do canal via <code>YouTube Data API v3</code>.
+    Configure <code>YT_CHANNEL_ID</code> e <code>YT_API_KEY</code> no arquivo <code>config.js</code> para ativar.
+    A descrição exibida é a descrição completa do vídeo, conforme publicada no YouTube.
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="config.js"></script>
+<script>
+initPage('videos');
+
+(async () => {
+  const embed   = document.getElementById('videoEmbed');
+  const loading = document.getElementById('videoLoading');
+  const title   = document.getElementById('videoTitle');
+  const date    = document.getElementById('videoDate');
+  const desc    = document.getElementById('videoDesc');
+  const link    = document.getElementById('videoLink');
+
+  const showIframe = id => {
+    loading.style.display = 'none';
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube.com/embed/${id}?rel=0`;
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    embed.appendChild(f);
+  };
+
+  const setDesc = (texto, id) => {
+    const t = (texto || '').trim();
+    desc.textContent = t || 'Este vídeo não possui descrição.';
+    if (!t) desc.classList.add('vazio');
+    link.href = `https://www.youtube.com/watch?v=${id}`;
+  };
+
+  if (YT_CHANNEL_ID === 'CHANNEL_ID_AQUI') {
+    showIframe(MOCK_VIDEO.videoId);
+    title.textContent = MOCK_VIDEO.titulo;
+    date.textContent  = 'Publicado em: ' + MOCK_VIDEO.data;
+    setDesc(MOCK_VIDEO.descricao, MOCK_VIDEO.videoId);
+    return;
+  }
+
+  try {
+    const s = await (await fetch(`https://www.googleapis.com/youtube/v3/search?channelId=${YT_CHANNEL_ID}&order=date&maxResults=1&type=video&key=${YT_API_KEY}&part=snippet`)).json();
+    const id = s.items[0].id.videoId;
+    showIframe(id);
+    title.textContent = s.items[0].snippet.title;
+    date.textContent  = 'Publicado em: ' + new Date(s.items[0].snippet.publishedAt).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
+    const v = await (await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${YT_API_KEY}&part=snippet`)).json();
+    setDesc(v.items[0]?.snippet?.description, id);
+  } catch {
+    loading.innerHTML = '<span style="font-size:2rem">⚠️</span><span style="color:rgba(255,115,0,.9);font-size:.82rem">Configure a API Key no config.js</span>';
+    desc.textContent = 'Não foi possível carregar.'; desc.classList.add('vazio');
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leis & Decretos — Vereador Marcos Araújo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  #leis-section { background: white; }
+  .leis-container { max-width: 860px; }
+
+  .leis-search {
+    display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+  }
+  .leis-search input {
+    flex: 1; min-width: 200px;
+    padding: 11px 16px; border-radius: 8px;
+    border: 1.5px solid var(--cinza-claro); background: var(--fundo);
+    font-family: 'Barlow', sans-serif; font-size: 0.9rem; color: var(--texto);
+    transition: border-color var(--t);
+  }
+  .leis-search input:focus { outline: none; border-color: var(--azul); }
+  .leis-search input::placeholder { color: var(--cinza-medio); }
+
+  .leis-list { background: white; border-radius: var(--radius); border: 1.5px solid var(--cinza-claro); box-shadow: var(--sombra); overflow: hidden; }
+  .lei-item {
+    display: flex; align-items: center; gap: 16px;
+    padding: 18px 24px; border-bottom: 1px solid var(--cinza-claro);
+    transition: background var(--t);
+  }
+  .lei-item:last-child { border-bottom: none; }
+  .lei-item:hover { background: #f7f9ff; }
+  .lei-icon { background: var(--laranja-bg); color: var(--laranja); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+  .lei-info { flex: 1; min-width: 0; }
+  .lei-nome { font-weight: 600; font-size: 0.92rem; color: var(--texto); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lei-data { font-size: 0.77rem; color: var(--cinza-escuro); margin-top: 3px; }
+  .lei-btn {
+    background: var(--azul); color: white; border: none;
+    padding: 9px 18px; border-radius: 7px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.84rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; white-space: nowrap;
+    transition: background var(--t), transform var(--t);
+  }
+  .lei-btn:hover { background: var(--azul-escuro); transform: translateY(-1px); }
+  .leis-vazio { text-align: center; padding: 56px; color: var(--cinza-escuro); font-size: 0.9rem; }
+  .leis-count { font-size: 0.82rem; color: var(--cinza-escuro); margin-bottom: 12px; }
+  .leis-count strong { color: var(--azul); }
+
+  @media (max-width: 560px) { .lei-btn { padding: 8px 12px; font-size: 0.78rem; } }
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<div id="social-placeholder"></div>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-eyebrow">Transparência</div>
+    <h1>Leis & Decretos</h1>
+    <p>Documentos oficiais do mandato — mais recente no topo.</p>
+  </div>
+</div>
+
+<section id="leis-section">
+  <div class="leis-container">
+
+    <div class="leis-search">
+      <input type="text" id="buscaInput" placeholder="🔍  Buscar por nome do documento..." oninput="filtrarLeis()">
+    </div>
+
+    <div class="leis-count" id="leisCount"></div>
+    <div class="leis-list" id="leisList"></div>
+
+    <div class="note-box laranja" style="margin-top:20px;">
+      📁 <strong>Como funciona:</strong> coloque os PDFs na pasta <code>/leis/</code> com nomes descritivos — o nome do arquivo aparece como título.
+      Rode <code>python gerar_indices.py</code> para atualizar a lista. O documento mais recente aparece sempre no topo.
+    </div>
+
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="config.js"></script>
+<script>
+initPage('leis');
+
+let todosLeis = [];
+
+function renderLeis(lista) {
+  const el = document.getElementById('leisList');
+  const ct = document.getElementById('leisCount');
+  el.innerHTML = '';
+  if (!lista.length) {
+    el.innerHTML = '<div class="leis-vazio">📄 Nenhum documento encontrado.</div>';
+    ct.innerHTML = '';
+    return;
+  }
+  ct.innerHTML = `Exibindo <strong>${lista.length}</strong> documento${lista.length !== 1 ? 's' : ''}`;
+  lista.forEach(lei => {
+    const dt  = new Date(lei.data);
+    const str = dt.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+    const nom = lei.nome.replace('.pdf', '');
+    const row = document.createElement('div');
+    row.className = 'lei-item';
+    row.innerHTML = `
+      <div class="lei-icon">📄</div>
+      <div class="lei-info">
+        <div class="lei-nome" title="${nom}">${nom}</div>
+        <div class="lei-data">Publicado em: ${str}</div>
+      </div>
+      <a class="lei-btn" href="leis/${lei.nome}" target="_blank">Visualizar PDF</a>`;
+    el.appendChild(row);
+  });
+}
+
+function filtrarLeis() {
+  const q = document.getElementById('buscaInput').value.toLowerCase().trim();
+  const filtrados = q ? todosLeis.filter(l => l.nome.toLowerCase().includes(q)) : todosLeis;
+  renderLeis(filtrados);
+}
+
+function carregarLeis(data) {
+  todosLeis = data.sort((a, b) => new Date(b.data) - new Date(a.data));
+  renderLeis(todosLeis);
+}
+
+fetch(LEIS_INDEX_URL).then(r => r.json()).then(carregarLeis).catch(() => carregarLeis(MOCK_LEIS));
+</script>
+</body>
+</html>

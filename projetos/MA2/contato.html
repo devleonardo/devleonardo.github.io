@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato — Vereador Marcos Araújo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  #contato-section { background: white; }
+  .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+
+  .contato-bloco h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.25rem; font-weight: 800; text-transform: uppercase; color: var(--azul); margin-bottom: 20px; }
+
+  .contato-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px; margin-bottom: 12px;
+    background: var(--fundo); border-radius: 10px;
+    border: 1.5px solid var(--cinza-claro);
+    text-decoration: none; color: inherit;
+    transition: border-color var(--t), transform var(--t);
+  }
+  .contato-item:hover { border-color: var(--laranja); transform: translateX(4px); }
+  .contato-icon {
+    width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+  }
+  .ci-azul   { background: rgba(0,51,255,0.1); }
+  .ci-laranja{ background: var(--laranja-bg); }
+  .ci-green  { background: rgba(37,211,102,0.12); }
+  .contato-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cinza-escuro); margin-bottom: 2px; }
+  .contato-valor { font-size: 0.94rem; font-weight: 600; color: var(--texto); }
+
+  .redes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .rede-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px; border-radius: 10px;
+    text-decoration: none; color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: transform var(--t), filter var(--t);
+  }
+  .rede-item:hover { transform: translateY(-2px); filter: brightness(1.1); }
+  .rede-item svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .ri-instagram { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+  .ri-facebook  { background: #1877f2; }
+  .ri-youtube   { background: #ff0000; }
+  .ri-whatsapp  { background: #25d366; }
+  .ri-tiktok    { background: #010101; }
+
+  .gabinete-card {
+    background: var(--azul); color: white; border-radius: var(--radius);
+    padding: 28px; margin-top: 32px;
+  }
+  .gabinete-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800; text-transform: uppercase; margin-bottom: 14px; }
+  .gabinete-card p  { font-size: 0.87rem; line-height: 1.7; color: rgba(255,255,255,0.75); }
+  .gabinete-card strong { color: var(--laranja); }
+
+  @media (max-width: 760px) { .contato-grid { grid-template-columns: 1fr; } .redes-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<div id="social-placeholder"></div>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-eyebrow">Fale conosco</div>
+    <h1>Contato</h1>
+    <p>Entre em contato com o gabinete do vereador Marcos Araújo.</p>
+  </div>
+</div>
+
+<section id="contato-section">
+  <div class="contato-grid">
+
+    <div class="contato-bloco">
+      <h3>Canais de Atendimento</h3>
+
+      <a class="contato-item" href="mailto:contato@marcosaraujo.com.br">
+        <div class="contato-icon ci-azul">✉️</div>
+        <div>
+          <div class="contato-label">E-mail</div>
+          <div class="contato-valor">contato@marcosaraujo.com.br</div>
+        </div>
+      </a>
+
+      <a class="contato-item" href="tel:+5521000000000">
+        <div class="contato-icon ci-azul">📞</div>
+        <div>
+          <div class="contato-label">Telefone do Gabinete</div>
+          <div class="contato-valor">(21) 0000-0000</div>
+        </div>
+      </a>
+
+      <a class="contato-item" href="https://wa.me/5521000000000" target="_blank">
+        <div class="contato-icon ci-green">💬</div>
+        <div>
+          <div class="contato-label">WhatsApp</div>
+          <div class="contato-valor">(21) 0 0000-0000</div>
+        </div>
+      </a>
+
+      <div class="contato-item" style="cursor:default;">
+        <div class="contato-icon ci-laranja">📍</div>
+        <div>
+          <div class="contato-label">Endereço do Gabinete</div>
+          <div class="contato-valor">Câmara Municipal de Itaboraí<br>Rua [Nome], nº [Número] — Itaboraí, RJ</div>
+        </div>
+      </div>
+
+      <div class="gabinete-card">
+        <h3>Atendimento ao Cidadão</h3>
+        <p>
+          O gabinete do vereador <strong>Marcos Araújo</strong> atende de <strong>segunda a sexta</strong>, das <strong>8h às 17h</strong>.<br><br>
+          Para solicitar uma reunião, envie um e-mail ou mensagem pelo WhatsApp com seu nome, telefone e o assunto a tratar.
+        </p>
+      </div>
+    </div>
+
+    <div class="contato-bloco">
+      <h3>Redes Sociais</h3>
+      <div class="redes-grid">
+        <a class="rede-item ri-instagram" href="#" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+        <a class="rede-item ri-facebook" href="#" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          Facebook
+        </a>
+        <a class="rede-item ri-youtube" href="#" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          YouTube
+        </a>
+        <a class="rede-item ri-whatsapp" href="https://wa.me/5521000000000" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.989.574 3.842 1.567 5.403L2 22l4.745-1.545A9.962 9.962 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          WhatsApp
+        </a>
+        <a class="rede-item ri-tiktok" href="#" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+          TikTok
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="config.js"></script>
+<script>initPage('contato');</script>
+</body>
+</html>

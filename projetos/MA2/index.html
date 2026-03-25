@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vereador Marcos Araújo — Itaboraí, RJ</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ── HERO ── */
+  .hero {
+    background: var(--azul); color: white;
+    padding: 90px 5% 80px;
+    display: grid; grid-template-columns: 1fr 380px;
+    gap: 60px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .hero::after {
+    content: ''; position: absolute; right: -60px; top: -60px;
+    width: 480px; height: 480px;
+    background: var(--laranja); opacity: 0.07; border-radius: 50%;
+  }
+  .hero-text { position: relative; z-index: 1; animation: fadeUp .65s ease both; }
+  .hero-chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--laranja); color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 4px; margin-bottom: 20px;
+  }
+  .hero-chip::before { content: '★'; font-size: 0.66rem; }
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(3rem, 6.5vw, 5rem); font-weight: 900;
+    line-height: 0.94; text-transform: uppercase; margin-bottom: 18px;
+  }
+  .hero h1 span { color: var(--laranja); }
+  .hero-city {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.93rem; font-weight: 500; color: rgba(255,255,255,0.62);
+    margin-bottom: 22px;
+  }
+  .hero-city::before { content: '📍'; }
+  .hero p {
+    font-size: 1.02rem; line-height: 1.72; color: rgba(255,255,255,0.7);
+    max-width: 460px; margin-bottom: 34px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-photo { position: relative; z-index: 1; animation: fadeUp .65s .15s ease both; }
+  .hero-photo-frame {
+    width: 100%; aspect-ratio: 3/4;
+    background: linear-gradient(160deg, rgba(255,115,0,0.15), rgba(255,255,255,0.04));
+    border: 2px solid rgba(255,115,0,0.28); border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.38); font-size: 0.78rem; text-align: center; padding: 24px;
+    position: relative; overflow: hidden;
+  }
+  .hero-photo-frame::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 5px; background: var(--laranja);
+  }
+  .photo-icon { font-size: 3.5rem; display: block; margin-bottom: 12px; opacity: 0.4; }
+
+  /* ── DESTAQUES ── */
+  .destaques { background: white; }
+  .destaques-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  .destaque-card {
+    background: var(--fundo); border-radius: var(--radius);
+    border: 1.5px solid var(--cinza-claro);
+    padding: 28px 24px; text-decoration: none; color: inherit;
+    transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .destaque-card:hover { transform: translateY(-4px); box-shadow: var(--sombra); border-color: var(--laranja); }
+  .destaque-icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    background: var(--laranja-bg); color: var(--laranja);
+    display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+  }
+  .destaque-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem; font-weight: 800; text-transform: uppercase; color: var(--azul);
+  }
+  .destaque-desc { font-size: 0.86rem; color: var(--cinza-escuro); line-height: 1.6; }
+  .destaque-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--laranja); margin-top: auto;
+  }
+
+  /* ── ÚLTIMO VÍDEO MINI ── */
+  .video-mini { background: var(--fundo); }
+  .video-mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+  .video-mini-player { position: relative; padding-top: 56.25%; background: #08080f; border-radius: var(--radius); overflow: hidden; }
+  .video-mini-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .video-mini-player .loading {
+    position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 12px; color: rgba(255,255,255,0.45); font-size: 0.85rem;
+  }
+  .video-mini-spinner { width: 38px; height: 38px; border: 3px solid rgba(255,115,0,.2); border-top-color: var(--laranja); border-radius: 50%; animation: spin 1s linear infinite; }
+  .video-mini-info { display: flex; flex-direction: column; gap: 12px; }
+  .video-mini-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fff0e6; color: var(--laranja);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 4px;
+  }
+  .video-mini-badge::before { content: '▶'; }
+  .video-mini-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.25rem; font-weight: 800; color: var(--azul); line-height: 1.2;
+  }
+  .video-mini-date { font-size: 0.8rem; color: var(--cinza-escuro); }
+  .video-mini-desc { font-size: 0.88rem; line-height: 1.75; color: var(--cinza-escuro); white-space: pre-line; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; text-align: center; padding: 60px 5%; }
+    .hero-photo { display: none; }
+    .hero p { margin: 0 auto 28px; }
+    .hero-actions { justify-content: center; }
+    .hero-city { justify-content: center; }
+    .destaques-grid { grid-template-columns: 1fr; }
+    .video-mini-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<div id="social-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-chip">Mandato 2024–2028 · Itaboraí–RJ</div>
+    <h1>Marcos<br><span>Araújo</span></h1>
+    <div class="hero-city">Câmara Municipal de Itaboraí, Rio de Janeiro</div>
+    <p>Acompanhe cada projeto, lei e decreto do mandato. Transparência total para Itaboraí — porque a população merece saber o que acontece na Câmara.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="leis.html">Ver Leis e Decretos</a>
+      <a class="btn-ghost"   href="biografia.html">Conheça o Vereador</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="hero-photo-frame">
+      <div>
+        <span class="photo-icon">📸</span>
+        <p>Substituir pela foto<br>oficial de Marcos Araújo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTAQUES -->
+<section class="destaques">
+  <div class="section-header">
+    <div class="section-eyebrow">Navegue pelo site</div>
+    <div class="section-title">O que você encontra aqui</div>
+  </div>
+  <div class="destaques-grid">
+    <a class="destaque-card" href="biografia.html">
+      <div class="destaque-icon">👤</div>
+      <div class="destaque-title">Biografia</div>
+      <div class="destaque-desc">Conheça a trajetória, valores e missão do vereador Marcos Araújo.</div>
+      <div class="destaque-cta">Ver biografia →</div>
+    </a>
+    <a class="destaque-card" href="galeria.html">
+      <div class="destaque-icon">🖼️</div>
+      <div class="destaque-title">Galeria de Fotos</div>
+      <div class="destaque-desc">Registros das atividades e compromissos do mandato em Itaboraí.</div>
+      <div class="destaque-cta">Ver galeria →</div>
+    </a>
+    <a class="destaque-card" href="leis.html">
+      <div class="destaque-icon">📄</div>
+      <div class="destaque-title">Leis & Decretos</div>
+      <div class="destaque-desc">Documentos oficiais publicados em ordem cronológica, sempre atualizados.</div>
+      <div class="destaque-cta">Ver documentos →</div>
+    </a>
+  </div>
+</section>
+
+<!-- ÚLTIMO VÍDEO -->
+<section class="video-mini">
+  <div class="section-header">
+    <div class="section-eyebrow">Canal no YouTube</div>
+    <div class="section-title">Último Vídeo Publicado</div>
+    <div class="section-sub">Atualizado automaticamente quando um novo vídeo é postado.</div>
+  </div>
+  <div class="video-mini-grid">
+    <div class="video-mini-player" id="vmPlayer">
+      <div class="loading" id="vmLoading">
+        <div class="video-mini-spinner"></div>
+        <span>Carregando...</span>
+      </div>
+    </div>
+    <div class="video-mini-info">
+      <div class="video-mini-badge">Último vídeo</div>
+      <div class="video-mini-title" id="vmTitle">Carregando...</div>
+      <div class="video-mini-date"  id="vmDate"></div>
+      <div class="video-mini-desc"  id="vmDesc"></div>
+      <a class="btn-primary" id="vmLink" href="videos.html">Ver todos os vídeos →</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="config.js"></script>
+<script>
+initPage('index');
+
+(async () => {
+  const player  = document.getElementById('vmPlayer');
+  const loading = document.getElementById('vmLoading');
+  const title   = document.getElementById('vmTitle');
+  const date    = document.getElementById('vmDate');
+  const desc    = document.getElementById('vmDesc');
+  const link    = document.getElementById('vmLink');
+
+  const showIframe = id => {
+    loading.style.display = 'none';
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube.com/embed/${id}?rel=0`;
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    player.appendChild(f);
+  };
+
+  if (YT_CHANNEL_ID === 'CHANNEL_ID_AQUI') {
+    showIframe(MOCK_VIDEO.videoId);
+    title.textContent = MOCK_VIDEO.titulo;
+    date.textContent  = 'Publicado em: ' + MOCK_VIDEO.data;
+    desc.textContent  = MOCK_VIDEO.descricao;
+    link.href = `https://www.youtube.com/watch?v=${MOCK_VIDEO.videoId}`;
+    link.textContent = '▶ Assistir no YouTube →';
+    return;
+  }
+  try {
+    const s = await (await fetch(`https://www.googleapis.com/youtube/v3/search?channelId=${YT_CHANNEL_ID}&order=date&maxResults=1&type=video&key=${YT_API_KEY}&part=snippet`)).json();
+    const id = s.items[0].id.videoId;
+    showIframe(id);
+    title.textContent = s.items[0].snippet.title;
+    date.textContent  = 'Publicado em: ' + new Date(s.items[0].snippet.publishedAt).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
+    const v = await (await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${YT_API_KEY}&part=snippet`)).json();
+    desc.textContent = (v.items[0]?.snippet?.description || '').trim().slice(0, 400) + '...';
+    link.href = `https://www.youtube.com/watch?v=${id}`;
+    link.textContent = '▶ Assistir no YouTube →';
+  } catch {
+    loading.innerHTML = '<span style="font-size:2rem">⚠️</span><span style="color:rgba(255,115,0,.9);font-size:.82rem">Configure a API Key no config.js</span>';
+  }
+})();
+</script>
+</body>
+</html>

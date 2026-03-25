@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biografia — Vereador Marcos Araújo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .bio-grid { display: grid; grid-template-columns: 300px 1fr; gap: 52px; align-items: start; }
+  .bio-card { background: white; border-radius: var(--radius); overflow: hidden; border: 1.5px solid var(--cinza-claro); box-shadow: var(--sombra); }
+  .bio-card-top { background: var(--azul); padding: 28px 22px 20px; text-align: center; position: relative; }
+  .bio-card-top::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--laranja); }
+  .bio-avatar {
+    width: 100px; height: 100px; background: rgba(255,255,255,0.12); border: 3px solid var(--laranja);
+    border-radius: 50%; margin: 0 auto 12px;
+    display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: rgba(255,255,255,0.4);
+  }
+  .bio-avatar-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+  .bio-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 900; text-transform: uppercase; color: white; margin-bottom: 4px; }
+  .bio-role { font-size: 0.78rem; color: rgba(255,255,255,0.6); }
+  .bio-card-body { padding: 16px 20px; }
+  .bio-stat { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--cinza-claro); font-size: 0.82rem; }
+  .bio-stat:last-child { border-bottom: none; }
+  .bio-stat-label { color: var(--cinza-escuro); }
+  .bio-stat-value { font-weight: 700; color: var(--azul); }
+  .bio-stat-value.laranja { color: var(--laranja); }
+
+  .bio-content h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 800; text-transform: uppercase; color: var(--azul); margin-bottom: 16px; }
+  .bio-content p { line-height: 1.85; color: var(--cinza-escuro); margin-bottom: 16px; font-size: 0.94rem; }
+  .bio-placeholder { background: #fff8f0; border-left: 3px solid var(--laranja); border-radius: 6px; padding: 14px 18px; font-style: italic; color: #a07040; font-size: 0.87rem; }
+
+  .bandeiras-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 28px; }
+  .bandeira-item {
+    background: white; border-radius: 10px; padding: 18px;
+    border: 1.5px solid var(--cinza-claro);
+    display: flex; flex-direction: column; gap: 8px;
+    transition: border-color var(--t), transform var(--t);
+  }
+  .bandeira-item:hover { border-color: var(--laranja); transform: translateY(-2px); }
+  .bandeira-icon { font-size: 1.6rem; }
+  .bandeira-nome { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; color: var(--azul); }
+  .bandeira-desc { font-size: 0.8rem; color: var(--cinza-escuro); line-height: 1.5; }
+
+  @media (max-width: 860px) { .bio-grid { grid-template-columns: 1fr; } .bio-card { max-width: 310px; margin: 0 auto; } }
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<div id="social-placeholder"></div>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-eyebrow">Quem é</div>
+    <h1>Biografia</h1>
+    <p>Trajetória, valores e atuação do vereador Marcos Araújo</p>
+  </div>
+</div>
+
+<section style="background:white;">
+  <div class="bio-grid">
+    <div>
+      <div class="bio-card">
+        <div class="bio-card-top">
+          <div class="bio-avatar">📸</div>
+          <div class="bio-name">Marcos Araújo</div>
+          <div class="bio-role">Vereador · Itaboraí–RJ</div>
+        </div>
+        <div class="bio-card-body">
+          <div class="bio-stat"><span class="bio-stat-label">Partido</span><span class="bio-stat-value laranja">PARTIDO</span></div>
+          <div class="bio-stat"><span class="bio-stat-label">Legislatura</span><span class="bio-stat-value">2024–2028</span></div>
+          <div class="bio-stat"><span class="bio-stat-label">Município</span><span class="bio-stat-value">Itaboraí–RJ</span></div>
+          <div class="bio-stat"><span class="bio-stat-label">Comissões</span><span class="bio-stat-value">—</span></div>
+          <div class="bio-stat"><span class="bio-stat-label">Projetos</span><span class="bio-stat-value laranja" id="totalProjetos">—</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="bio-content">
+      <h3>Trajetória</h3>
+      <p class="bio-placeholder">✏️ Insira aqui a trajetória de Marcos Araújo. Ex: "Nascido em Itaboraí, Marcos dedicou sua vida ao serviço público e às causas da nossa comunidade. Formado em [área], atuou como [cargo] antes de ingressar na política..."</p>
+      <p class="bio-placeholder">✏️ Segundo parágrafo — principais bandeiras do mandato, áreas de atuação prioritárias (saúde, educação, infraestrutura) e conquistas já obtidas.</p>
+      <p class="bio-placeholder">✏️ Terceiro parágrafo — projetos em andamento, visão de futuro para Itaboraí e mensagem para a população.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--fundo);">
+  <div class="section-header">
+    <div class="section-eyebrow">Mandato</div>
+    <div class="section-title">Principais Bandeiras</div>
+    <div class="section-sub">As causas que guiam o trabalho de Marcos Araújo em Itaboraí.</div>
+  </div>
+  <div class="bandeiras-grid">
+    <div class="bandeira-item"><div class="bandeira-icon">🏥</div><div class="bandeira-nome">Saúde</div><div class="bandeira-desc">Ampliação das UBSs e acesso a medicamentos para todos.</div></div>
+    <div class="bandeira-item"><div class="bandeira-icon">📚</div><div class="bandeira-nome">Educação</div><div class="bandeira-desc">Merenda de qualidade, transporte escolar e melhoria das escolas.</div></div>
+    <div class="bandeira-item"><div class="bandeira-icon">🏗️</div><div class="bandeira-nome">Infraestrutura</div><div class="bandeira-desc">Iluminação pública, calçamento e obras nos bairros.</div></div>
+    <div class="bandeira-item"><div class="bandeira-icon">🌳</div><div class="bandeira-nome">Meio Ambiente</div><div class="bandeira-desc">Limpeza urbana, arborização e coleta seletiva.</div></div>
+    <div class="bandeira-item"><div class="bandeira-icon">👨‍👩‍👧</div><div class="bandeira-nome">Família</div><div class="bandeira-desc">Políticas de proteção às famílias em situação de vulnerabilidade.</div></div>
+    <div class="bandeira-item"><div class="bandeira-icon">🔍</div><div class="bandeira-nome">Transparência</div><div class="bandeira-desc">Prestação de contas pública e fiscalização dos gastos municipais.</div></div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="config.js"></script>
+<script>
+initPage('biografia');
+// Exibe total de projetos
+fetch(LEIS_INDEX_URL)
+  .then(r => r.json())
+  .then(d => { document.getElementById('totalProjetos').textContent = d.length; })
+  .catch(() => { document.getElementById('totalProjetos').textContent = MOCK_LEIS.length; });
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria — Vereador Marcos Araújo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  #galeria-section { background: white; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+  .gallery-item {
+    border-radius: 10px; overflow: hidden; aspect-ratio: 4/3;
+    position: relative; cursor: pointer;
+    background: var(--cinza-claro);
+    transition: transform var(--t), box-shadow var(--t);
+  }
+  .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,51,255,0.14); }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,20,80,0.82));
+    color: white; padding: 28px 12px 10px;
+    font-size: 0.77rem; font-weight: 500;
+    transform: translateY(100%); transition: transform var(--t);
+  }
+  .gallery-item:hover .gallery-caption { transform: translateY(0); }
+  .gallery-placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: var(--cinza-medio); font-size: 0.77rem; text-align: center;
+    gap: 8px; padding: 12px;
+    background: linear-gradient(135deg, #f4f6fb, #eaedf8);
+  }
+  .gallery-placeholder span { font-size: 2rem; }
+
+  .lightbox { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,10,40,0.94); align-items: center; justify-content: center; padding: 20px; }
+  .lightbox.active { display: flex; }
+  .lightbox-img { max-width: 90vw; max-height: 85vh; border-radius: 10px; object-fit: contain; }
+  .lightbox-caption { position: absolute; bottom: 24px; left: 0; right: 0; text-align: center; color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+  .lightbox-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 2rem; cursor: pointer; background: none; border: none; transition: color var(--t); }
+  .lightbox-close:hover { color: var(--laranja); }
+  .lightbox-prev, .lightbox-next {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.1); color: white; border: none; cursor: pointer;
+    font-size: 1.5rem; padding: 12px 16px; border-radius: 8px;
+    transition: background var(--t);
+  }
+  .lightbox-prev { left: 16px; }
+  .lightbox-next { right: 16px; }
+  .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,115,0,0.5); }
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<div id="social-placeholder"></div>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-eyebrow">Registros</div>
+    <h1>Galeria de Fotos</h1>
+    <p>Registros das atividades e compromissos do mandato em Itaboraí.</p>
+  </div>
+</div>
+
+<section id="galeria-section">
+  <div class="gallery-grid" id="galleryGrid"></div>
+  <div class="note-box azul" style="margin-top:22px;">
+    📁 <strong>Como funciona:</strong> coloque as imagens na pasta <code>/fotos/</code> com nomes descritivos — o nome do arquivo vira legenda automática (ex: <code>Inauguração da UBS Norte.jpg</code>).
+    Rode <code>python gerar_indices.py</code> para atualizar o índice.
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-prev"  onclick="navLightbox(-1)">‹</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button class="lightbox-next"  onclick="navLightbox(1)">›</button>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="config.js"></script>
+<script>
+initPage('galeria');
+
+let fotosData = [];
+let lightboxIndex = 0;
+
+function renderFotos(fotos) {
+  fotosData = fotos.filter(f => f.src);
+  const grid = document.getElementById('galleryGrid');
+  grid.innerHTML = '';
+  fotos.forEach((foto, i) => {
+    const leg = foto.arquivo.replace(/\.[^/.]+$/, '');
+    const el  = document.createElement('div');
+    el.className = 'gallery-item';
+    if (foto.src) {
+      el.innerHTML = `<img src="${foto.src}" alt="${leg}" loading="lazy"><div class="gallery-caption">${leg}</div>`;
+      el.onclick = () => openLightbox(i);
+    } else {
+      el.innerHTML = `<div class="gallery-placeholder"><span>🖼️</span><small>${leg}</small></div>`;
+    }
+    grid.appendChild(el);
+  });
+}
+
+function openLightbox(idx) {
+  lightboxIndex = idx;
+  const f = fotosData[idx];
+  if (!f) return;
+  document.getElementById('lightboxImg').src = f.src;
+  document.getElementById('lightboxCaption').textContent = f.arquivo.replace(/\.[^/.]+$/, '');
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
+function navLightbox(dir) {
+  lightboxIndex = (lightboxIndex + dir + fotosData.length) % fotosData.length;
+  openLightbox(lightboxIndex);
+}
+document.getElementById('lightbox').addEventListener('click', e => {
+  if (e.target === document.getElementById('lightbox')) closeLightbox();
+});
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('active')) return;
+  if (e.key === 'ArrowLeft')  navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
+  if (e.key === 'Escape')     closeLightbox();
+});
+
+fetch(FOTOS_INDEX_URL).then(r => r.json()).then(renderFotos).catch(() => renderFotos(MOCK_FOTOS));
+</script>
+</body>
+</html>
