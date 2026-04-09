@@ -168,7 +168,7 @@
 
     .footer-row td:last-child {
       color: #f9a8d4;
-      font-size: 18px;
+      font-size: 14px;
       border-radius: 0 14px 14px 14px;
     }
 
@@ -242,53 +242,91 @@
       .stats { flex-direction: column; }
     } */
     /* 🔥 MOBILE */
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
 
       .card {
-        padding: 20px 14px;
+        padding: 20px 12px;
       }
 
       h1 {
         font-size: 24px;
       }
 
-      table, thead, tbody, th, td, tr {
-        display: block;
-        width: 100%;
+      .subtitle {
+        font-size: 12px;
       }
 
-      thead {
-        display: none;
+      /* tabela compacta */
+      table {
+        border-spacing: 0 6px;
       }
 
-      tbody tr {
-        margin-bottom: 12px;
-        padding: 10px;
+      thead th {
+        font-size: 9px;
+        padding: 0 6px 6px;
       }
 
-      td {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 6px 10px;
+      tbody td {
+        padding: 10px 6px;
+        font-size: 12px;
+      }
+
+      /* primeira coluna menor */
+      tbody td:first-child {
+        font-size: 12px;
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      /* badges menores */
+      .qty-badge {
+        font-size: 11px;
+        padding: 3px 8px;
+        min-width: auto;
+      }
+
+      .price {
+        font-size: 11px;
+      }
+
+      .total-col {
+        font-size: 12px;
+      }
+
+      .footer-row td {
         font-size: 13px;
+        padding: 12px 6px;
       }
 
-      td::before {
-        content: attr(data-label);
-        font-size: 10px;
-        color: rgba(255,255,255,0.5);
-        text-transform: uppercase;
-      }
-
-      td:first-child {
-        font-weight: bold;
-        font-size: 14px;
-        margin-bottom: 6px;
-      }
-
+      /* stats empilhado */
       .stats {
         flex-direction: column;
+        gap: 10px;
+      }
+
+      .stat {
+        padding: 14px;
+      }
+
+      .stat-value {
+        font-size: 20px;
+      }
+
+      /* pix ajustado */
+      .pix-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 14px;
+      }
+
+      .pix-text {
+        font-size: 12px;
+      }
+
+      .pix-key {
+        font-size: 13px;
       }
     }
   </style>
