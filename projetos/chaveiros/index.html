@@ -241,6 +241,56 @@
       h1 { font-size: 26px; }
       .stats { flex-direction: column; }
     }
+    /* 🔥 MOBILE */
+    @media (max-width: 600px) {
+
+      .card {
+        padding: 20px 14px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tbody tr {
+        margin-bottom: 12px;
+        padding: 10px;
+      }
+
+      td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 10px;
+        font-size: 13px;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-size: 10px;
+        color: rgba(255,255,255,0.5);
+        text-transform: uppercase;
+      }
+
+      td:first-child {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      .stats {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
@@ -262,66 +312,73 @@
       </thead>
       <tbody>
         <tr>
-          <td>🔴 Flamengo</td>
-          <td><span class="qty-badge">5</span></td>
-          <td class="price">R$ 10,00</td>
-          <td class="total-col">R$ 50,00</td>
+          <td data-label="Item">🔴 Flamengo</td>
+          <td data-label="Qtd"><span class="qty-badge">5</span></td>
+          <td data-label="Valor" class="price">R$ 10,00</td>
+          <td data-label="Total" class="total-col">R$ 50,00</td>
         </tr>
+
         <tr>
-          <td>⚫ Vasco</td>
-          <td><span class="qty-badge">2</span></td>
-          <td class="price">R$ 10,00</td>
-          <td class="total-col">R$ 20,00</td>
+          <td data-label="Item">⚫ Vasco</td>
+          <td data-label="Qtd"><span class="qty-badge">2</span></td>
+          <td data-label="Valor" class="price">R$ 10,00</td>
+          <td data-label="Total" class="total-col">R$ 20,00</td>
         </tr>
+
         <tr>
-          <td>🏆 Taça da Copa</td>
-          <td><span class="qty-badge">14</span></td>
-          <td class="price">R$ 7,00</td>
-          <td class="total-col">R$ 98,00</td>
+          <td data-label="Item">🏆 Taça da Copa</td>
+          <td data-label="Qtd"><span class="qty-badge">14</span></td>
+          <td data-label="Valor" class="price">R$ 7,00</td>
+          <td data-label="Total" class="total-col">R$ 98,00</td>
         </tr>
+
         <tr>
-          <td>⚔️ Starwars</td>
-          <td><span class="qty-badge">4</span></td>
-          <td class="price">R$ 7,00</td>
-          <td class="total-col">R$ 28,00</td>
+          <td data-label="Item">⚔️ Starwars</td>
+          <td data-label="Qtd"><span class="qty-badge">4</span></td>
+          <td data-label="Valor" class="price">R$ 7,00</td>
+          <td data-label="Total" class="total-col">R$ 28,00</td>
         </tr>
+
         <tr>
-          <td>🐉 Dragon Ball (Laranja c/ Preto)</td>
-          <td><span class="qty-badge">6</span></td>
-          <td class="price">R$ 7,00</td>
-          <td class="total-col">R$ 42,00</td>
+          <td data-label="Item">🐉 Dragon Ball (Laranja c/ Preto)</td>
+          <td data-label="Qtd"><span class="qty-badge">6</span></td>
+          <td data-label="Valor" class="price">R$ 7,00</td>
+          <td data-label="Total" class="total-col">R$ 42,00</td>
         </tr>
+
         <tr>
-          <td>⚽ Copa 26</td>
-          <td><span class="qty-badge">8</span></td>
-          <td class="price">R$ 7,00</td>
-          <td class="total-col">R$ 56,00</td>
+          <td data-label="Item">⚽ Copa 26</td>
+          <td data-label="Qtd"><span class="qty-badge">8</span></td>
+          <td data-label="Valor" class="price">R$ 7,00</td>
+          <td data-label="Total" class="total-col">R$ 56,00</td>
         </tr>
+
         <tr>
-          <td>🟩 Minecraft (Cubo Verde)</td>
-          <td><span class="qty-badge">3</span></td>
-          <td class="price">R$ 7,00</td>
-          <td class="total-col">R$ 21,00</td>
+          <td data-label="Item">🟩 Minecraft</td>
+          <td data-label="Qtd"><span class="qty-badge">3</span></td>
+          <td data-label="Valor" class="price">R$ 7,00</td>
+          <td data-label="Total" class="total-col">R$ 21,00</td>
         </tr>
+
         <tr>
-          <td>🌀 Akatsuki (Nuvem Vermelha)</td>
-          <td><span class="qty-badge">5</span></td>
-          <td class="price">R$ 5,00</td>
-          <td class="total-col">R$ 25,00</td>
+          <td data-label="Item">🌀 Akatsuki</td>
+          <td data-label="Qtd"><span class="qty-badge">5</span></td>
+          <td data-label="Valor" class="price">R$ 5,00</td>
+          <td data-label="Total" class="total-col">R$ 25,00</td>
         </tr>
+
         <tr>
-          <td>👻 Caça Fantasmas</td>
-          <td><span class="qty-badge">5</span></td>
-          <td class="price">R$ 7,00</td>
-          <td class="total-col">R$ 35,00</td>
+          <td data-label="Item">👻 Caça Fantasmas</td>
+          <td data-label="Qtd"><span class="qty-badge">5</span></td>
+          <td data-label="Valor" class="price">R$ 7,00</td>
+          <td data-label="Total" class="total-col">R$ 35,00</td>
         </tr>
-      </tbody>
-      <tbody>
+
         <tr class="footer-row">
-          <td>TOTAL</td>
-          <td><span class="qty-badge">52</span></td>
-          <td class="price"></td>
-          <td style="color:#f9a8d4;font-size:18px;font-weight:800;">R$ 375,00</td>
+          <td data-label="Total">TOTAL</td>
+          <td data-label="Qtd">52</td>
+          <td></td>
+          <td data-label="Valor">R$ 375,00</td>
         </tr>
       </tbody>
     </table>
@@ -351,3 +408,4 @@
   </div>
 </body>
 </html>
+
