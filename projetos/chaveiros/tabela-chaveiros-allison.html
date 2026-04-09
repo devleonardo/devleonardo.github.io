@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tabela de Preços – Chaveiros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 48px 40px;
+      max-width: 760px;
+      width: 100%;
+      box-shadow: 0 32px 64px rgba(0,0,0,0.5);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #7b2ff7, #f107a3);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 32px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+    }
+
+    thead th {
+      color: rgba(255,255,255,0.45);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0 20px 8px;
+      text-align: left;
+    }
+
+    thead th:not(:first-child) {
+      text-align: center;
+    }
+
+    tbody tr {
+      background: rgba(255,255,255,0.06);
+      border-radius: 12px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    tbody tr:hover {
+      background: rgba(167,139,250,0.15);
+      transform: translateY(-2px);
+    }
+
+    tbody td {
+      padding: 16px 20px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    tbody td:first-child {
+      border-radius: 12px 0 0 12px;
+      font-weight: 500;
+    }
+
+    tbody td:last-child {
+      border-radius: 0 12px 12px 0;
+    }
+
+    td:not(:first-child) {
+      text-align: center;
+    }
+
+    .qty-badge {
+      display: inline-block;
+      background: rgba(167,139,250,0.2);
+      color: #c4b5fd;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 100px;
+      min-width: 44px;
+    }
+
+    .price {
+      color: rgba(255,255,255,0.65);
+      font-size: 14px;
+    }
+
+    .total-col {
+      color: #a78bfa;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .footer-row {
+      margin-top: 8px;
+      background: linear-gradient(90deg, rgba(123,47,247,0.25), rgba(241,7,163,0.25));
+      border: 1px solid rgba(167,139,250,0.3);
+      border-radius: 14px;
+    }
+
+    .footer-row td {
+      padding: 18px 20px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .footer-row td:first-child {
+      color: #e9d5ff;
+      border-radius: 14px 0 0 14px;
+    }
+
+    .footer-row td:last-child {
+      color: #f9a8d4;
+      font-size: 18px;
+      border-radius: 0 14px 14px 14px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      flex: 1;
+      min-width: 140px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-value.green { color: #34d399; }
+    .stat-value.purple { color: #a78bfa; }
+    .stat-value.pink { color: #f472b6; }
+
+    .stat-label {
+      color: rgba(255,255,255,0.45);
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pix-box {
+      margin-top: 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px dashed rgba(255,255,255,0.15);
+      border-radius: 14px;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .pix-icon {
+      font-size: 22px;
+    }
+
+    .pix-text {
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+    }
+
+    .pix-key {
+      color: #a78bfa;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    @media (max-width: 540px) {
+      .card { padding: 28px 18px; }
+      h1 { font-size: 26px; }
+      .stats { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="badge">✦ Loja de Chaveiros</div>
+      <h1>Tabela de <span>Preços</span></h1>
+      <p class="subtitle">Allison — Catálogo atualizado</p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>#</th>
+          <th>Valor Unit.</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🔴 Flamengo</td>
+          <td><span class="qty-badge">5</span></td>
+          <td class="price">R$ 10,00</td>
+          <td class="total-col">R$ 50,00</td>
+        </tr>
+        <tr>
+          <td>⚫ Vasco</td>
+          <td><span class="qty-badge">2</span></td>
+          <td class="price">R$ 10,00</td>
+          <td class="total-col">R$ 20,00</td>
+        </tr>
+        <tr>
+          <td>🏆 Taça da Copa</td>
+          <td><span class="qty-badge">14</span></td>
+          <td class="price">R$ 7,00</td>
+          <td class="total-col">R$ 98,00</td>
+        </tr>
+        <tr>
+          <td>⚔️ Starwars</td>
+          <td><span class="qty-badge">4</span></td>
+          <td class="price">R$ 7,00</td>
+          <td class="total-col">R$ 28,00</td>
+        </tr>
+        <tr>
+          <td>🐉 Dragon Ball (Laranja c/ Preto)</td>
+          <td><span class="qty-badge">6</span></td>
+          <td class="price">R$ 7,00</td>
+          <td class="total-col">R$ 42,00</td>
+        </tr>
+        <tr>
+          <td>⚽ Copa 26</td>
+          <td><span class="qty-badge">8</span></td>
+          <td class="price">R$ 7,00</td>
+          <td class="total-col">R$ 56,00</td>
+        </tr>
+        <tr>
+          <td>🟩 Minecraft (Cubo Verde)</td>
+          <td><span class="qty-badge">3</span></td>
+          <td class="price">R$ 7,00</td>
+          <td class="total-col">R$ 21,00</td>
+        </tr>
+        <tr>
+          <td>🌀 Akatsuki (Nuvem Vermelha)</td>
+          <td><span class="qty-badge">5</span></td>
+          <td class="price">R$ 5,00</td>
+          <td class="total-col">R$ 25,00</td>
+        </tr>
+        <tr>
+          <td>👻 Caça Fantasmas</td>
+          <td><span class="qty-badge">5</span></td>
+          <td class="price">R$ 7,00</td>
+          <td class="total-col">R$ 35,00</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr class="footer-row">
+          <td>TOTAL</td>
+          <td><span class="qty-badge">52</span></td>
+          <td class="price"></td>
+          <td style="color:#f9a8d4;font-size:18px;font-weight:800;">R$ 375,00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value purple">9</div>
+        <div class="stat-label">Modelos</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value green">52</div>
+        <div class="stat-label">Unidades</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value pink">R$375</div>
+        <div class="stat-label">Faturamento</div>
+      </div>
+    </div>
+
+    <div class="pix-box">
+      <span class="pix-icon">💳</span>
+      <div>
+        <div class="pix-text">Chave Pix para pagamento</div>
+        <div class="pix-key">upsign3d@jim.com</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
